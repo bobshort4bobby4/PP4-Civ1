@@ -113,9 +113,9 @@ The AGIILE methodology for project development will be used to produce this proj
   **Booking**  
   user:foreginkey(AUTH_USER_Model)  
   room_number:foreginkey(Room)  
-  check_in:datefield
-  check_out:datefield
-  is_active:boolean  
+  check_in:datefield  
+  check_out:datefield  
+  is_active:boolean    
   
   
   Reviews App Model
@@ -124,8 +124,40 @@ The AGIILE methodology for project development will be used to produce this proj
   user:foreginkey(AUTH_USER_Model)    
   text:textfield  
   created_on:datefield  
-  approved:boolean
-  featured:boolean
+  approved:boolean  
+  featured:boolean  
+
+[Link to erd pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/erd-pdf-correct.pdf)
+![erd](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/pp4-erd-png-correct.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
