@@ -43,11 +43,12 @@ The AGIILE methodology for project development will be used to produce this proj
   - to be able to check availability for my room choice on any particular set of dates to aid my purchasing decision.
   - to navigate easily around the site to avoid frustration whilst using the site and to engender positive emotions towards the business.
   - to have any incorrect input rejected and the error explained clearly and quickly so I do not have any frustrating emotions using the site. 
+  - to be able to read reviews about the hotel to determine the quality of the product and aid my purchasing decision.
     
   #### Customer Goals
   As a Customer I want:
   - to be able to easily book a room.
-  - to be able to easily cancel a booking if there is more than 48 hours to check in to manage my booking.
+  - to be able to easily cancel a booking if there is more than 7 days to check in to manage my booking.
   - to be able to easly extend my stay if possible to manage my booking .
   - to be easily able to view my booking and account details to make using the site as easy as possible.
   - to be easily able to change account details to make use as easy as possible.
@@ -56,16 +57,17 @@ The AGIILE methodology for project development will be used to produce this proj
     
   #### Site Owner/Administrator
   As a Site Owner/Administrator I want:
-  - to be able to view bookings to enable proper planning.
+  - to be able to view and analyse bookings to enable proper planning.
   - to be able to view/change rooms to keep room inventory current.
   - to be able to view customer information to enable efficient communication.
   - to provide a quality website in order to drive sales and increase profits.
   
-  
+  #### Epics
   Using the user stories as a frame of reference the following Epics were formulated;
   
   - implement basic html and django structure
   - implement user registration and login
+  - implement home pages
   - implement room booking management system
   - implement user feedback system
   - optimise the django admin panel to aid hotel management functions.
@@ -78,7 +80,8 @@ The AGIILE methodology for project development will be used to produce this proj
   
   
   
-  ### Database Relations
+
+  
   
   
   
@@ -88,6 +91,41 @@ The AGIILE methodology for project development will be used to produce this proj
   
   
 </details>
+
+
+  ### Database Relations
+  
+  Roombook App Models
+  
+  **RoomType**  
+  type:charfield  
+  description:textfield  
+  price:decimalfield  
+  image_url: urlfield  
+  image:imagefield  
+  
+  **Room**  
+  room_number: integerfield  
+  type:foreginKey(roomtype)
+  booked:boolean  
+  occupied:boolean  
+  
+  **Booking**  
+  user:foreginkey(AUTH_USER_Model)  
+  room_number:foreginkey(Room)  
+  check_in:datefield
+  check_out:datefield
+  is_active:boolean  
+  
+  
+  Reviews App Model
+  
+  **Reviews**  
+  user:foreginkey(AUTH_USER_Model)    
+  text:textfield  
+  created_on:datefield  
+  approved:boolean
+  featured:boolean
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
