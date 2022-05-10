@@ -21,7 +21,7 @@ The project sets out to create a website for a fictitious hotel.  Rooms can be b
 The room should only be cancelled if the check in date is not more than 7 days away.
 
 The imaginery product owner has also requested that rooms are put on sale if occupancy drops below a set percentage.  
-She also requested a review section where customers could leave feedback on their stay at the hotel and email confirmation for all customer interactions.
+She also requested a review section where customers could leave feedback on their stay at the hotel.
   
 # User Experience/User Interface (UX/UI)
 
@@ -77,6 +77,13 @@ The AGIILE methodology for project development will be used to produce this proj
   Care was taken to ensure should-have proioritised user stories are not greater than 60% of the total.
   
   ### Wireframes
+  A full set of wireframes was produced, they can be viewed via the link following.
+  (CTRL + click to open on new page)
+  [Link to wireframes pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/pp4-ci-wireframesv2.pdf)  
+    
+    ##### Typography
+  I choose '' as the font for the site. It is a big bold type that stands out from the background well and is easy to read.
+    
   
   
   
