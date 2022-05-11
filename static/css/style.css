@@ -2,7 +2,8 @@ html{
     height:100%;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Playfair+Display&display=swap');
 
 
 * {
@@ -13,8 +14,9 @@ html{
 }
 
 body {
-    background: url('/media/backgrd.png') no-repeat center center fixed;
+    background: url('/media/backgrd-dark.png') no-repeat center center fixed;
     background-size: cover;
+    
    
 }
 
@@ -46,7 +48,8 @@ body {
 
 .roomtype {
     color:white;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0,0,0,.3);
+    
 }
 
 .check {
@@ -78,4 +81,49 @@ body {
 
 .cus-nav-p {
     padding: 0.5rem 1rem;
+}
+
+.hotel-title {
+    width:35%;
+    background-color: transparent;
+    color:white;
+    margin:auto;
+    margin-top:10px;
+    padding:10px;
+    font-size:2rem
+   
+}
+
+.paratext {
+    background-color: transparent;
+    color:white;
+    margin:auto;
+    margin-top:5px;
+    padding:10px;
+}
+
+.map-responsive{
+
+    overflow:hidden;
+
+    padding-bottom:25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
 }
