@@ -1,0 +1,81 @@
+html{
+    height:100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+* {
+    font-family: 'Playfair Display', serif;
+    padding:0;
+    border:none;
+    margin:0;
+}
+
+body {
+    background: url('/media/backgrd.png') no-repeat center center fixed;
+    background-size: cover;
+   
+}
+
+.roomcard {
+    background-color: darksalmon;
+    margin:15px;
+    max-width:25%;
+}
+
+.hotel_img {
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+   
+}
+
+.hotel_img a {
+    background-color: #21c7f3;
+}
+
+.roompic {
+    margin:auto;
+}
+
+.title_colour {
+    color:white;
+}
+
+.roomtype {
+    color:white;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.check {
+    position:relative;
+    top:-135px;
+
+}
+
+.check1 {
+    position:relative;
+    top:-250px;
+    width:50%;
+    margin:auto
+
+}
+
+.check2 {
+    position:relative;
+    top:-250px;
+    width:50%;
+    margin: auto;
+
+}
+
+.navbg {
+    background-color:#21c7f3;
+    color:black;
+}
+
+.cus-nav-p {
+    padding: 0.5rem 1rem;
+}

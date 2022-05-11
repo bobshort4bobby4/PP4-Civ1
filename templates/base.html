@@ -16,6 +16,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/media/flowernew.png">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">  
 {% endblock %}
 
 {% block extra_css %}
@@ -33,7 +34,97 @@
     
     <title>Home{% block title%}{% endblock title %}</title>
 </head>
-<body>
-    {% block content%} 
-    {% endblock %}
+<body class="d-flex flex-column h-100 main-bg" >
+    <!------------------------------------------navbar section---------------------------------------------------->
+    <header>
+        <div class="container" style=" padding:0px !important;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="{% url 'home:home' %}"><img class="brand"  src="/media/flowernewheader.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown" style="padding:0.5rem 1rem;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Home
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'home:home' %}">Home</a>
+                            <a class="dropdown-item" href="{% url 'home:info' %}">Information</a>
+                            <!--  -->
+                            <a class="dropdown-item" href="{% url 'home:contact' %}">Contact</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item cus-nav-p">
+                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                        
+                        <li class="cus-nav-p">
+                            <p class="nav-link float-right">Logged in as User: {{ request.user.username }}</p>
+                        </li>
+                    {% else %}
+                        <li class="nav-link cus-nav-p">
+                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        </li>
+                        <li class="nav-link cus-nav-p">
+                            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        </li>
+                    {% endif%}
+                      
+                  </ul>
+                </div>
+            </nav>  
+        </div>            
+    </header>
+
+    <!------------------------------------------Messages section------------------------------------------------->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show text-center" id="msg" role="alert">
+                    {{ message | safe }}
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+        <!-------------------------------------Block section--------------------------------------->
+    <main class="flex-shrink-0 main-bg">
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
+
+     <!-- Footer -->
+     <footer class="footer mt-auto py-3 dark-bg">
+        <p class="m-0 text-center text-blue">infoinfo</p>
+        <p class="m-0 text-center text-blue">Follow us: <i class="fab fa-facebook-square ms-3"></i>
+            <i class="fab fa-twitter-square ms-3"></i>
+            <i class="fab fa-instagram-square ms-3"></i>
+            <i class="fab fa-youtube-square ms-3"></i></p>
+    </footer>
+    <!-------------------------script for closing messages------------------>
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 2500);
+    </script>
+    <!---remore errors from error list-->
+    <script>
+        setTimeout(function() {
+          let errors = document.getElementsByClassName('errorlist');
+          while(errors.length > 0) {
+            errors[0].parentNode.removeChild(errors[0]);
+          }
+        }, 3000);
+      </script>
 </body>
