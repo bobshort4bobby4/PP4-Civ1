@@ -1,6 +1,6 @@
-html{
+/* html{
     height:100%;
-}
+} */
 
 /* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Heebo&family=Playfair+Display&display=swap');
@@ -117,12 +117,13 @@ body {
     position:absolute;
 }
 
-#foot {
+/* #foot {
     position: fixed;
     padding: 10px 10px 0px 10px;
     bottom: 0;
+    left:0;
     width: 100%;
     /* Height of the footer*/ 
-    height: 70px;
+    max-height: 60px;
     background: rgb(214, 13, 164);
-}
+} */

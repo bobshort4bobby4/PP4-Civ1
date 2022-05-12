@@ -84,6 +84,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django.contrib.staticfiles',
     'cloudinary',
+    'crispy_forms',
     'home',
     'roombook',
     'reviews',
@@ -100,6 +101,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'hotelapp.urls'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {

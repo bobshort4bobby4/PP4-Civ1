@@ -22,10 +22,10 @@
     {% endfor%}
 
     <div class="pagination justify-content-between">
-        <span class="step-links">
+        <span class="step-links text-white">
             {% if page_obj.has_previous %}
-                <a href="?page=1">&laquo; first</a>
-                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                <a class="text-white" href="?page=1">&laquo; first</a>
+                <a class="text-white" href="?page={{ page_obj.previous_page_number }}">previous</a>
             {% endif %}
     
             <span class="current text-white">
@@ -33,8 +33,8 @@
             </span>
     
             {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">next</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                <a class="text-white" href="?page={{ page_obj.next_page_number }}">next</a>
+                <a class="text-white" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
             {% endif %}
         </span>
         <span style="color:red;"><a class="btn" href="{% url 'reviews:create_review' %}" style="background-color:aqua;">Leave a Review</a></span>
