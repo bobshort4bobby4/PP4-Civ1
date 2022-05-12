@@ -34,8 +34,8 @@
     
     <title>Home{% block title%}{% endblock title %}</title>
 </head>
-<body class="d-flex flex-column h-100 main-bg" >
-    <div class="h-100" ">
+<body class="d-flex flex-column  main-bg" >
+    <div class="">
     <!------------------------------------------navbar section---------------------------------------------------->
     <header>
         <div class="container" style=" padding:0px !important;">
@@ -54,7 +54,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{% url 'home:home' %}">Home</a>
                             <a class="dropdown-item" href="{% url 'home:info' %}">Information</a>
-                            <!--  -->
+                            <a class="dropdown-item" href="{% url 'reviews:reviews' %}">Reviews</a>
                             <a class="dropdown-item" href="{% url 'home:contact' %}">Contact</a>
                             <div class="dropdown-divider"></div>
                         </div>
@@ -104,9 +104,9 @@
     </main>
 
      <!-- Footer -->
-     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-blue">infoinfo</p>
-        <p class="m-0 text-center text-blue">Follow us: <i class="fab fa-facebook-square ms-3"></i>
+     <footer id="foot" class="py-3 text-center dark-bg">
+        <p class="m-0 text-blue">infoinfo</p>
+        <p class="m-0  text-blue">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
             <i class="fab fa-youtube-square ms-3"></i></p>

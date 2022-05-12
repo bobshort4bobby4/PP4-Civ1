@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container col-sm-12  offset-md-3 col-md-6  offset-lg-4 col-lg-4">
+        <h1>Leave your review</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <span>Saving as {{user.username }}</span><span style="float:right;"><input type="submit" value="Save"></span>
+        </form>
+    </div>
+{% endblock %}

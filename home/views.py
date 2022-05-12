@@ -1,6 +1,7 @@
 
 from django.views.generic import  TemplateView
 from roombook.models import RoomType
+from reviews.models import Reviews
 
 
 # Create your views here.
@@ -11,7 +12,7 @@ class HomeView(TemplateView): # happpy
         context = super().get_context_data(**kwargs)
         context['room_types'] = RoomType.objects.all()
         # only showcase reviews which are approved
-        # context['reviews'] = Reviews.objects.filter(approved= True)
+        context['reviews'] = Reviews.objects.filter(featured= True)
         return context
 
 class InfoView(TemplateView):# happy
