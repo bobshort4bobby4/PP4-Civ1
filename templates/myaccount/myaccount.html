@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5" style="background-color:white;">
+  <div class="col-sm-12  offset-md-2 col-md-8  offset-lg-3 col-lg-6">
+    <div class="row flex-column">
+        <div>
+            <h2 class="text-center">Welcome!</h2>
+            <H2 class="text-center"> Your Bookings.</H2>
+        </div>
+        <table class="table bookingtable" >
+          <thead>
+            <tr>
+              <th scope="col">User</th>
+              <th scope="col">Room</th>
+              <th scope="col">Check-In</th>
+              <th scope="col">Check-Out</th>
+              <th scope="col">Extend</th>
+              <th scope="col">Cancel</th>
+            </tr>
+          </thead>
+          {% for booking in mybookings %}
+          <tbody>
+            <tr>
+              <th scope="row">{{ booking.user }}</th>
+              <td>{{ booking.room_number }}</td>
+              <td>{{ booking.check_in }}</td>
+              <td>{{ booking.check_out }}</td>
+              <td> <span><a href="{% url 'myaccount:extend' booking.id %}">Extend</a></span></td>
+              <td> <span><a href="{% url 'myaccount:cancel' booking.id %}">Cancel</a></span></td>
+            </tr>
+          {% empty %}
+            <div>
+                <h3 class="text-center">You currently have no bookings</h3>
+            </div>
+          {% endfor%}  
+          </tbody>
+        </table>
+    </div>
+    
+    
+    
+        
+  </div>
+        <p>User:    {{user.username}}</p>
+        <p>User Email:    {{ user.email }}</p>
+        <p><a href="{% url 'account_change_password' %}">change password</a></p>
+    </div> 
+</div>
+
+{% endblock%}

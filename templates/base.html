@@ -63,7 +63,9 @@
                         <li class="nav-item cus-nav-p">
                             <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                         </li>
-                        
+                        <li class="nav-item cus-nav-p">
+                            <a class="nav-link" href="{% url 'myaccount:myaccount' %} ">My Account</a>
+                        </li>
                         <li class="cus-nav-p">
                             <p class="nav-link float-right">Logged in as User: {{ request.user.username }}</p>
                         </li>
@@ -81,7 +83,22 @@
             </nav>  
         </div>            
     </header>
-
+    <!--------------------------------social-->
+    <div id="soclinks" class="mt-3 ">
+        
+            <footer class="text-white text-center mb-4 mb-lg-5">
+                
+                <p class="m-0 ">Follow us: <i class="fab fa-facebook-square ms-3"></i>
+                    <i class="fab fa-twitter-square ms-3"></i>
+                    <i class="fab fa-instagram-square ms-3"></i>
+                    <i class="fab fa-youtube-square ms-3"></i></p>
+            
+                </footer>
+            <!--footer-->
+            <!-- <footer id="foot" class="py-3 text-center dark-bg mt-3">
+                <p class="m-0 text-blue">infoinfo</p>
+            </footer> -->
+        </div>
     <!------------------------------------------Messages section------------------------------------------------->
     <div class="container">
         <div class="row">
@@ -104,21 +121,21 @@
         {% endblock content %}
     </main>
 
-    <div id="pagends">
-    <!--social-->
-        <footer class="text-white text-center mb-4 mb-lg-5">
+    <!-- <div id="pagends">
+    social-->
+        <!-- <footer class="text-white text-center mb-4 mb-lg-5">
             
             <p class="m-0 ">Follow us: <i class="fab fa-facebook-square ms-3"></i>
                 <i class="fab fa-twitter-square ms-3"></i>
                 <i class="fab fa-instagram-square ms-3"></i>
                 <i class="fab fa-youtube-square ms-3"></i></p>
         
-            </footer>
+            </footer> -->
         <!--footer-->
         <!-- <footer id="foot" class="py-3 text-center dark-bg mt-3">
             <p class="m-0 text-blue">infoinfo</p>
         </footer> -->
-    </div>
+    <!-- </div> --> -->
     <!-------------------------script for closing messages------------------>
     <script>
         setTimeout(function () {

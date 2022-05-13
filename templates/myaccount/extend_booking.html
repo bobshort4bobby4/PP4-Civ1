@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1  class="hotel-title container text-center col-sm-12  offset-md-3 col-md-6  offset-lg-0 col-lg-4" >The Flower Hotel</h1>
+<h3 class="hotel-title container text-center col-sm-12  offset-md-3 col-md-6  offset-lg-0 col-lg-4">Extend Your Stay</h3>
+<div class="row justify-content-center">
+<div class="container col-sm-12 mt-5 col-lg-4 offset-lg-4 p-4" style="background-color:aliceblue;">
+  
+       
+        <div class=" col-sm-12 col-md-8 offset-md-2 ">
+            <div class="d-flex justify-content-between"><span style="float:left;">User:</span><span style=""float:right;>{{bookid.user}}</span></div>
+            <div class="d-flex justify-content-between"><span>Room Number:</span><span>{{ bookid.room_number}}</span></div>
+            <div class="d-flex justify-content-between"><span>Check In:</span><span>{{ bookid.check_in}}</span></div>
+            <div class="d-flex justify-content-between"><span>Old Check Out:</span><span>{{ bookid.check_out}}</span></div>
+            <div class="mt-3 text-center">Enter new desired check out date </div>
+            <div>
+                <form  class="d-flex flex-column text-center " style="color:white; font-size:medium;" action="" method="POST">
+                    {% csrf_token %}
+                        <div class="field">
+                            <div class="control" style="color:black;">
+                                {{ form.new_check_out}}
+                            
+                            </div>
+                            <!--form error messages------------------>
+                        
+                            {% for error in form.check_out.errors %}
+                                <p class="help is-danger">{{ error|safe }} </p>
+                            {% endfor %}
+                            
+                            <!--end of form error messages------------->
+                        </div>
+                        <div class="text-center m-auto" >
+                            <button type="submit" style="display:block;">Extend </button>
+                        </div>
+                    
+                </form>
+            </div>
+        
+            <!-- <h1 style="color:red;">testtestets{{booking.id}}{{booking.user}}{{booking.check_in}} {{booking.check_out}}</h1> -->
+        </div>
+    </div>
+</div>       
+{% endblock %}

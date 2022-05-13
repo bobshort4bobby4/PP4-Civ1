@@ -105,7 +105,7 @@ body {
     margin-top:5px;
     padding:10px;
 }
-
+/* styles for embedded map */
 .map-responsive{
     overflow:hidden;
     padding-bottom:25%;
@@ -130,6 +130,18 @@ body {
     font-size:0.8rem;
 }
 
+/*  styles for booking list table*/
+
+.bookingtable {
+    font-size: calc(0.3rem *1.8);
+}
+
+#soclinks  p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 
 /*----media queries-------------------*/  
 
@@ -140,18 +152,30 @@ body {
     
 }
 
+@media screen and (min-width:425px) {
+    .bookingtable {
+        font-size: calc(0.3rem *2.4);
+    }
+
+
+#caro {
+    min-height:180px ;
+    }
+}
+
+
 @media screen and (min-width:768px) {
 .step-links {
     font-size:1.5rem;
     }
-}
 
 
-@media screen and (min-width:426px) {
-    #caro {
-    min-height:180px ;
-    }
+.bookingtable {
+    font-size: calc(0.3rem *3);
 }
+
+}
+   
 
 @media screen and (min-height:920px) {
 
@@ -167,4 +191,10 @@ body {
     
 }  
 
+}
+@media screen and (min-width:1024px) {
+    .bookingtable {
+        font-size: calc(0.3rem *3.2);
+    }
+    
 }
