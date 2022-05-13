@@ -1,5 +1,6 @@
 from django import forms
 from roombook.models import Booking
+from reviews.models import Reviews
 
 
 
@@ -18,4 +19,4 @@ class CancelConfirmForm(forms.Form):
     class Meta:
         fields = ['user', 'room_number', 'check_in', 'check_out']
 
-           
+

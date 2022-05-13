@@ -88,6 +88,7 @@ INSTALLED_APPS = [
     'home',
     'roombook',
     'reviews',
+    'myaccount',
 ]
 
 MIDDLEWARE = [

@@ -5,7 +5,7 @@ from .models import Reviews
 class ReviewsAdmin(admin.ModelAdmin):
      list_display = ('user', 'text', 'created_on', 'approved', 'featured')
      list_filter = ('user',)
-     actions = ['set_approved_to_true', 'set_is_active_to_true', 'set_all_attributes_to_true']
+     actions = ['set_approved_to_true', 'set_featured_to_true', 'set_all_attributes_to_true']
 
      def set_approved_to_true(self, request, queryset):
           queryset.update(approved = True)

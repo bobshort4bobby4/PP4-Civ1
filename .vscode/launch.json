@@ -9,6 +9,25 @@
             "request": "launch",
             "program": "${file}",
             "console": "internalConsole"
-        }
+        },
+
+        {
+
+          "name": "roombook",
+          "type": "python",
+          "request": "launch",
+          "program": "manage.py",
+          "console": "internalConsole",
+          "args": ["runserver"]
+          },
+
+          {
+            "name": "Django TEST",
+            "type": "python",
+            "request": "launch",
+            "program": "manage.py",
+            "args": ["test"],
+            "django": true
+            },
   ]
 }
