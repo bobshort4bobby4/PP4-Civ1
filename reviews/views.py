@@ -14,7 +14,7 @@ class ReviewView(ListView): # happy
     paginate_by = 5
 
 
-    # display all review which are active
+    # display all review which are approved
     def get_queryset(self):
         return Reviews.objects.filter(
             approved=True)

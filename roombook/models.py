@@ -1,7 +1,26 @@
 from django.db import models
 from django.conf import settings
+from datetime import datetime, date
 
 
+class MarkOutDatedAsInactive(models.Manager):
+    """ 
+    determines if the booking is past-tense and changes the is_active field to false if so
+    """
+
+    def set_inactive(self,bookings):
+        today = date.today()
+
+        for booking in bookings:
+            if booking.check_out < today:
+                booking.is_active = False
+                booking.save()
+        return bookings
+
+    def all(self):
+        bookings = super().all() 
+        bookings = self.set_inactive(bookings)
+        return bookings
 
 class RoomType(models.Model):
     Room_Types = (
@@ -35,6 +54,8 @@ class Booking(models.Model):
     check_in = models.DateField(null=True)
     check_out = models.DateField(null=True)
     is_active = models.BooleanField(default= True)
+
+    objects = MarkOutDatedAsInactive()
 
 
     def __str__(self):
