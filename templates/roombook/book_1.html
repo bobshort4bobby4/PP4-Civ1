@@ -2,13 +2,13 @@
 {%load crispy_forms_tags %}
 
 {% block content %}
-    <div class="container d-flex flex-column align-items-center" style="color:white;">
+    <div class="container d-flex flex-column align-items-center text-white mt-lg-5 p-5" style="background-color: rgba(0,0,0,0.5);">
         <h1 class="text-center">Check Availability for a {{type}} Room</h1>
         <h2>{{ desc.description }}</h2>
         <form  class="d-flex flex-column " style="color:white; font-size:medium;" action="" method="POST">
             {{ form.as_p }}
             {% csrf_token %}
-            <button type="submit">CHECK AVAILABILITY </button>
+            <button class="buttonsty" type="submit" aria-label="check availability for given dates">CHECK AVAILABILITY </button>
         </form>
 </div>
 {% endblock %}

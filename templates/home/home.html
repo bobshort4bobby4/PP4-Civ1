@@ -16,10 +16,10 @@
             <div class="col-sm-12  offset-md-3 col-md-6  offset-lg-0 col-lg-4">
                 <div class="accomodation_item text-center">
                     <div class="hotel_img">
-                        <img class="roompic" src="{{ i.image_url }}" alt="roompicture">
+                        <img class="roompic" src="{{ i.image_url }}" alt="roompicture of an {{i.type}} room">
                         <h4 class="roomtype check1">{{ i.type }}</h4></a>
                         <h5 class="roomtype check2">€{{ i.price}}/night</h5>
-                        <a href="roombook/book_1/{{i.type}}" class="btn mt-4 check">Check Availability</a>
+                        <a aria-label="check availability for a {{i.type}} room" href="roombook/book_1/{{i.type}}" class="btn mt-4 check">Check Availability</a>
                     </div>
                     
                 </div>

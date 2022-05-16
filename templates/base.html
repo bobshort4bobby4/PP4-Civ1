@@ -51,30 +51,30 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              Home
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{% url 'home:home' %}">Home</a>
-                            <a class="dropdown-item" href="{% url 'home:info' %}">Information</a>
-                            <a class="dropdown-item" href="{% url 'reviews:reviews' %}">Reviews</a>
-                            <a class="dropdown-item" href="{% url 'home:contact' %}">Contact</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" aria-label="dropdowm menu">
+                            <a class="dropdown-item" href="{% url 'home:home' %}" aria-label="dropdowm menu home page">Home</a>
+                            <a class="dropdown-item" href="{% url 'home:info' %}" aria-label="dropdowm menu" informaion page>Information</a>
+                            <a class="dropdown-item" href="{% url 'reviews:reviews' %}" aria-label="dropdowm menu review page" reviews>Reviews</a>
+                            <a class="dropdown-item" href="{% url 'home:contact' %}" aria-label="dropdowm menu contact page">Contact</a>
                             <div class="dropdown-divider"></div>
                         </div>
                     </li>
                     {% if user.is_authenticated %}
                         <li class="nav-item cus-nav-p">
-                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                            <a class="nav-link" href="{% url 'account_logout' %}" aria-label="logout button">Logout</a>
                         </li>
                         <li class="nav-item cus-nav-p">
-                            <a class="nav-link" href="{% url 'myaccount:myaccount' %} ">My Account</a>
+                            <a class="nav-link" href="{% url 'myaccount:myaccount' %} " aria-label="myaccount button">My Account</a>
                         </li>
                         <li class="cus-nav-p">
-                            <p class="nav-link float-right">Logged in as User: {{ request.user.username }}</p>
+                            <p class="nav-link float-right" aria-label="logged in as ">Logged in as User: {{ request.user.username }}</p>
                         </li>
                     {% else %}
                         <li class="nav-link cus-nav-p">
-                            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                            <a class="nav-link" href="{% url 'account_login' %}" aria-label="log in button">Login</a>
                         </li>
                         <li class="nav-link cus-nav-p">
-                            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                            <a class="nav-link" href="{% url 'account_signup' %}" aria-label="sign up button">Register</a>
                         </li>
                     {% endif%}
                       
@@ -83,24 +83,9 @@
             </nav>  
         </div>            
     </header>
-    <!--------------------------------social-->
-    <div id="soclinks" class="mt-3 ">
-        
-            <footer class="text-white text-center mb-4 mb-lg-5">
-                
-                <p class="m-0 ">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-                    <i class="fab fa-twitter-square ms-3"></i>
-                    <i class="fab fa-instagram-square ms-3"></i>
-                    <i class="fab fa-youtube-square ms-3"></i></p>
-            
-                </footer>
-            <!--footer-->
-            <!-- <footer id="foot" class="py-3 text-center dark-bg mt-3">
-                <p class="m-0 text-blue">infoinfo</p>
-            </footer> -->
-        </div>
-    <!------------------------------------------Messages section------------------------------------------------->
-    <div class="container">
+
+     <!------------------------------------------Messages section------------------------------------------------->
+     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 {% for message in messages %}
@@ -113,6 +98,20 @@
         </div>
     </div>
 
+    <!--------------------------------social-->
+    <div id="soclinks" class="mt-3 ">
+        
+            <div class="text-white text-center mb-4 mb-lg-5">
+                
+                <p class=""><span >Follow us:</span>     
+                    <a href="https://facebook.com" target="_blank" aria-label="link to our facebook page (opens in new tab)"><i class="fab socicon fa-facebook-square ms-3"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="link to our twitter page (opens in new tab)"><i class="fab socicon fa-twitter-square ms-3"></i></a>
+                    <a  href="https://instagram.com" target="_blank" aria-label="link to our instagram page (opens in new tab)"><i class="fab socicon fa-instagram-square ms-3"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="link to our youtube page (opens in new tab)"><i class="fab socicon fa-youtube-square ms-3"></i></p></a>
+            
+                </div>
+            
+   
         <!-------------------------------------Block section--------------------------------------->
     <main class="flex-shrink-0 main-bg">
         {% block content %}
@@ -121,21 +120,7 @@
         {% endblock content %}
     </main>
 
-    <!-- <div id="pagends">
-    social-->
-        <!-- <footer class="text-white text-center mb-4 mb-lg-5">
-            
-            <p class="m-0 ">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-                <i class="fab fa-twitter-square ms-3"></i>
-                <i class="fab fa-instagram-square ms-3"></i>
-                <i class="fab fa-youtube-square ms-3"></i></p>
-        
-            </footer> -->
-        <!--footer-->
-        <!-- <footer id="foot" class="py-3 text-center dark-bg mt-3">
-            <p class="m-0 text-blue">infoinfo</p>
-        </footer> -->
-    <!-- </div> --> -->
+    
     <!-------------------------script for closing messages------------------>
     <script>
         setTimeout(function () {

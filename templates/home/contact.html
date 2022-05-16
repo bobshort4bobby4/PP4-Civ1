@@ -5,30 +5,35 @@
 
 
 {% block content%}
-    <div class="container text-center">
-        <h1  class="hotel-title container text-center" >The Flower Hotel</h1>
+    <div class="container col-sm-12 text-center">
+        <div style="background-color:rgba(0,0,0,0.5);">
+            <section>
+                <h1  class="hotel-title container text-center" >The Flower Hotel</h1>
 
-        <h3 class="paratext">
-            We can be contacted by telephone on +454 45 1234567, by email at flowerhotel@madeupemail.net
-            or you can use the form below. 
-        </h3>
-        <h3 class="paratext"> We will be happy to help you what ever way we can to plan a great holiday for you and your family.</h3>
+                <h3 class="paratext">
+                    We can be contacted by telephone on +454 45 1234567, by email at flowerhotel@email.com
+                    or you can use the form below. 
+                </h3>
+                <h3 class="paratext"> We will be happy to help you what ever way we can to plan a great holiday for you and your family.</h3>
+            
+                <h3 class="paratext">Please use the form below to contact us if we can help you in any way possible.</h3>
+            </section>
+            <section class="text-white mb-4 container">
+
+                <!--Section heading-->
+                <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+                <!--Section description-->
+                <p class="text-center w-responsive mx-auto mb-5">Do you have any questions?
+                     Please do not hesitate to contact us directly. Our team will come back to you within
+                    a matter of hours to help you.</p>
+            </section>
+            
        
-        <h3 class="paratext">Please use the form below to contact us if we can help you in any way possible.</h3>
-
-        <div class="text-white mb-4 container">
-
-            <!--Section heading-->
-            <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
-            <!--Section description-->
-            <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-                a matter of hours to help you.</p>
-    
-            <div class="row">
+            <section class="row">
     
                 <!--Grid column-->
-                <div class="col-md-9 mb-md-0 mb-5">
-                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                <div class="col-md-9 mb-md-0 mb-5 text-white">
+                    <form id="contact-form" name="contact-form" action="" method="POST">
     
                         <!--Grid row-->
                         <div class="row">
@@ -43,7 +48,7 @@
                             <!--Grid column-->
     
                             <!--Grid column-->
-                            <div class="col-md-6">
+                            <div class="col-md-6 text-white">
                                 <div class="md-form mb-0">
                                     <input type="text" id="email" name="email" class="form-control">
                                     <label for="email" class="">Your email</label>
@@ -83,14 +88,14 @@
                     </form>
     
                     <div class="text-center text-md-left">
-                        <a class="btn btn-primary" href="{% url 'home:sent' %}">Send</a>
+                        <a class="btn btn-primary" href="{% url 'home:sent' %}" aria-label="send contact request button">Send</a>
                     </div>
                     <div class="status"></div>
                 </div>
                 <!--Grid column-->
     
                 <!--Grid column-->
-                <div class="col-md-3 text-center">
+                <div class="col-md-3 text-center text-white">
                     <ul class="list-unstyled mb-0">
                         <li><i class="fas fa-map-marker-alt fa-2x"></i>
                             <p>Sunny place, Europe</p>
@@ -101,19 +106,17 @@
                         </li>
     
                         <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                            <p>flowerhotel@madeupemail@email.com</p>
+                            <p>flowerhotel@email.com</p>
                         </li>
                     </ul>
                 </div>
                 <!--Grid column-->
     
-            </div>
-    
+            </section>
         </div>
+    
+        
     </div>
 
-    <!--Section: Contact v.2-->
     
-    <!--Section: Contact v.2-->
-
 {% endblock%}

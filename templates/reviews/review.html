@@ -9,7 +9,7 @@
 </div>
 
 
-<div class="container p-2 text-center" >
+<section class="container p-2 text-center" aria-label="list of reviews">
 
     {% for review in hotel_reviews%}
     <div style="border:2px solid black; background-color:beige;" class="mt-3 mb-3 p-2">
@@ -24,8 +24,8 @@
     <div class="pagination justify-content-between">
         <span class="step-links text-white">
             {% if page_obj.has_previous %}
-                <a class="text-white" href="?page=1">&laquo; first</a>
-                <a class="text-white" href="?page={{ page_obj.previous_page_number }}">previous</a>
+                <a class="text-white" href="?page=1" aria-label="first page of reviews">&laquo; first </a>
+                <a class="text-white" href="?page={{ page_obj.previous_page_number }}" aria-label="previous page of reviews">previous</a>
             {% endif %}
     
             <span class="current text-white">
@@ -33,11 +33,11 @@
             </span>
     
             {% if page_obj.has_next %}
-                <a class="text-white" href="?page={{ page_obj.next_page_number }}">next</a>
-                <a class="text-white" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                <a class="text-white" href="?page={{ page_obj.next_page_number }}" aria-label="next page of reviews">next</a>
+                <a class="text-white" href="?page={{ page_obj.paginator.num_pages }}" aria-label="last page of reviews">last &raquo;</a>
             {% endif %}
         </span>
-        <span style="color:red;"><a class="btn" href="{% url 'reviews:create_review' %}" style="background-color:aqua;">Leave a Review</a></span>
+        <span style="color:red;"><a class="btn" href="{% url 'reviews:create_review' %}" style="background-color:aqua;" aria-label="leave a review button">Leave a Review</a></span>
     </div>
-</div>
+</section>
 {% endblock %}

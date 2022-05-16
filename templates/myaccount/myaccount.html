@@ -26,8 +26,8 @@
               <td>{{ booking.room_number }}</td>
               <td>{{ booking.check_in }}</td>
               <td>{{ booking.check_out }}</td>
-              <td> <span><a href="{% url 'myaccount:extend' booking.id %}">Extend</a></span></td>
-              <td> <span><a href="{% url 'myaccount:cancel' booking.id %}">Cancel</a></span></td>
+              <td> <span><a href="{% url 'myaccount:extend' booking.id %}" aria-label="extend your booking link">Extend</a></span></td>
+              <td> <span><a href="{% url 'myaccount:cancel' booking.id %}" aria-label="cancel a booking link">Cancel</a></span></td>
             </tr>
           {% empty %}
             <div>
@@ -44,7 +44,7 @@
   </div>
         <p>User:    {{user.username}}</p>
         <p>User Email:    {{ user.email }}</p>
-        <p><a href="{% url 'account_change_password' %}">change password</a></p>
+        <p><a href="{% url 'account_change_password' %}" aria-label="change your password">change password</a></p>
     </div> 
 </div>
 
