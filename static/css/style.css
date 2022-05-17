@@ -102,13 +102,17 @@
 
 .hotel-title {
     width:35%;
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.5);
     color:white;
     margin:auto;
     margin-top:10px;
     padding:10px;
     font-size:2rem
    
+}
+
+.dark {
+    background-color: rgba(0,0,0,0.5);
 }
 
 .paratext {
