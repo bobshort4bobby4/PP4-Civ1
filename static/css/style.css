@@ -30,8 +30,13 @@ body {
     position: relative;
     margin-bottom: 10px;
     overflow: hidden;
-    border-radius: 10px;
+    
    
+}
+
+.hotel_img img {
+    border-radius: 6%;
+    border:1px solid black;
 }
 
 .book-btn {
