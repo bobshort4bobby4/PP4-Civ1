@@ -34,13 +34,13 @@
     
     <title>Home{% block title%}{% endblock title %}</title>
 </head>
-<body class="d-flex flex-column  main-bg" >
+<body class="d-flex flex-column  main-bg" style="background: url('/media/backgrd-dark.png') no-repeat center center fixed; background-size: cover;">
     <div class="">
     <!------------------------------------------navbar section---------------------------------------------------->
     <header>
         <div class="container" style=" padding:0px !important;">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="{% url 'home:home' %}"><img class="brand"  src="/media/flowernewheader.png" alt=""></a>
+                <a class="navbar-brand" href="{% url 'home:home' %}"><img class="brand"  src="/media/flowernewheader.png" alt="hotel logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>

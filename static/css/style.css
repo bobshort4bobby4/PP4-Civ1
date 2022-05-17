@@ -13,12 +13,12 @@
     margin:0;
 }
 
-body {
+/* body {
     background: url('/media/backgrd-dark.png') no-repeat center center fixed;
     background-size: cover;
     
    
-}
+} */
 
 .roomcard {
     background-color: darksalmon;
