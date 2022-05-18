@@ -136,11 +136,13 @@ body {
 .dark {
     /* background-color: rgba(0,0,0,0.1);  */
     color:burlywood; 
+    filter:brightness(115%);
 }
 
 .darker {
     background-color: rgba(0,0,0,0.1);  
     color:burlywood; 
+    filter:brightness(115%);
 }
 
 .paratext {
