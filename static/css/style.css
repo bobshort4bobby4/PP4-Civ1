@@ -56,7 +56,7 @@ body {
 }
 
 .hotel_img a {
-    background-color: #21c7f3;
+    background-color: #df9e3e;
 }
 
 .roompic {
@@ -94,6 +94,9 @@ body {
     margin: auto;
 
 }
+.flash-color {
+    color:#eb420c
+}
 
 .navbg {
     background-color:#21c7f3;
@@ -101,7 +104,8 @@ body {
 }
 
 .buttonsty {
-    background-color:#21c7f3;
+    /* background-color:#21c7f3; */
+    background-color:#df9e3e;
     margin-top: 5px;
     border:2px solid black;
     padding:2px;
@@ -131,6 +135,11 @@ body {
 
 .dark {
     /* background-color: rgba(0,0,0,0.1);  */
+    color:burlywood; 
+}
+
+.darker {
+    background-color: rgba(0,0,0,0.1);  
     color:burlywood; 
 }
 
@@ -172,7 +181,8 @@ body {
 
 .review-display {
     border-style:inset;
-    background-color: beige;
+    /* background-color: beige; */
+    background-color:#3e261d;
     border:5px solid burlywood;
 }
 
