@@ -43,7 +43,7 @@
     <!------------------------------------------navbar section---------------------------------------------------->
     <header>
         <div class="container" style=" padding:0px !important;">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color:aliceblue; color:black;">
                 <a class="navbar-brand" href="{% url 'home:home' %}"><img class="brand"  src="https://res.cloudinary.com/dpudxnll7/image/upload/v1652783737/media/flowernewheader_eohbd5.png" alt="hotel logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -52,11 +52,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown" style="padding:0.5rem 1rem;">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="{% url 'home:home' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              Home
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" aria-label="dropdowm menu">
-                            <a class="dropdown-item" href="{% url 'home:home' %}" aria-label="dropdowm menu home page">Home</a>
+                            <!-- <a class="dropdown-item" href="{% url 'home:home' %}" aria-label="dropdowm menu home page">Home</a> -->
                             <a class="dropdown-item" href="{% url 'home:info' %}" aria-label="dropdowm menu" informaion page>Information</a>
                             <a class="dropdown-item" href="{% url 'reviews:reviews' %}" aria-label="dropdowm menu review page" reviews>Reviews</a>
                             <a class="dropdown-item" href="{% url 'home:contact' %}" aria-label="dropdowm menu contact page">Contact</a>
@@ -71,7 +71,7 @@
                             <a class="nav-link" href="{% url 'myaccount:myaccount' %} " aria-label="myaccount button">My Account</a>
                         </li>
                         <li class="cus-nav-p">
-                            <p class="nav-link float-right" aria-label="logged in as ">Logged in as User: {{ request.user.username }}</p>
+                            <p class="nav-link float-right text-black" aria-label="logged in as ">Logged in as User: {{ request.user.username }}</p>
                         </li>
                     {% else %}
                         <li class="nav-link cus-nav-p">

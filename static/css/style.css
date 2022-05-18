@@ -20,6 +20,10 @@ body {
    
 }
 
+a {
+    color:black !important;
+}
+
 .roomcard {
     background-color: darksalmon;
     margin:15px;
@@ -139,10 +143,21 @@ body {
     filter:brightness(115%);
 }
 
+.darkanchor {
+    color:burlywood !important; 
+    filter:brightness(115%);
+}
+
 .darker {
     background-color: rgba(0,0,0,0.1);  
     color:burlywood; 
     filter:brightness(115%);
+}
+
+.bookingtable {
+    background:white;
+    border:5px solid burlywood;
+    border-style:inset;
 }
 
 .paratext {
@@ -218,6 +233,28 @@ body {
     background-color: beige;
 }
 
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+
 /*----media queries-------------------*/   
 @media screen and (min-width:320px){
     .form-wrapper textarea {
@@ -279,7 +316,7 @@ body {
 }
 @media screen and (min-width:1024px) {
     .bookingtable {
-        font-size: calc(0.3rem *3.2);
+        font-size: calc(0.3rem *3.8);
     }
 
     .home-review-panel {

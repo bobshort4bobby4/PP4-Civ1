@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container mt-5" style="background-color:white;">
-  <div class="col-sm-12  offset-md-2 col-md-8  offset-lg-3 col-lg-6">
+<div class="container mt-5 bookingtable" >
+  <div class="col-sm-12  offset-md-2 col-md-8  offset-lg-3 col-lg-6 p-1">
     <div class="row flex-column">
         <div>
-            <h2 class="text-center">Welcome!</h2>
-            <H2 class="text-center"> Your Bookings.</H2>
+            <h2 class="text-center" style="color:#a1661a">Welcome!</h2>
+            <H2 class="text-center" style="color:#a1661a"> Your Bookings.</H2>
         </div>
-        <table class="table bookingtable" >
+        <table class="table " >
           <thead>
             <tr>
               <th scope="col">User</th>
@@ -26,8 +26,8 @@
               <td>{{ booking.room_number }}</td>
               <td>{{ booking.check_in }}</td>
               <td>{{ booking.check_out }}</td>
-              <td> <span><a href="{% url 'myaccount:extend' booking.id %}" aria-label="extend your booking link">Extend</a></span></td>
-              <td> <span><a href="{% url 'myaccount:cancel' booking.id %}" aria-label="cancel a booking link">Cancel</a></span></td>
+              <td> <span><a href="{% url 'myaccount:extend' booking.id %}" aria-label="extend your booking link"><u >Extend</u></a></span></td>
+              <td> <span><a href="{% url 'myaccount:cancel' booking.id %}" aria-label="cancel a booking link"><u >Cancel</u></a></span></td>
             </tr>
           {% empty %}
             <div>
@@ -42,9 +42,9 @@
     
         
   </div>
-        <p>User:    {{user.username}}</p>
-        <p>User Email:    {{ user.email }}</p>
-        <p><a href="{% url 'account_change_password' %}" aria-label="change your password">change password</a></p>
+        <h4 style="color:#a1661a" class="text-center">User:    {{user.username}}</h4>
+        <h4 style="color:#a1661a" class="text-center mb-1">User Email:    {{ user.email }}</h4>
+        <p class="mb-2"><a href="{% url 'account_change_password' %}" aria-label="change your password"><u>change password</u></a></p>
     </div> 
 </div>
 
