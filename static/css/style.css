@@ -13,12 +13,12 @@
     margin:0;
 }
 
-/* body {
-    background: url('/media/backgrd-dark.png') no-repeat center center fixed;
+body {
+    background: url('https://res.cloudinary.com/dpudxnll7/image/upload/v1652823794/media/backgrd-80dark_ov6duw.jpg') no-repeat center center fixed;
     background-size: cover;
     
    
-} */
+}
 
 .roomcard {
     background-color: darksalmon;
@@ -34,6 +34,15 @@
    
 }
 
+.socicon {
+    color:burlywood;
+    font-size: 2rem;
+}
+
+.socicon-label {
+    font-size:2rem;
+}
+
 .hotel_img img {
     border-radius: 6%;
     border:1px solid black;
@@ -41,6 +50,9 @@
 
 .book-btn {
     background-color: #21c7f3;
+    border:1px solid black;
+    padding:2px;
+    border-radius:10%;
 }
 
 .hotel_img a {
@@ -102,8 +114,8 @@
 
 .hotel-title {
     width:35%;
-    background-color: rgba(0,0,0,0.5);
-    color:white;
+    /* background-color: rgba(0,0,0,0.3);*/
+    color:black;
     margin:auto;
     margin-top:10px;
     padding:10px;
@@ -111,13 +123,18 @@
    
 }
 
+.home-review-panel{
+    color:black;
+    font-size:1.1rem;
+}
+
+
 .dark {
-    background-color: rgba(0,0,0,0.5);
+    /* background-color: rgba(0,0,0,0.1);  */
+    color:burlywood; 
 }
 
 .paratext {
-    background-color: transparent;
-    color:white;
     margin:auto;
     margin-top:5px;
     padding:10px;
@@ -141,10 +158,31 @@
 #caro {
     background-color: beige;
     min-height:240px;
+    border:5px solid burlywood;
+    border-style: inset;
+}
+
+.carousel-item {
+    transition-duration: 1.2s 1.2s !important;
 }
 
 .step-links {
     font-size:0.8rem;
+}
+
+.review-display {
+    border-style:inset;
+    background-color: beige;
+    border:5px solid burlywood;
+}
+
+.form-wrapper textarea {
+    border-style:inset;
+    background-color: beige;
+    border:5px solid burlywood;
+    padding:5px;
+    margin:5px;
+
 }
 
 /*  styles for booking list table*/
@@ -160,12 +198,26 @@
 }
 
 
-/*----media queries-------------------*/  
+#contact-form input {
+    background-color: beige;
+}
 
+#contact-form textarea {
+    background-color: beige;
+}
+
+/*----media queries-------------------*/   
+@media screen and (min-width:320px){
+    .form-wrapper textarea {
+        width:290px;
+    }
+}
 @media screen and (min-width:375px) {
     .step-links {
         font-size:1rem;
     }
+
+    
     
 }
 
@@ -216,6 +268,10 @@
 @media screen and (min-width:1024px) {
     .bookingtable {
         font-size: calc(0.3rem *3.2);
+    }
+
+    .home-review-panel {
+        font-size:1.4rem;
     }
     
 }
