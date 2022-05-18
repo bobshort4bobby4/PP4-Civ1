@@ -12,11 +12,12 @@
             <div class="d-flex justify-content-between"><span>Room Number:</span><span>{{ bookid.room_number}}</span></div>
             <div class="d-flex justify-content-between"><span>Check In:</span><span>{{ bookid.check_in}}</span></div>
             <div class="d-flex justify-content-between"><span>Old Check Out:</span><span>{{ bookid.check_out}}</span></div>
-            <div  class="mt-3 text-center"><span id="fielddesc">Enter new desired check out date</span></div>
+            <div  class="mt-3 text-center"><span>Enter new desired check out date</span></div>
             <div>
                 <form  class="d-flex flex-column text-center " style="color:white; font-size:medium;" action="" method="POST">
                     {% csrf_token %}
                         <div class="field">
+                            <span style="display:none" id="fielddesc"> new check out date</span>
                             <div class="control" style="color:black;" aria-labelledby="fielddesc">
                                 <!-- <p style="display:none;" aria-labelledby=""> {{ form.new_check_out.label}}</p>  -->
                                 {{ form.new_check_out}}
