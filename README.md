@@ -140,6 +140,95 @@ The AGIILE methodology for project development will be used to produce this proj
 
 
 
+  
+# Deployment and Version Control
+<details>  
+            
+<summary>Deployment</summary>    
+  
+  
+ ### Version Control
+  
+  Git is an open source version control system and was used for this project. Github was used to store the repository.   
+  Git is run locally whereas Github is cloud based.
+  
+  ###### Forking
+  Forking a Github repository is the process of making a copy of any repository that you can use without affecting the original, this original is known as the 
+  "upstream repository".
+  The process for forking a repository is set out below.
+  1. Go to the Github page that hosts the repository you wish to fork.
+  1. On the top-right of the page there is a button "Fork".
+  1. Click this button.
+  1. This creates a repository in your Github home page which is a copy of the original. You can submit and receive changes to the code by using pull requests 
+  and/or syncing with the upstream repository.
+    
+  (Taken from the Github Docs guide "Forking Projects")
+    
+###### Cloning 
+  Cloning a repository involves making a full copy of that repository on your local machine. This makes working on the code easier.  Changes can be pushed back up to the 
+  GitHub site or changes from other sources pulled to your local copy. To make a clone follow the process below.
+  1. Goto the repository page on GitHub.
+  1. Above the file list click on the green button titled "Code".
+  1. You can choose to download a zip file of the repository, unpack it on your local machine and open it in your IDE or,
+  1. Clone using HTTPS by copying the URL under the HTTPS tab.
+  1. Open a terminal window, set current directory to the one you want to contain the clone.
+  1. Type `git clone `and paste the URL copied from the GitHub page.
+  1. The repository clone will be created on your machine.
+    
+  (Taken from the Github Docs guide "Cloning a repository")
+  
+  ### Deployment
+  
+  ### Heroku
+
+Heroku is a cloud based platform that allows the user to deploy and manage apps easily. The completed version of this project was deployed using Heroku.   
+Heroku is fully managed meaning that all the hardware/server issues are taken care of.
+It  previously allowed the linking of github repositories which made deploying easier but following a security issue this is not possible currently.
+Projects must now be deployed through the heroku app via the terminal command line.  
+  
+To deploy my project I followed the steps below.
+  
+  - login to Heroku:  
+  `heroku login -i`  
+  - check the apps name on heroku  
+  `heroku apps`  
+  - link the gitpod workspace with the app  
+  `heroku git:remote -a pp4-civ1`  
+  - use git commands to update repository  
+  `git add .`  `git commit -m "commit message"`  
+  - push to github  
+  `git push origin main`  
+  - push to heroku  
+  `git push heroku main`  
+  
+  
+  This process did not work seamlessly for me, below I list some the problems I encountered whilst trying to deployment the project.
+  
+  Because I had not created a runtime.txt file in my root, which specifies which  version of python I was using the build failed.
+  [link to information on this issue](https://devcenter.heroku.com/articles/python-runtimes)  
+  creating the said file with the contents `python-3.8.10 ` fixed this problem.
+  
+  I then got the H14  heroku error which indicates no web dynos are running, the documentation suggests that using the scale command should fix this  
+  `heroku ps:scale web=1`, this did not work in my case and after further investigation I discovered my Procfile was  
+  `web:gunicorn hotelapp.wsgi`   when it needed to be `web: gunicorn hotelapp.wsgi` note extra space after colon.  
+  
+  I had several more issues serving the static and media files due to having incorrect settings in the settings.py file of the django project.  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+
+  
+  
+  
+ </details>
 
 
 
