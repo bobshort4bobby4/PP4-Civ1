@@ -5,10 +5,10 @@
 
 The deployed site can be found [here](https://pp4.herokuapp.com/)
 
-Github repository can be accessed [here](https://github.com/bobshort4bobby4/PP4-Civ1
+Github repository can be accessed [here](https://github.com/bobshort4bobby4/PP4-Civ1)
 
 
-MOCKUP TOGO HERE
+![mockup of website](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/mockup-pp4.png)
 
 
 
