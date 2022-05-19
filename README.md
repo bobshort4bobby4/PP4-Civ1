@@ -153,25 +153,25 @@ The AGIILE methodology for project development will be used to produce this proj
   All social links open to a new tab.  
   A carousel of featured reviews is placed on the lower part of the screen.  
     
-  ![image of home screen]()
+  ![image of home screen](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/home-pp4.png)
   
     
   ### Information Page
   The information page is accessed from the drop down menu from the nav-bar.  
   It contains a brief paragraph of general information on our imaginery hotel and an embedded google map showing it's supposed location.  
     
-  ![image of the information page]()
+  ![image of the information page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/infopage-pp4.png)
   
   ### Reviews Page
   The Reviews page displays all approved reviews in groups of 5 per page, the page uses django's ListView's built-in pagination feature to handle this.  
   This page is accessed from the drop down menu in the nav-bar.  
   There is a button to enable logged in users to leave a review, any logged out user is shown an alert and redirected to the home page if they try to submit a review.    
-  ![image of review page]()
+  ![image of review page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/reviewpage-pp4.png)
     
   ### Create Review Page
   A simple page containing a text area for users to input their review, the form validates for content, on submitting the user is alerted with a thank you message and redirected to the home page.  The reviews will not be displayed untill approved via the admin panel, only reviews set to featured = true will be displayed on the home page slider.
     
-  ![image of the create review page.]()  
+  ![image of the create review page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/createreview-pp4.png)  
     
   ### Contact Page
   maybe not include  
@@ -181,30 +181,30 @@ The AGIILE methodology for project development will be used to produce this proj
   The form validates the inputted dates for format and correctness.  
   The 'Check Availability' button directs the user to either the booking procedure if there is a room free or to the home page with an informative message if not.  
     
-  ![image of the check availability page]()  
+  ![image of the check availability page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/checkavail-pp4.png)  
     
   ### Book Page
   The book page displays the details of the booking and a button to confirm the booking.  If the occupancy rate for that period is below 50% a banner is displayed showing a 10% discount on the booking price. Please see note on how this was calculated in testing section.  
   On booking the user is thanked, the details shown again and re-directed to the home page.
     
-  ![image of the booking screen]()  
+  ![image of the booking screen](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/bookpage-pp4.png)  
     
   ### MyAccount Page
   
   Available only to logged in users this page lists that customers bookings as well as the option to extend the stay if available, cancel the booking if enough notice(7 days) and an option to change password.  
     
-  ![image of the my account page]()  
+  ![image of the my account page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/myaccountscreen-pp4.png)  
     
   ### Extend Booking Page
   
   Page used to extend the check-out date for the room if free. It displays the details of the booking and a form field to enter the new desired checkout date.  The form data is validated  and the booking is altered if possible, the user is shown a message and redirected to the myaccount page if data is invalid.  
     
-  ![image of extend booking page]()  
+  ![image of extend booking page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/extendbookingpage-pp4.png)  
     
   ### Cancel Booking Page 
   This page will be used to cancel the booking (details are displayed ) if there is enough notice. If there is not a message is displayed, if there is the booking is deleted from the database and action confirmed to user via an alert. 
     
-  ![image of the cancel booking page]()
+  ![image of the cancel booking page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/cancelbookingpage-pp4.png)
     
   ### User Authentification
   All user authentification functions are implemented using the django all-auth package.  The templates are customisied to match the style of website.  
@@ -215,7 +215,7 @@ The AGIILE methodology for project development will be used to produce this proj
   ##### Occupancy Rate in roomtype 
   I added two columns in the roomtype relation display which show the ocupancy rate for each room type over 14 and 30 days.  
     
-  ![image of occupancy rate display in admin panel]()  
+  ![image of occupancy rate display in admin panel](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/occupancyrate-pp4.png)  
     
     
   ##### Custom Model Manager
@@ -224,12 +224,12 @@ The AGIILE methodology for project development will be used to produce this proj
  ##### Actions on Review Relation Display
   I added three actions to the dropdown list on the review relation display. These allow the manager to process reviews in a more efficient manner.  
    
-  ![image of dropdown list on reviews display]()
+  ![image of dropdown list on reviews display](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/reviewactions-pp4.png)
   
   ##### Custom Filters
   I added several custom filters to some of the relation displays via the admin.py file  
     
-  ![image of custom admin panel filters]()
+  ![image of custom admin panel filters](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/customfilters-pp4.png)
   
   
   
