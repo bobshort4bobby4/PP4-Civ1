@@ -139,7 +139,105 @@ The AGIILE methodology for project development will be used to produce this proj
 
 
 
-
+# Features
+<details>
+  <summary>Features</summary>
+  
+  ### Home Page  
+  The major element of the landing page is a display inviting the user to check availability for the various room types the hotel offers.  
+  Price and a brief decsription of the rooms are also displayed.  
+  The nav-bar is displayed at the top along with various links to social media.  
+  The nav-bar is based on a standard bootstrap one and is fully responsive, collasping to  a  hamburger menu at smaller screen sizes.  
+  The nav-bar and social links are part of the base template and are displayed on all pages.  
+  When a user logs in the 'log out', 'myaccount' and 'logged in as ...' links are displayed.  
+  All social links open to a new tab.  
+  A carousel of featured reviews is placed on the lower part of the screen.  
+    
+  ![image of home screen]()
+  
+    
+  ### Information Page
+  The information page is accessed from the drop down menu from the nav-bar.  
+  It contains a brief paragraph of general information on our imaginery hotel and an embedded google map showing it's supposed location.  
+    
+  ![image of the information page]()
+  
+  ### Reviews Page
+  The Reviews page displays all approved reviews in groups of 5 per page, the page uses django's ListView's built-in pagination feature to handle this.  
+  This page is accessed from the drop down menu in the nav-bar.  
+  There is a button to enable logged in users to leave a review, any logged out user is shown an alert and redirected to the home page if they try to submit a review.    
+  ![image of review page]()
+    
+  ### Create Review Page
+  A simple page containing a text area for users to input their review, the form validates for content, on submitting the user is alerted with a thank you message and redirected to the home page.  The reviews will not be displayed untill approved via the admin panel, only reviews set to featured = true will be displayed on the home page slider.
+    
+  ![image of the create review page.]()  
+    
+  ### Contact Page
+  maybe not include  
+  
+  ### Check Availability Page
+  This page contains a short description of the type of room the user chose on the home page and a form to input the desired check-in and check-out dates.  
+  The form validates the inputted dates for format and correctness.  
+  The 'Check Availability' button directs the user to either the booking procedure if there is a room free or to the home page with an informative message if not.  
+    
+  ![image of the check availability page]()  
+    
+  ### Book Page
+  The book page displays the details of the booking and a button to confirm the booking.  If the occupancy rate for that period is below 50% a banner is displayed showing a 10% discount on the booking price. Please see note on how this was calculated in testing section.  
+  On booking the user is thanked, the details shown again and re-directed to the home page.
+    
+  ![image of the booking screen]()  
+    
+  ### MyAccount Page
+  
+  Available only to logged in users this page lists that customers bookings as well as the option to extend the stay if available, cancel the booking if enough notice(7 days) and an option to change password.  
+    
+  ![image of the my account page]()  
+    
+  ### Extend Booking Page
+  
+  Page used to extend the check-out date for the room if free. It displays the details of the booking and a form field to enter the new desired checkout date.  The form data is validated  and the booking is altered if possible, the user is shown a message and redirected to the myaccount page if data is invalid.  
+    
+  ![image of extend booking page]()  
+    
+  ### Cancel Booking Page 
+  This page will be used to cancel the booking (details are displayed ) if there is enough notice. If there is not a message is displayed, if there is the booking is deleted from the database and action confirmed to user via an alert. 
+    
+  ![image of the cancel booking page]()
+    
+  ### User Authentification
+  All user authentification functions are implemented using the django all-auth package.  The templates are customisied to match the style of website.  
+    
+  ### Admin Panel Features
+  
+  I made some small additions to the admin panel features, these were functions which I imagined would be useful to a hotel manage in a real-life scenario.  
+  ##### Occupancy Rate in roomtype 
+  I added two columns in the roomtype relation display which show the ocupancy rate for each room type over 14 and 30 days.  
+    
+  ![image of occupancy rate display in admin panel]()  
+    
+    
+  ##### Custom Model Manager
+  I added a custom model manager into the bookings model which marks all out of date bookings as in-active.  ie. if a booking's check-out date is in the past, then the booking's 'is_active' field is set to false.   
+    
+ ##### Actions on Review Relation Display
+  I added three actions to the dropdown list on the review relation display. These allow the manager to process reviews in a more efficient manner.  
+   
+  ![image of dropdown list on reviews display]()
+  
+  ##### Custom Filters
+  I added several custom filters to some of the relation displays via the admin.py file  
+    
+  ![image of custom admin panel filters]()
+  
+  
+  
+  
+  
+  
+  
+ </details>
 
   
 # Deployment and Version Control
@@ -189,6 +287,7 @@ Projects must now be deployed through the heroku app via the terminal command li
   
 To deploy my project I followed the steps below.
   
+  - Remove the collectstatic variable from heroku settings and set debug to false in settings.py
   - login to Heroku:  
   `heroku login -i`  
   - check the apps name on heroku  
