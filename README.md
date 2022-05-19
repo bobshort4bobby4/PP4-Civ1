@@ -3,7 +3,7 @@
 
 (CTRL + Click to open links in new window)
 
-The deployed site can be found [here](https://pp4.herokuapp.com/)
+The deployed site can be found [here](https://pp4-civ1.herokuapp.com/)
 
 Github repository can be accessed [here](https://github.com/bobshort4bobby4/PP4-Civ1)
 
@@ -145,7 +145,7 @@ The AGIILE methodology for project development will be used to produce this proj
   
   ### Home Page  
   The major element of the landing page is a display inviting the user to check availability for the various room types the hotel offers.  
-  Price and a brief decsription of the rooms are also displayed.  
+  Price and a brief description of the rooms are also displayed.  
   The nav-bar is displayed at the top along with various links to social media.  
   The nav-bar is based on a standard bootstrap one and is fully responsive, collasping to  a  hamburger menu at smaller screen sizes.  
   The nav-bar and social links are part of the base template and are displayed on all pages.  
@@ -361,7 +361,61 @@ To deploy my project I followed the steps below.
   [link to info page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-info-pp4.png)  
   [link to reviews page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-reviews-pp4.png)
     
-  The one error shown is as above, concerning a form field having no visible label, I plan to fix this before submitting.
+  The one error shown is as above, concerning a form field having no visible label, I plan to fix this before submitting.  
+    
+  ### CSS Validation  
+   
+  
+  
+  
+ ### HTML VALIDATION  
+    
+  
+  
+  
+  
+ ### Python Validation
+  
+
+  
+  
+ ### Testing Application For Achievement of User Goals.  
+    
+  
+   
+  
+  
+   |                          Goal                                                      |                  Outcome                              |
+   |------------------------------------------------------------------------------------|-------------------------------------------------------|
+   |to be easily able to ascertain information on the hotel.                            |Information Page easily accessible                     |
+   |to be able to check availability for my room choice on any particular set of dates. |Function provided on home page                         |
+   |to navigate easily around the site.                                                 |Intutitive navigation links provided                   |
+   |to have any incorrect input rejected and the error explained clearly.               |All input validated and feedback provided              |
+   |to be able to read reviews about the hotel.                                         |Review facility provided                               |
+   |to be able to easily book a room.                                                   |Easy booking process provided with neccessary feedback |
+   |to be able to easily cancel a booking                                               |Simple process to cancel booking provided              |
+   |to be able to easly extend my stay                                                  |Simple process to extend stay if available             |
+   |to be easily able to view my booking and account details                            |Dedicated page for customer's account                  |
+   |to be easily able to change account details                                         |Ability to change password                             |
+   |to have all actions confirmed to me so as to avoid any confusion                    |All information relayed to customer                    |
+   |to be able to leave a review of the hotel                                           |Ability to leave a review provided                     |
+   |to be able to view and analyse bookings                                             |Possible through admin panel                           |
+   |to be able to view/change rooms                                                     |Possible through admin panel                           |
+   |to be able to view customer information                                             |Possible through admin panel                           |
+   |to provide a quality website                                                        |to be determined                                       |
+   
+   
+  
+   
+  ### Responsive Testing
+  
+  The website 
+  
+  
+  
+  
+  
+  
   
   
   
