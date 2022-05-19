@@ -33,9 +33,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+
 
 ALLOWED_HOSTS = ["pp4-civ1.herokuapp.com", "localhost"]
+# ALLOWED_HOSTS = ['*']
 
 AUTHENTICATION_BACKENDS = [
 
@@ -89,6 +91,7 @@ INSTALLED_APPS = [
     'roombook',
     'reviews',
     'myaccount',
+    
 ]
 
 MIDDLEWARE = [

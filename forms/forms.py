@@ -27,7 +27,7 @@ class ExtendBookingForm(forms.Form):
         fields = ['check_out']
 
     def __init__(self, oldcheck_out, *args, **kwargs): 
-        #  *args, **kwargs)
+       
 
         # call standard __init__
         super().__init__(*args, **kwargs)
