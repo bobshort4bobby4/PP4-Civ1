@@ -409,8 +409,30 @@ To deploy my project I followed the steps below.
    
   ### Responsive Testing
   
-  The website 
-  
+  The website was tested for responsiveness using the built-in tool in the Google Chrome browser. As I worked through each breakpoint I fixed any display issues I encountered.  
+  A set of images of the homepage at each breakpoint is shown.  
+  The table shows the result of each other page.  
+    
+  ![homepage at 320px](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/responsive-images/home-320px-pp4.png)  
+  HomePage at 320px.  
+    
+  ![homepage at 375px](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/responsive-images/home-375px-pp4.png)  
+  HomePage at 375px.  
+    
+  ![homepage at 425px](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/responsive-images/home-425px-pp4.png)  
+   HomePage at 425px.  
+    
+  ![homepage at 768px](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/responsive-images/home-768px-pp4.png)  
+  HomePage at 768px.  
+    
+  ![homepag at 1024px](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/responsive-images/home-1024px-pp4.png)  
+  HomePage at 1024px.  
+    
+  ![homepage at 1440px](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/responsive-images/home-1440px-pp4.png)  
+  HomePage at 1440px.  
+    
+  ![homepage at 2000px](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/responsive-images/home-2000px-pp4.png)  
+  HomePage at 2000px.
   
   
   
