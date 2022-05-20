@@ -411,7 +411,7 @@ To deploy my project I followed the steps below.
   
   The website was tested for responsiveness using the built-in tool in the Google Chrome browser. As I worked through each breakpoint I fixed any display issues I encountered.  
   A set of images of the homepage at each breakpoint is shown.  
-  The table shows the result of each other page.  
+  There is a link provided which shows the results of each other page in a spreadsheet.  
     
   ![homepage at 320px](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/responsive-images/home-320px-pp4.png)  
   HomePage at 320px.  
@@ -435,7 +435,16 @@ To deploy my project I followed the steps below.
   HomePage at 2000px.
   
   
+    
+  [Link to responsive testing](https://docs.google.com/spreadsheets/d/1LyncF4JuYmWrfmwA610n0NtrX4EGbiZRYUCYySV0JWY/edit?usp=sharing)  
+    
+    
+  ### Manual Testing of User Input and Functions  
+  I systematically tested all user inputs and functionality in the website to compare feedback/results against expected results.  
+  Any unexpected output/outcomes were fixed.  
+  [The results of this testing can be found here]()
   
+    
   
   
   
