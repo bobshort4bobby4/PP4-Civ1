@@ -211,7 +211,7 @@ The AGIILE methodology for project development will be used to produce this proj
     
   ### Admin Panel Features
   
-  I made some small additions to the admin panel features, these were functions which I imagined would be useful to a hotel manage in a real-life scenario.  
+  I made some small additions to the admin panel features, these were functions which I imagined would be useful to a hotel manager in a real-life scenario.  
   ##### Occupancy Rate in roomtype 
   I added two columns in the roomtype relation display which show the ocupancy rate for each room type over 14 and 30 days.  
     
@@ -221,7 +221,7 @@ The AGIILE methodology for project development will be used to produce this proj
   ##### Custom Model Manager
   I added a custom model manager into the bookings model which marks all out of date bookings as in-active.  ie. if a booking's check-out date is in the past, then the booking's 'is_active' field is set to false.   
     
- ##### Actions on Review Relation Display
+ ##### Actions on Review Relation Display  
   I added three actions to the dropdown list on the review relation display. These allow the manager to process reviews in a more efficient manner.  
    
   ![image of dropdown list on reviews display](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/reviewactions-pp4.png)
@@ -442,7 +442,7 @@ To deploy my project I followed the steps below.
   ### Manual Testing of User Input and Functions  
   I systematically tested all user inputs and functionality in the website to compare feedback/results against expected results.  
   Any unexpected output/outcomes were fixed.  
-  [The results of this testing can be found here]()
+  [The results of this testing can be found here](https://docs.google.com/spreadsheets/d/1OmOLO1755Cwm_MdL_q3j_q5kEfDmpSuUcT__er4jC2Y/edit?usp=sharing)
   
     
   
