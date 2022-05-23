@@ -38,6 +38,11 @@ a {
     border-style:outset;
     filter: brightness(115%) !important;
 }
+
+.navbar-toggler {
+    border:1px solid black!important;
+}
+
 .koulenfont {
     font-family: 'Koulen', cursive !important;
 }
