@@ -30,6 +30,14 @@ a {
     color:black !important;
 }
 
+
+.barsty {
+    color:black;
+    background-color: #df9e3e;
+    border:5px solid burlywood;
+    border-style:outset;
+    filter: brightness(115%) !important;
+}
 .koulenfont {
     font-family: 'Koulen', cursive !important;
 }
