@@ -8,7 +8,7 @@
             <h2 class="text-center" style="color:#a1661a">Welcome!</h2>
             <H2 class="text-center" style="color:#a1661a"> Your Bookings.</H2>
         </div>
-        <table class="table " >
+        <table class="table koulenfont">
           <thead>
             <tr>
               <th scope="col">User</th>
@@ -20,7 +20,8 @@
             </tr>
           </thead>
           {% for booking in mybookings %}
-          <tbody>
+
+          <tbody >
             <tr>
               <th scope="row">{{ booking.user }}</th>
               <td>{{ booking.room_number }}</td>
@@ -44,7 +45,7 @@
   </div>
         <h4 style="color:#a1661a" class="text-center">User:    {{user.username}}</h4>
         <h4 style="color:#a1661a" class="text-center mb-1">User Email:    {{ user.email }}</h4>
-        <p class="mb-2"><a href="{% url 'account_change_password' %}" aria-label="change your password"><u>change password</u></a></p>
+        <p class="mb-2"><a href="{% url 'account_change_password' %}" aria-label="change your password"><u class="koulenfont">change password</u></a></p>
     </div> 
 </div>
 

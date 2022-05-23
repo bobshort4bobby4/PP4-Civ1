@@ -4,7 +4,13 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Heebo&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 
+/* .input {
+    font-family: 'Koulen', cursive !important;
+    color: black !important;
+    filter:brightness(120%);
+} */
 
 * {
     font-family: 'Playfair Display', serif;
@@ -24,6 +30,14 @@ a {
     color:black !important;
 }
 
+.koulenfont {
+    font-family: 'Koulen', cursive !important;
+}
+
+.koulenfont * {
+    font-family: 'Koulen', cursive !important;
+}
+
 .roomcard {
     background-color: darksalmon;
     margin:15px;
@@ -36,6 +50,10 @@ a {
     overflow: hidden;
     
    
+}
+
+.blacktext {
+    color: black !important;
 }
 
 .socicon {
@@ -102,6 +120,15 @@ a {
     color:#eb420c
 }
 
+.customfontsize1 {
+    font-size:1.7rem !important;
+}
+
+.customfontsize2 {
+    font-size:1.4rem !important;
+}
+
+
 .navbg {
     background-color:#21c7f3;
     color:black;
@@ -121,7 +148,7 @@ a {
 }
 
 .hotel-title {
-    width:35%;
+    /* width:35%; */
     /* background-color: rgba(0,0,0,0.3);*/
     color:black;
     margin:auto;
@@ -218,12 +245,23 @@ a {
     font-size: calc(0.3rem *1.8);
 }
 
-#soclinks  p {
+#soclinks p {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    font-family:'Koulen', cursive !important;
 }
 
+
+.liform p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+}
+
+.smalltext {
+    font-size:smaller!important;
+}
 
 #contact-form input {
     background-color: beige;
@@ -231,6 +269,10 @@ a {
 
 #contact-form textarea {
     background-color: beige;
+}
+
+.regform-fontsize {
+    font-size: 0.7rem;
 }
 
 /* Tooltip container */
@@ -285,6 +327,10 @@ a {
     margin-top:5px;
 }
 
+.regform-fontsize {
+    font-size: 0.9rem;
+}
+
 
 @media screen and (min-width:768px) {
 .step-links {
@@ -294,6 +340,10 @@ a {
 
 .bookingtable {
     font-size: calc(0.3rem *3);
+}
+
+.smalltext {
+    font-size:medium!important;
 }
 
 }
@@ -321,6 +371,14 @@ a {
 
     .home-review-panel {
         font-size:1.4rem;
+    }
+
+    .topmarlg {
+        margin-top:7% !important;
+    }
+
+    .regform-fontsize {
+        font-size: 1rem;
     }
     
 }

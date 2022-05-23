@@ -69,5 +69,5 @@ class RoomAdmin(admin.ModelAdmin):
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ('user', 'room_number',  'check_in', 'check_out', 'is_active')
+    list_display = ('pk', 'user', 'room_number',  'check_in', 'check_out', 'is_active')
     list_filter = ('is_active', 'room_number')

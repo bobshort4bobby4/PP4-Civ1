@@ -59,7 +59,7 @@ def availability_view(request,type):
 
         # check dates are chronologicaly correct
         # if dates invalid redirect with alert
-        if data['check_in'] < date.today() or data['check_out'] < data['check_in']:
+        if data['check_in'] < date.today() or data['check_out'] < data['check_in'] or data['check_in'] == data['check_out']:
             messages.warning(request, 'Please enter a valid set of dates')
             return redirect( reverse('roombook:book_1',kwargs={'type':type}))
 
