@@ -26,6 +26,14 @@ body {
    
 }
 
+.dropdown-menu {
+    background-color:transparent;
+}
+
+.dropdown-divider {
+    border:1px solid rgba(0,0,0,0.15);
+}
+
 a {
     color:black !important;
 }
@@ -392,6 +400,11 @@ a {
 
     .regform-fontsize {
         font-size: 1rem;
+    }
+
+    .dropdown-menu{
+        background-color:burlywood;
+        top:50%;
     }
     
 }
