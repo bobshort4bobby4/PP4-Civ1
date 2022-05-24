@@ -230,8 +230,8 @@ a {
 }
 
 #caro {
-    background-color: beige;
-    min-height:240px;
+    background-color: #df9e3e;
+    min-height:400px;
     border:5px solid burlywood;
     border-style: inset;
 }
@@ -329,6 +329,10 @@ a {
         font-size:1rem;
     }
 
+    #caro {
+        min-height:350px;
+    }
+
     
     
 }
@@ -340,7 +344,7 @@ a {
 
 
 #caro {
-    min-height:180px ;
+    min-height:300px;
     }
 }
 
@@ -367,7 +371,13 @@ a {
     font-size:medium!important;
 }
 
+#caro {
+    min-height:190px;
 }
+
+}
+
+
    
 
 @media screen and (min-height:920px) {
