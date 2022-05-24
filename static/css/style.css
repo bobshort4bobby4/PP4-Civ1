@@ -190,8 +190,8 @@ a {
 
 .dark {
     /* background-color: rgba(0,0,0,0.1);  */
-    color:burlywood; 
-    filter:brightness(115%);
+    color:burlywood !important; 
+    filter: brightness(115%) !important;
 }
 
 .darkanchor {
@@ -206,9 +206,13 @@ a {
 }
 
 .bookingtable {
-    background:white;
+    /* background:white; */
+    color:#a1661a;
     border:5px solid burlywood;
     border-style:inset;
+    /* background-color: beige; */
+    background-color:#3e261d;
+    font-size: calc(0.3rem *1.8);
 }
 
 .paratext {
@@ -261,12 +265,6 @@ a {
     padding:5px;
     margin:5px;
 
-}
-
-/*  styles for booking list table*/
-
-.bookingtable {
-    font-size: calc(0.3rem *1.8);
 }
 
 #soclinks p {
@@ -328,7 +326,7 @@ a {
     right:0; */
     z-index:1100;
     margin-top:auto;
-    background-color:#df9e3e;
+    background-color:#b97b20;
     color:black;
     border:4px solid burlywood;
     border-style:outset;
