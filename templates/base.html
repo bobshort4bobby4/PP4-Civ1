@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en" class="">
 <head>
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -37,7 +37,7 @@
     
     <title>{% block title%}{% endblock title %}</title>
 </head>
-<body class="d-flex flex-column dark main-bg "  style="height:100vh;">
+<body class="d-flex flex-column dark main-bg h-100">
     <div class="">
         <!-- 'https://res.cloudinary.com/dpudxnll7/image/upload/v1652783458/media/backgrd-dark_zwgxln.jpg' -->
     <!------------------------------------------navbar section---------------------------------------------------->
@@ -120,7 +120,7 @@
     <main class="flex-shrink-0 main-bg" style="margin-top:5%;">
         {% block content %}
         <!-- Content Goes here -->
-           
+        
         {% endblock content %}
 
 
@@ -130,24 +130,20 @@
         <div class="container p-1">
 
             <!-- Section: Social media -->
-            <div class="m-0">
+            <!-- <div class="m-0">
 
                 <!-- Linkedin -->
-                <a class="m-3 footer-button" href="https://www.linkedin.com/in/fernanda-brito200585/" role="button" target="_blank" aria-label="linkedin link"><i class="fab fa-lg fa-linkedin-in"></i></a>
+                <!-- <a class="m-3 footer-button" href="https://www.linkedin.com/in/fernanda-brito200585/" role="button" target="_blank" aria-label="linkedin link"><i class="fab fa-lg fa-linkedin-in"></i></a> -->
 
                 <!-- Github -->
-                <a class="m-3 footer-button" href="https://github.com/nandabritto" role="button" target="_blank" aria-label="github link"><i class="fab fa-lg fa-github"></i></a>
+                <!-- <a class="m-3 footer-button" href="https://github.com/nandabritto" role="button" target="_blank" aria-label="github link"><i class="fab fa-lg fa-github"></i></a>
             </div>
-        </div>
+        </div> -->
 
         <!-- Copyright -->
-        <div class="text-center p-1 small">
-            © 2021 Copyright: Best Beer
-        </div>
-    </footer> -->
+       
+    <!-- </footer>  -->
     </main>
-
-
     
 
     
@@ -169,4 +165,16 @@
         }, 3000);
       </script>
     </div>
+    <footer class="foot">
+        <div class=" d-flex flex-row " style="justify-content:space-evenly;">
+            <span href="tel:454 45 1234567" ><i class="fas fa-phone mt-1 "></i>+454 45 1234567</span>
+            <span> © 2022 R.Kennedy: Website for Education Purposes</span>
+            <span><i class="fas fa-envelope mt-1 "></i>   flowerhotel@email.com</span>
+            
+        </div>
+        <!-- <div class="text-center p-1 small " >
+            © 2022 R.Kennedy: Website for Education Purposes
+        </div> -->
+    </footer>
+    
 </body>
