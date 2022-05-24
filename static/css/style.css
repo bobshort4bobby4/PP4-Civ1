@@ -332,8 +332,15 @@ a {
     color:black;
     border:4px solid burlywood;
     border-style:outset;
+    filter: brightness(115%) !important;
 
-  
+  }
+
+  .footspans {
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
   }
   
 
@@ -434,6 +441,11 @@ a {
     .dropdown-menu{
         background-color:burlywood;
         top:50%;
+    }
+
+    .footspans {
+        flex-direction: row;
+        padding:5px;
     }
     
 }
