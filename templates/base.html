@@ -59,7 +59,9 @@
                             <a class="dropdown-item" href="{% url 'home:home' %}" aria-label="dropdowm menu home page">Home</a>
                             <a class="dropdown-item" href="{% url 'home:info' %}" aria-label="dropdowm menu informaion page">Information</a>
                             <a class="dropdown-item" href="{% url 'reviews:reviews' %}" aria-label="dropdowm menu review page">Reviews</a>
-                            <a class="dropdown-item" href="{% url 'home:contact' %}" aria-label="dropdowm menu contact page">Contact</a>
+                            {% if user.is_staff %}
+                            <a class="dropdown-item" href="{% url 'home:staff' %}" aria-label="dropdowm menu contact page">Staff Page</a>
+                            {% endif %}
                             <div class="dropdown-divider"></div>
                         </div>
                     </li>
@@ -124,25 +126,7 @@
         {% endblock content %}
 
 
-        <!--footer------------>
-
-    <!-- <footer class="bg-light text-center text-dark fixed-bottom">
-        <div class="container p-1">
-
-            <!-- Section: Social media -->
-            <!-- <div class="m-0">
-
-                <!-- Linkedin -->
-                <!-- <a class="m-3 footer-button" href="https://www.linkedin.com/in/fernanda-brito200585/" role="button" target="_blank" aria-label="linkedin link"><i class="fab fa-lg fa-linkedin-in"></i></a> -->
-
-                <!-- Github -->
-                <!-- <a class="m-3 footer-button" href="https://github.com/nandabritto" role="button" target="_blank" aria-label="github link"><i class="fab fa-lg fa-github"></i></a>
-            </div>
-        </div> -->
-
-        <!-- Copyright -->
        
-    <!-- </footer>  -->
     </main>
     
 

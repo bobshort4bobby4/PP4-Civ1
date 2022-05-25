@@ -21,8 +21,7 @@ class InfoView(TemplateView):# happy
     template_name = 'home/info.html'
 
 
-class ContactView(TemplateView):# happy
-    template_name = 'home/contact.html'
+class StaffView(TemplateView):# happy
+    template_name = 'home/staff.html'
 
-class ContactSentView(TemplateView):
-    template_name = 'home/contact_sent.html'
+
