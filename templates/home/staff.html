@@ -4,6 +4,20 @@
 
 
 {% block content%}
-    <h1>staff</h1>
-    
+    <h1 class="container text-center">Staff Page</h1>
+
+    <div class="d-flex flex-column">
+        {% for review in reviews %}
+            <div style=" border:1px solid white;" class="m-1">
+                <div class="m-1 text-center" style="color:burlywood;">{{ review.text }} </div>
+                <div class="text-center p-1"><a href="{% url 'home:approve' review.id %}" style="color:burlywood!important; background-color: brown;" >Approve Review</a></div>
+            </div>
+
+        {% empty %}
+            <div>
+                <h1 class="container text-center">No Reviews currently unapproved</h1>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock%}
+<!-- href="{% url 'home:approve' review.id %}" -->

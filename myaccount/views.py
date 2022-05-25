@@ -48,7 +48,7 @@ class CancelBooking(SuccessMessageMixin, DeleteView):# think im happy custom cod
     success_url = reverse_lazy("home:home")
     success_message  = "The booking has been canceled"
     
-    # overriding get method to check the chrckin date is not too close
+    # overriding get method to check the checkin date is not too close
     def get(self, request, *args, **kwargs):
         bookid = self.kwargs.get('pk', None)
         today = date.today()
@@ -95,7 +95,7 @@ class ExtendBooking(View):# not happy with this one, working ok
 
         user=self.request.user
         if bookid.user.username == user.username:
-        # pass old check-out date into form for validation and form data
+            # pass old check-out date into form for validation and form data
             form = ExtendBookingForm( bookid.check_out, request.POST)
 
             # if new check-out date valid continue else display error alert and redirect
