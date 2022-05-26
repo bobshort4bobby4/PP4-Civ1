@@ -6,11 +6,12 @@
 {% block content%}
     <h1 class="container text-center">Staff Page</h1>
 
-    <div class="d-flex flex-column">
+    <div class=" container d-flex flex-column p-1">
         {% for review in reviews %}
-            <div style=" border:1px solid white;" class="m-1">
-                <div class="m-1 text-center" style="color:burlywood;">{{ review.text }} </div>
-                <div class="text-center p-1"><a href="{% url 'home:approve' review.id %}" style="color:burlywood!important; background-color: brown;" >Approve Review</a></div>
+            <div class="stafftextbox m-1">
+                <div class="mt-1 " ><strong><em>"{{ review.text }}"</em></strong> </div>
+                <div class="mt-1">Created by {{ review.user }} on {{ review.created_on }} .</div>
+                <div class="text-center p-1 my-1 staffbutton"><a href="{% url 'home:approve' review.id %}">Approve Review</a></div>
             </div>
 
         {% empty %}
