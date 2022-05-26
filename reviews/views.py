@@ -32,7 +32,6 @@ class CreateReview(LoginRequiredMixin, SuccessMessageMixin, CreateView):# happy
     # pre-populate the user field with the current logged in user
     def form_valid(self, form):
         form.instance.user = self.request.user
-        
         return super().form_valid(form)
 
 
