@@ -3,7 +3,7 @@ from django.test import tag
 from django.urls import reverse
 from django.contrib.auth.models import User
 from reviews.models import Reviews
-from .views import approvereview
+
 
 @tag('views')
 class TestHomeViews(TestCase):
@@ -41,10 +41,28 @@ class TestHomeViews(TestCase):
             approved = False,
             featured = False,
         )
-        self.client.login(username='robert', password='1234')
-        # response = self.client.post(reverse('add_review'), payload)
-        response = reverse('home:approve', kwargs={'pk':1})
-        approvereview(response,1)
-        self.assertAlmostEqual(self.review.approved, True)
+        pk =1
+        response = self.client.get(reverse('home:approve', kwargs={'pk':1}))
+        self.assertEquals(response.status_code, 302)
+        self.assertRedirects(response, reverse('home:home'))
 
-    
+
+    def test_approve_review_is_working_logged(self):
+        user = User.objects.create_user(
+        username = 'robert',
+        password = '1234',
+        email = "mail@mail.com",
+        is_staff = True,
+
+        )
+        self.review = Reviews.objects.create(
+            user = user,
+            text = 'space',
+            created_on = '01/01/2020',
+            approved = False,
+            featured = False,
+        )
+        pk =1
+        self.client.login(username='robert', password='1234')
+        response = self.client.get(reverse('home:approve', kwargs={'pk':1}))
+        self.assertTemplateUsed('/staff/')

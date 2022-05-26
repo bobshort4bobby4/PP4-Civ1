@@ -19,7 +19,7 @@ class ShowDetails(ListView):# happy
 
     def get_queryset(self):
         return Booking.objects.filter(
-            user=self.request.user, is_active=True)
+            user=self.request.user, is_active=True).order_by('check_in')
  
 
 class CancelBooking(SuccessMessageMixin, DeleteView):# think im happy custom code has to go somewhere?
@@ -32,7 +32,7 @@ class CancelBooking(SuccessMessageMixin, DeleteView):# think im happy custom cod
     def delete(self, request, *args, **kwargs):
         bookid = type = self.kwargs.get('pk', None)
         bookid = get_object_or_404(Booking, pk=bookid)
-
+        # check that the booking is owned by the logged in user
         user=self.request.user
         if bookid.user.username == user.username:
             messages.success(self.request, self.success_message)
