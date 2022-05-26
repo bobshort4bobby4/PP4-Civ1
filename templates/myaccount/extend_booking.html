@@ -15,11 +15,11 @@
             <div class="d-flex justify-content-between"><span>Old Check Out:</span><span>{{ bookid.check_out}}</span></div>
             <div  class="mt-3 text-center"><span>Enter new desired check out date</span></div>
             <div>
-                <form  class="d-flex flex-column text-center " style="color:white; font-size:medium;" action="" method="POST">
+                <form  class="d-flex flex-column text-center  "  action="" method="POST">
                     {% csrf_token %}
                         <div class="field">
                             <span style="display:none" id="fielddesc"> new check out date</span>
-                            <div class="control" style="color:black;" aria-labelledby="fielddesc">
+                            <div class="control extenddatebox"  aria-labelledby="fielddesc">
                                 <!-- <p style="display:none;" aria-labelledby=""> {{ form.new_check_out.label}}</p>  -->
                                 {{ form.new_check_out}}
                             

@@ -7,8 +7,10 @@
         <hr class="dark">
         <div class="text-center customfontsize2 mb-2">{{ desc.description }}</div>
         <form  class="d-flex flex-column mt-2" style="color:white; font-size:medium;" action="" method="POST">
-            {{ form.as_p }}
-            {% csrf_token %}
+            <div class="availform koulenfont">
+                {{ form.as_p }}
+                {% csrf_token %}
+            </div>
             <button class="buttonsty" type="submit" aria-label="check availability for given dates">CHECK AVAILABILITY </button>
         </form>
 </div>
