@@ -325,7 +325,7 @@ To deploy my project I followed the steps below.
   <summary>Testing</summary>
   
  ### Lighthouse
-  All pages of the app were tested using the lighthouse function built in to the google chrome browser.
+  All pages of the app were tested using the lighthouse function built in to the Google Chrome browser.
   A summary of results is shown as well as links to the indivual results.  
   
   ![summary of lighthouse results](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/lighthouse-results/lightresults-all-pp4.png)  
@@ -438,6 +438,17 @@ To deploy my project I followed the steps below.
     
   [Link to responsive testing](https://docs.google.com/spreadsheets/d/1LyncF4JuYmWrfmwA610n0NtrX4EGbiZRYUCYySV0JWY/edit?usp=sharing)  
     
+  
+  ### Automated Tesing
+  
+  I wrote tests using the unit test functionality built into django. The coverage rate of these tests for the entire app was 86%.  
+  The coverage for the individual apps is listed below.  
+  - Home APP 100% 
+  - MyAccount APP 73%  
+  - Reviews APP 96%  
+  - Roombook APP 84%  
+  
+  [These results are shared at this link](https://docs.google.com/spreadsheets/d/1RWi0MxZxObRYifLkKv-LtTtAoNW04lpUWkk4_LFDsOM/edit?usp=sharing)  
     
   ### Manual Testing of User Input and Functions  
   I systematically tested all user inputs and functionality in the website to compare feedback/results against expected results.  
