@@ -84,11 +84,11 @@ The AGIILE methodology for project development will be used to produce this proj
   ### Typography
   I choose The Playfair Display Font  as the  main font for the site.   
     
-  [playfair display font example]()  
+  ![playfair display font example](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/typography/playfairfont-pp4.png)  
   
   The Playfair font did not display well in the various form fields especially at smaller screen sizes so I choose the Koulen font for these elements.  
     
-  [example of the koulen font]()  
+  ![example of the koulen font](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/typography/koulenfont-pp4.png)  
     
   Both fonts were downloaded from Google fonts.  
     
@@ -109,7 +109,10 @@ The AGIILE methodology for project development will be used to produce this proj
   
 </details>
 
-
+# Data Schema
+<details>
+  <summary>Data Schema</summary>
+  
   ### Database Relations
   
   Roombook App Models
@@ -147,7 +150,7 @@ The AGIILE methodology for project development will be used to produce this proj
 [Link to erd pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/erd-pdf-correct.pdf)
 ![erd](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/pp4-erd-png-correct.png)
 
-
+</details>
 
 # Features
 <details>
