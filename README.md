@@ -95,9 +95,11 @@ The AGIILE methodology for project development will be used to produce this proj
   
     
   
-  
-  
-
+  ### Colours
+  Colours used are shown below. Black was used for some of the form fields as it was clearer.  
+    
+![](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/colours-pp4.png)
+    
   
   
   
@@ -148,7 +150,21 @@ The AGIILE methodology for project development will be used to produce this proj
   featured:boolean  
 
 [Link to erd pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/erd-pdf-correct.pdf)
-![erd](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/pp4-erd-png-correct.png)
+![erd](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/pp4-erd-png-correct.png)  
+    
+    
+  ### Django View Types
+  I used a mixture of function and Class based views.  
+  The Generic views used were 
+  - TemplateView
+  - DeleteView
+  - ListView
+  - CreateView  
+    
+  The built-in mixins were used also  
+  - SuccessMessageMixin
+  - LoginRequiredMixin
+  
 
 </details>
 
