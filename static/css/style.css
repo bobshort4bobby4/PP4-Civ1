@@ -219,6 +219,11 @@ a {
     font-size: calc(0.3rem *2);
 }
 
+.under {
+    z-index:-999;
+    position:relative;
+}
+
 .paratext {
     margin:auto;
     margin-top:5px;
@@ -227,7 +232,7 @@ a {
 /* styles for embedded map */
 .map-responsive{
     overflow:hidden;
-    padding-bottom:20%;
+    padding-bottom:35%;
     position:relative;
     height:0;
 }
@@ -480,6 +485,15 @@ a {
     .footspans {
         flex-direction: row;
         padding:5px;
+    }
+
+    
+}
+
+
+@media screen and (min-width:1440px) {
+    .map-responsive{
+        padding-bottom: 20%;
     }
     
 }
