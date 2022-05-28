@@ -81,8 +81,18 @@ The AGIILE methodology for project development will be used to produce this proj
   (CTRL + click to open on new page)
   [Link to wireframes pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/pp4-ci-wireframesv2.pdf)  
     
-    ##### Typography
-  I choose '' as the font for the site. It is a big bold type that stands out from the background well and is easy to read.
+  ### Typography
+  I choose The Playfair Display Font  as the  main font for the site.   
+    
+  [playfair display font example]()  
+  
+  The Playfair font did not display well in the various form fields especially at smaller screen sizes so I choose the Koulen font for these elements.  
+    
+  [example of the koulen font]()  
+    
+  Both fonts were downloaded from Google fonts.  
+    
+  
     
   
   
