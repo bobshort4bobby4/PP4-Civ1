@@ -227,7 +227,7 @@ a {
 /* styles for embedded map */
 .map-responsive{
     overflow:hidden;
-    padding-bottom:25%;
+    padding-bottom:20%;
     position:relative;
     height:0;
 }
