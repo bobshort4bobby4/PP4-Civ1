@@ -38,7 +38,7 @@
 <body class="d-flex flex-column dark main-bg h-100">
     <div class="">
       
-    <!------------------------------------------navbar section---------------------------------------------------->
+    <!--===============================navbar section=======================================-->
     <header>
         <div class="container barsty">
             <nav class="navbar navbar-expand-lg navbar-light ">
@@ -53,7 +53,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              Pages
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" aria-label="dropdowm menu">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{% url 'home:home' %}" aria-label="dropdowm menu home page">Home</a>
                             <a class="dropdown-item" href="{% url 'home:info' %}" aria-label="dropdowm menu informaion page">Information</a>
                             <a class="dropdown-item" href="{% url 'reviews:reviews' %}" aria-label="dropdowm menu review page">Reviews</a>
@@ -88,7 +88,7 @@
         </div>            
     </header>
 
-     <!------------------------------------------Messages section------------------------------------------------->
+     <!--======================Messages section=============================-->
      <div class="container ">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -104,7 +104,7 @@
     
             
    
-        <!-------------------------------------Block section--------------------------------------->
+        <!--=========================Block section====================-->
     <main class="flex-shrink-0 main-bg cusp" >
         {% block content %}
         <!-- Content Goes here -->
@@ -113,7 +113,7 @@
     
 
     
-    <!-------------------------script for closing messages------------------>
+    <!--===================script for closing messages=============-->
     <script>
         setTimeout(function () {
             let messages = document.getElementById('msg');
@@ -121,7 +121,7 @@
             alert.close();
         }, 2500);
     </script>
-    <!---remore errors from error list-->
+    <!--remore errors from error list-->
     <!-- <script>
         setTimeout(function() {
           let errors = document.getElementsByClassName('errorlist');
@@ -131,7 +131,7 @@
         }, 3000);
       </script> -->
     </div>
-    <!-----------------Footer-------------------->
+    <!--===================Footer=================-->
     <footer class="foot">
         <div class=" footspans" >
             <span><i class="fas fa-phone mt-1 "></i><a href="tel:+454451234567" >+454 45 1234567</a></span>

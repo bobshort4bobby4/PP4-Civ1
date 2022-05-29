@@ -5,7 +5,7 @@
 
 {% block content%}
     <h1 class="container text-center mt-5">Staff Page</h1>
-
+    <!--list of unapproved reviews awaiting approval===-->
     <div class=" container d-flex flex-column p-1">
         {% for review in reviews %}
             <div class="stafftextbox m-1">
@@ -21,4 +21,3 @@
         {% endfor %}
     </div>
 {% endblock%}
-<!-- href="{% url 'home:approve' review.id %}" -->

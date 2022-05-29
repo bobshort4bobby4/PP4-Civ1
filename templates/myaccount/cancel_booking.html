@@ -2,16 +2,15 @@
 {% block title%}Cancel Booking{% endblock title %}
 
 {% block content %}
-   
+<!--===========title====================================--> 
 <h1  class="hotel-title container text-center col-sm-12  offset-md-3 col-md-6 dark offset-lg-0 col-lg-4 topmarlg" >The Flower Hotel</h1>
 <h3 class="hotel-title container text-center col-sm-12  offset-md-3 col-md-6 dark offset-lg-0 col-lg-4">Cancel your Booking</h3>
 <div class="row justify-content-center m-1">
     <div class="container col-sm-12 mt-5 col-lg-4 offset-lg-4 p-4 review-display " >
-
+<!--==============cancel form============-->
             <form method="post">{% csrf_token %}
      
                 <div class=" col-sm-12 col-md-8 offset-md-2 ">
-                    <!-- <div class="d-flex justify-content-between">Are you sure you want to delete this Booking?</div> -->
                     <div class="d-flex justify-content-between"><span>Room Number:</span><span>{{ booking.room_number}}</span></div>
                     <div class="d-flex justify-content-between"><span>Check In:</span><span>{{ booking.check_in}}</span></div>
                     <div class="d-flex justify-content-between"><span>Check Out:</span><span>{{ booking.check_out}}</span></div>

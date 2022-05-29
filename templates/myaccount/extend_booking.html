@@ -7,30 +7,30 @@
 <div class="row justify-content-center m-1 m-lg-0">
 <div class="container col-sm-12 mt-5 col-lg-4 offset-lg-4 p-4 review-display" >
   
-       
+       <!--===================booking details=======-->
         <div class=" col-sm-12 col-md-8 offset-md-2">
-            <div class="d-flex justify-content-between"><span style="float:left;">User:</span><span style=""float:right;>{{bookid.user}}</span></div>
+            <div class="d-flex justify-content-between"><span style="float:left;">User:</span><span style="float:right;">{{bookid.user}}</span></div>
             <div class="d-flex justify-content-between"><span>Room Number:</span><span>{{ bookid.room_number}}</span></div>
             <div class="d-flex justify-content-between"><span>Check In:</span><span>{{ bookid.check_in}}</span></div>
             <div class="d-flex justify-content-between"><span>Old Check Out:</span><span>{{ bookid.check_out}}</span></div>
             <div  class="mt-3 text-center"><span>Enter new desired check out date</span></div>
             <div>
-                <form  class="d-flex flex-column text-center  "  action="" method="POST">
+                <!--==========form for new checkout date====-->
+                <form  class="d-flex flex-column text-center" method="POST">
                     {% csrf_token %}
                         <div class="field">
                             <span style="display:none" id="fielddesc"> new check out date</span>
                             <div class="control extenddatebox"  aria-labelledby="fielddesc">
-                                <!-- <p style="display:none;" aria-labelledby=""> {{ form.new_check_out.label}}</p>  -->
                                 {{ form.new_check_out}}
                             
                             </div>
-                            <!--form error messages------------------>
+                            <!--form error messages-->
                         
-                            {% for error in form.check_out.errors %}
+                            <!-- {% for error in form.check_out.errors %}
                                 <p class="help is-danger">{{ error|safe }} </p>
-                            {% endfor %}
+                            {% endfor %} -->
                             
-                            <!--end of form error messages------------->
+                            <!--end of form error messages-->
                         </div>
                         <div class="text-center m-auto" >
                             <button class ="buttonsty" type="submit" style="display:block;" aria-label="button to extend your stay">Extend </button>

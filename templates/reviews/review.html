@@ -10,7 +10,7 @@
 
 
 <section class="container p-2 text-center" aria-label="list of reviews">
-
+    <!--===========list approved reviews======-->
     {% for review in hotel_reviews %}
     <div  class="mt-2 mb-1 p-2 review-display">
         <p style="font-size:1.2rem;">{{ review.text }}.......{{review.user.username}}, {{ review.created_on  }}</p>
