@@ -24,27 +24,25 @@ body {
     background-size: cover;
     display:flex;
     flex-direction: column;
-    min-height:100vh;
-    
-   
-}
-
-.dropdown-menu {
-    background-color:transparent;
-}
-
-.dropdown-divider {
-    border:1px solid rgba(0,0,0,0.15);
+    min-height:100vh;  
 }
 
 a {
     color:black !important;
 }
 
-.cusp {
-    padding:5px;
+.under {
+    z-index:-999;
+    position:relative;
 }
 
+.hotel-title {
+    color:black;
+    margin:auto;
+    margin-top:10px;
+    padding:10px;
+    font-size:2rem; 
+}
 
 .barsty {
     color:black;
@@ -52,10 +50,6 @@ a {
     border:5px solid burlywood;
     border-style:outset;
     filter: brightness(115%) !important;
-}
-
-.navbar-toggler {
-    border:1px solid black!important;
 }
 
 .koulenfont {
@@ -66,31 +60,96 @@ a {
     font-family: 'Koulen', cursive !important;
 }
 
-.roomcard {
-    background-color: darksalmon;
-    margin:15px;
-    max-width:25%;
-}
-
-.hotel_img {
-    position: relative;
-    /* margin-bottom: 10px; */
-    overflow: hidden;
-    
-   
-}
-
 .blacktext {
     color: black !important;
 }
 
-.socicon {
-    color:burlywood;
-    font-size: 2rem;
+.buttonsty {
+    /* background-color:#21c7f3; */
+    background-color:#df9e3e;
+    margin-top: 5px;
+    border:2px solid black;
+    padding:2px;
+    border-radius:10%;
 }
 
-.socicon-label {
-    font-size:2rem;
+.dark {
+    /* background-color: rgba(0,0,0,0.1);  */
+    color:burlywood !important; 
+    filter: brightness(115%) !important;
+}
+
+.darker {
+    background-color: rgba(0,0,0,0.1);  
+    color:burlywood; 
+    filter:brightness(115%);
+}
+
+.paratext {
+    margin:auto;
+    margin-top:5px;
+    padding:10px;
+}
+
+.cusp {
+    padding:5px;
+}
+
+/* -------NAv-bar-----*/
+.dropdown-menu {
+    background-color:transparent;
+}
+
+.dropdown-divider {
+    border:1px solid rgba(0,0,0,0.15);
+}
+
+.navbar-toggler {
+    border:1px solid black!important;
+}
+
+.navbg {
+    background-color:#21c7f3;
+    color:black;
+}
+
+.cus-nav-p {
+    padding: 0.5rem 1rem;
+}
+
+/*==============*/
+/*-------footer-----*/
+
+.foot {
+    z-index:1100;
+    margin-top:auto;
+    background-color:#b97b20;
+    color:black;
+    border:4px solid burlywood;
+    border-style:outset;
+    filter: brightness(115%) !important;
+
+  }
+
+  .footspans {
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+  }
+  /*====================*/
+  /*----homepage--------*/
+.title_colour {
+    color:white;
+}
+
+.hotel_img {
+    position: relative;
+    overflow: hidden;
+}
+
+.hotel_img a {
+    background-color: #df9e3e;
 }
 
 .hotel_img img {
@@ -98,23 +157,8 @@ a {
     border:1px solid black;
 }
 
-.book-btn {
-    background-color: #df9e3e;
-    border:1px solid black;
-    padding:2px;
-    border-radius:10%;
-}
-
-.hotel_img a {
-    background-color: #df9e3e;
-}
-
 .roompic {
     margin:auto;
-}
-
-.title_colour {
-    color:white;
 }
 
 .roomtype {
@@ -144,46 +188,16 @@ a {
     margin: auto;
 
 }
-.flash-color {
-    color:#eb420c
+
+#caro {
+    background-color: #df9e3e;
+    min-height:400px;
+    border:5px solid burlywood;
+    border-style: inset;
 }
 
-.customfontsize1 {
-    font-size:1.7rem !important;
-}
-
-.customfontsize2 {
-    font-size:1.4rem !important;
-}
-
-
-.navbg {
-    background-color:#21c7f3;
-    color:black;
-}
-
-.buttonsty {
-    /* background-color:#21c7f3; */
-    background-color:#df9e3e;
-    margin-top: 5px;
-    border:2px solid black;
-    padding:2px;
-    border-radius:10%;
-}
-
-.cus-nav-p {
-    padding: 0.5rem 1rem;
-}
-
-.hotel-title {
-    /* width:35%; */
-    /* background-color: rgba(0,0,0,0.3);*/
-    color:black;
-    margin:auto;
-    margin-top:10px;
-    padding:10px;
-    font-size:2rem
-   
+.carousel-item {
+    transition-duration:1.2s, 1.2s !important;
 }
 
 .home-review-panel{
@@ -191,45 +205,9 @@ a {
     font-size:1.1rem;
 }
 
+/*=======================*/
+/*----information page---*/
 
-.dark {
-    /* background-color: rgba(0,0,0,0.1);  */
-    color:burlywood !important; 
-    filter: brightness(115%) !important;
-}
-
-.darkanchor {
-    color:burlywood !important; 
-    filter:brightness(115%);
-}
-
-.darker {
-    background-color: rgba(0,0,0,0.1);  
-    color:burlywood; 
-    filter:brightness(115%);
-}
-
-.bookingtable {
-    /* background:white; */
-    color:#a1661a;
-    border:5px solid burlywood;
-    border-style:inset;
-    /* background-color: beige; */
-    background-color:#3e261d;
-    font-size: calc(0.3rem *2);
-}
-
-.under {
-    z-index:-999;
-    position:relative;
-}
-
-.paratext {
-    margin:auto;
-    margin-top:5px;
-    padding:10px;
-}
-/* styles for embedded map */
 .map-responsive{
     overflow:hidden;
     padding-bottom:35%;
@@ -245,20 +223,8 @@ a {
     position:absolute;
 }
 
-#caro {
-    background-color: #df9e3e;
-    min-height:400px;
-    border:5px solid burlywood;
-    border-style: inset;
-}
-
-.carousel-item {
-    transition-duration: 1.2s 1.2s !important;
-}
-
-.step-links {
-    font-size:0.8rem;
-}
+/*====================*/
+/*---review page------*/
 
 .review-display {
     border-style:inset;
@@ -267,22 +233,77 @@ a {
     border:5px solid burlywood;
 }
 
-.form-wrapper textarea {
-    border-style:inset;
-    background-color: beige;
+.step-links {
+    font-size:0.8rem;
+}
+
+.darkanchor {
+    color:burlywood !important; 
+    filter:brightness(115%);
+}
+/*================*/
+/*----staff page--*/
+
+.stafftextbox {
+    background-color: #a3c1d9;
+    color:black;
+}
+
+.staffbutton{
+  width:140px;
+  margin:auto;
+  background-color:#df9e3e;
+  margin-top: 5px;
+  border:2px solid black;
+  padding:2px;
+  border-radius:10%;
+
+}
+
+/*====================*/
+/*------myaccount page*/
+
+.bookingtable {
+    color:#a1661a;
     border:5px solid burlywood;
-    padding:5px;
-    margin:5px;
-
+    border-style:inset;
+    background-color:#3e261d;
+    font-size: calc(0.3rem *2);
 }
 
-#soclinks p {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-family:'Koulen', cursive !important;
+/*====================*/
+/*---book page--------*/
+
+.flash-color {
+    color:#eb420c
+}
+/*====================*/
+/*--check availability*/
+
+.customfontsize1 {
+    font-size:1.7rem !important;
 }
 
+.customfontsize2 {
+    font-size:1.4rem !important;
+}
+
+.availform {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;  
+}
+
+/*========================*/
+/*-custom all-auth pages-*/
+
+.smalltext {
+    font-size:smaller!important;
+}
+
+.regform-fontsize {
+    font-size: 0.7rem;
+}
 
 .liform p {
     display: flex;
@@ -290,94 +311,33 @@ a {
     justify-content: space-between !important;
 }
 
-.smalltext {
-    font-size:smaller!important;
-}
+/*===============*/
+/*---extend page-*/
 
-#contact-form input {
-    background-color: beige;
-}
-
-#contact-form textarea {
-    background-color: beige;
-}
-
-.regform-fontsize {
-    font-size: 0.7rem;
-}
-
-/* Tooltip container */
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-  }
-  
-  /* Tooltip text */
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-   
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-  }
-
-  .foot {
-    /* position:absolute; */
-    /* bottom:0;
-    left:0;
-    right:0; */
-    z-index:1100;
-    margin-top:auto;
-    background-color:#b97b20;
+.extenddatebox {
     color:black;
-    border:4px solid burlywood;
-    border-style:outset;
-    filter: brightness(115%) !important;
+    font-size: medium;
+    font-family: 'Koulen', cursive !important;
+}
 
-  }
+/*==================*/
+/*--create review---*/
 
-  .footspans {
-      display:flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-  }
-  
-  .stafftextbox {
-      background-color: #a3c1d9;
-      color:black;
-  }
-
-  .staffbutton{
-    width:140px;
-    margin:auto;
-    background-color:#df9e3e;
-    margin-top: 5px;
-    border:2px solid black;
+.book-btn {
+    background-color: #df9e3e;
+    border:1px solid black;
     padding:2px;
     border-radius:10%;
+}
+.form-wrapper textarea {
+    border-style:inset;
+    background-color: beige;
+    border:5px solid burlywood;
+    padding:5px;
+    margin:5px;
+}
 
-  }
-
-  .availform {
-      display:flex;
-      flex-direction: column;
-      align-items: flex-end;
-      
-  }
-
-  .extenddatebox {
-      color:black;
-      font-size: medium;
-      font-family: 'Koulen', cursive !important;
-  }
+/*=====================*/
 
 /*----media queries-------------------*/   
 @media screen and (min-width:320px){
@@ -421,7 +381,7 @@ a {
 @media screen and (min-width:768px) {
 .step-links {
     font-size:1.5rem;
-    }
+}
 
 
 .bookingtable {
@@ -454,9 +414,7 @@ a {
     bottom: 0;
     left:0;
     width: 100%; 
-    /* Height of the footer*/ 
-    max-height: 50px;
-    
+    max-height: 50px;   
 }  
 
 }
@@ -489,7 +447,6 @@ a {
 
     
 }
-
 
 @media screen and (min-width:1440px) {
     .map-responsive{
