@@ -84,20 +84,22 @@ The AGIILE methodology for project development will be used to produce this proj
   ### Typography
   I choose The Playfair Display Font  as the  main font for the site.   
     
-  [playfair display font example]()  
+  ![playfair display font example](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/typography/playfairfont-pp4.png)  
   
   The Playfair font did not display well in the various form fields especially at smaller screen sizes so I choose the Koulen font for these elements.  
     
-  [example of the koulen font]()  
+  ![example of the koulen font](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/typography/koulenfont-pp4.png)  
     
   Both fonts were downloaded from Google fonts.  
     
   
     
   
-  
-  
-
+  ### Colours
+  Colours used are shown below. Black was used for some of the form fields as it was clearer.  
+    
+![](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/colours-pp4.png)
+    
   
   
   
@@ -109,7 +111,10 @@ The AGIILE methodology for project development will be used to produce this proj
   
 </details>
 
-
+# Data Schema
+<details>
+  <summary>Data Schema</summary>
+  
   ### Database Relations
   
   Roombook App Models
@@ -145,9 +150,23 @@ The AGIILE methodology for project development will be used to produce this proj
   featured:boolean  
 
 [Link to erd pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/erd-pdf-correct.pdf)
-![erd](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/pp4-erd-png-correct.png)
+![erd](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/pp4-erd-png-correct.png)  
+    
+    
+  ### Django View Types
+  I used a mixture of function and Class based views.  
+  The Generic views used were 
+  - TemplateView
+  - DeleteView
+  - ListView
+  - CreateView  
+    
+  The built-in mixins were used also  
+  - SuccessMessageMixin
+  - LoginRequiredMixin
+  
 
-
+</details>
 
 # Features
 <details>
