@@ -19,8 +19,8 @@
                 <form  class="d-flex flex-column text-center" method="POST">
                     {% csrf_token %}
                         <div class="field">
-                            <span style="display:none" id="fielddesc"> new check out date</span>
-                            <div class="control extenddatebox"  aria-labelledby="fielddesc">
+                            <label for="id_new_check_out" class="sr-only">New check out date</label>
+                            <div class="control extenddatebox">
                                 {{ form.new_check_out}}
                             
                             </div>

@@ -11,8 +11,9 @@
             </div>
         <!--======form for review entry=====-->
         <div class="form-wrapper">
-            <form method="post">
+            <form method="post" >
                 {% csrf_token %}
+                <label for="id_text" class="sr-only">review</label>
                 {% for field in form %}
                     {{field}}
                 {% endfor %}
