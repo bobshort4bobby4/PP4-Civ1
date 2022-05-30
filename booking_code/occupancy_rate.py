@@ -1,17 +1,31 @@
-from roombook.models import Room, Booking
+"""
+Calculates if a sale should be declared
+based on the occupancy rate
+"""
+
+
 import datetime
+from roombook.models import Room, Booking
 
 
 def occupancy_rate(data):
+    """
+    A function to calculate occupancy rate
+
+    Parameters:
+        data:dictionary
+
+    Returns: boolean
+    """
     bookings = Booking.objects.all()
     rooms = Room.objects.all()
     bookedrooms = []
-    year = data['check_in']
+
     y = int(data['check_in'][0:4])
     m = int(data['check_in'][5:7])
     d = int(data['check_in'][8:10])
-        
-    cin = datetime.date(y, m, d)  
+
+    cin = datetime.date(y, m, d)
     for room in rooms:
         for booking in bookings:
             if booking.room_number_id == room.room_number:

@@ -1,9 +1,11 @@
+"""
+myaccount app url paths
+"""
 from django.urls import path
 from .views import ShowDetails, CancelBooking, ExtendBooking
 
 
 app_name = 'myaccount'
-
 
 
 urlpatterns = [

@@ -7,7 +7,7 @@
         <div class="text-center customfontsize1 mb-1 topmarlg">Check Availability for a {{type}} Room</div>
         <hr class="dark">
         <div class="text-center customfontsize2 mb-2">{{ desc.description }}</div>
-        <form  class="d-flex flex-column mt-2" style="color:white; font-size:medium;" action="" method="POST">
+        <form  class="d-flex flex-column mt-2" style="color:white; font-size:medium;" method="POST">
             <div class="availform koulenfont">
                 {{ form.as_p }}
                 {% csrf_token %}

@@ -1,3 +1,6 @@
+"""
+routing paths for home app
+"""
 from django.urls import path
 from .views import HomeView, InfoView, StaffView, approvereview
 
@@ -9,5 +12,5 @@ urlpatterns = [
     path('info/', InfoView.as_view(), name='info'),
     path('staff/', StaffView.as_view(), name='staff'),
     path('approve/<pk>', approvereview, name='approve')
-    
+
 ]
