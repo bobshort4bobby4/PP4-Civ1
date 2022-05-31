@@ -77,7 +77,7 @@ class TestAdminSite(TestCase):
                                         text='first review',
                                         created_on=self.today,
                                         approved=False,
-                                        featured=False) 
+                                        featured=False)
 
         self.reviewsadmin.set_approved_to_true(
                                 request=review, queryset=Reviews.objects.all())
