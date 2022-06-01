@@ -371,7 +371,12 @@ To deploy my project I followed the steps below.
   [link to create review page lighthouse result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/lighthouse-results/lighthouse-createreview-pp4.png)
   
   The two lowest scores are for the create review and the extend booking pages (89 for accessability ), this concerns the lack of a label on a form field.  
-  This will be fixed for the submitted version.  
+  These two errors have been fixed as shown below.  
+    
+  ![create review lighthouse result fixed](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/lighthouse-results/lighthouse-createreview-fixed-pp4.png)  
+    
+  ![extend page lighthouse result fixed](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/lighthouse-results/lighthouse-extend-fixed-pp4.png)
+
   
   
   ### WAVE Web Accessibility Evaluation Tool
@@ -390,14 +395,28 @@ To deploy my project I followed the steps below.
   [link to info page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-info-pp4.png)  
   [link to reviews page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-reviews-pp4.png)
     
-  The one error shown is as above, concerning a form field having no visible label, I plan to fix this before submitting.  
+  The one error shown is as above, concerning a form field having no visible label, this was fixed as shown below.  
+    
+  ![](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-extend-fixed-pp4.png)
     
   ### CSS Validation  
-   
+   I used The W3C CSS Validation Service-Jigsaw to validate the css used in the app.  
+  Any errors found were fixed to obtain no errors and 2 warnings as shown below.  
+  The warning concerned the importing of fonts from google fonts.
+    
+  ![css validation results](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/css-html%20-validation-results/cssvalidation-pp4.png)  
+  
+  
+ 
   
   
   
  ### HTML VALIDATION  
+  Each page of HTML was checked using the W3C HTML validator.  
+  All errors were remedied leaving three warning which concerned the aria label for the reviews slider on the home page.  
+    
+  ![html warning](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/css-html%20-validation-results/htmlwarnings-pp4.png)
+ 
     
   
   
