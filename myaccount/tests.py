@@ -85,7 +85,7 @@ class TestmyaccountView(TestCase):
                                                 check_in=valid_date,
                                                 check_out='2022-05-21',
                                                 is_active=True,)
-    
+
         response = self.client.get(f'/myaccount/cancel/{self.booking.id}')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "myaccount/cancel_booking.html")

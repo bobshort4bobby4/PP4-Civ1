@@ -141,7 +141,8 @@ class TestRoomBookModels(TestCase):
                                         check_in='2022-02-01',
                                         check_out='2022-02-03',
                                         is_active=True)
-        self.assertEqual(str(item), 'brian has booked Room 2 from 2022-02-01 to 2022-02-03')
+        self.assertEqual(
+            str(item), 'brian has booked Room 2 from 2022-02-01 to 2022-02-03')
 
 
 @tag('admin')

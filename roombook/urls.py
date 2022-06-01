@@ -1,8 +1,12 @@
+
+"""
+ Url pathd for roombook app
+"""
 from django.urls import path
 from .views import availability_view, book_room_view
 
 
-app_name  = 'roombook' 
+app_name = 'roombook'
 
 
 urlpatterns = [
