@@ -17,7 +17,7 @@ Github repository can be accessed [here](https://github.com/bobshort4bobby4/PP4-
 
 This is the fourth project I have completed as part of the[Code Institute Full Stack Diploma Course](https://codeinstitute.net).  
 
-The project sets out to create a website for a fictitious hotel.  Rooms can be booked and cancelled via the site, as well as extended if availability exsists for that room,  if the  current room is booked  another room of the same type will be suggested if available.  
+The project sets out to create a website for a fictitious hotel.  Rooms can be booked and cancelled via the site, as well as extended if availability exsists for that room.  
 The room should only be cancelled if the check in date is not more than 7 days away.
 
 The imaginery product owner has also requested that rooms are put on sale if occupancy drops below a set percentage.  
@@ -78,8 +78,9 @@ The AGIILE methodology for project development will be used to produce this proj
   
   ### Wireframes
   A full set of wireframes was produced, they can be viewed via the link following.
+  This document shows three reviews per page on the reviews page, this number was changed to five in the deployed app, as it displayed better.
   (CTRL + click to open on new page)
-  [Link to wireframes pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/pp4-ci-wireframesv2.pdf)  
+  [Link to wireframes pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/pp4-ci-wireframesv2.pdf)  
     
   ### Typography
   I choose The Playfair Display Font  as the  main font for the site.   
@@ -161,7 +162,7 @@ The AGIILE methodology for project development will be used to produce this proj
   - ListView
   - CreateView  
     
-  The built-in mixins were used also  
+  Two built-in mixins were used also  
   - SuccessMessageMixin
   - LoginRequiredMixin
   
@@ -200,10 +201,12 @@ The AGIILE methodology for project development will be used to produce this proj
   ### Create Review Page
   A simple page containing a text area for users to input their review, the form validates for content, on submitting the user is alerted with a thank you message and redirected to the home page.  The reviews will not be displayed untill approved via the admin panel, only reviews set to featured = true will be displayed on the home page slider.
     
-  ![image of the create review page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/createreview-pp4.png)  
+  ![image of the create review page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/createreviewpage-pp4.png)  
     
-  ### Contact Page
-  maybe not include  
+  ### Staff Page
+  This page is available only to users who are staff.  It is used to approve reviews submitted by customers.  
+    
+  ![staff page image](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/staffpage-pp4.png)
   
   ### Check Availability Page
   This page contains a short description of the type of room the user chose on the home page and a form to input the desired check-in and check-out dates.  
@@ -237,7 +240,11 @@ The AGIILE methodology for project development will be used to produce this proj
     
   ### User Authentification
   All user authentification functions are implemented using the django all-auth package.  The templates are customisied to match the style of website.  
+     
+  ### Footer  
+  All pages have a footer which conatain working links to the hotel for both telephone and email.  
     
+  
   ### Admin Panel Features
   
   I made some small additions to the admin panel features, these were functions which I imagined would be useful to a hotel manager in a real-life scenario.  
@@ -423,7 +430,7 @@ To deploy my project I followed the steps below.
   
   
  ### Python Validation
-  
+  All python code was validated using the PEP8 online validator.  All errors were cleared, a link to screen-grabs of these results is below.  
 [Link to PeP8 results for python code](https://docs.google.com/document/d/1seRhPVNkAd9ZI-dmfUxzx1te3_IKNzYoB3pL-h_-G-8/edit?usp=sharing)
   
   
