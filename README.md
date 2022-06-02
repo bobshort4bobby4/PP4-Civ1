@@ -307,7 +307,9 @@ The AGIILE methodology for project development will be used to produce this proj
   - [Windows snip & sketch](https://www.microsoft.com/en-us/p/snip-sketch/9mz95kl8mr0l?activetab=pivot:overviewtab) used to capture screenshots for readme file.
   - [techsini.com](https://techsini.com/) used to create the mock-up used in the readme file.
   - [Freeconvert.com](https://www.freeconvert.com) was used to convert the background image file to the  webp format.  
-  - [autoprefixer.github.io](https://autoprefixer.github.io/) used to improve browser compatibility.
+  - [autoprefixer.github.io](https://autoprefixer.github.io/) used to improve browser compatibility.  
+  
+  </details>
   
 
   
@@ -550,12 +552,7 @@ To deploy my project I followed the steps below.
   [The results of this testing can be found here](https://docs.google.com/spreadsheets/d/1OmOLO1755Cwm_MdL_q3j_q5kEfDmpSuUcT__er4jC2Y/edit?usp=sharing)
   
     
-  
-  
-  
-  
-  
-</details>
+  </details>
 
 
 
