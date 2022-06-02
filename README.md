@@ -92,10 +92,11 @@ The AGIILE methodology for project development will be used to produce this proj
   ![example of the koulen font](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/typography/koulenfont-pp4.png)  
     
   Both fonts were downloaded from Google fonts.  
-    
   
-    
+  ### Images
   
+  All images used in this site were obtained from the [Pexels Website](https://www.pexels.com/) and are free to use.
+   
   ### Colours
   Colours used are shown below. Black was used for some of the form fields as it was clearer.  
     
@@ -274,6 +275,40 @@ The AGIILE methodology for project development will be used to produce this proj
   
   
  </details>
+ 
+ # Technologies Used
+<details>
+  <summary>Technologies Used</summary>
+  
+  #### Languages Used
+  
+  - Python
+  - CSS  
+  - HTML  
+  - CSS  
+  
+  #### Development Environment
+    
+  I used the gitpod-full-template for gitpod provided by Code Institute.  
+  The app was built using the Django framework.  
+  
+  
+  #### Applications Used
+  
+  - [Balsamiq](https://www.balsamiq.com) was used to create wireframes for this project.
+  - [LucidChart](https://www.lucidchart.com) used for the ERD in readme file.
+  - [Git](https://git-scm.com/) Git was used for version control.
+  - [GitHub](https://github.com/) GitHub is used to store the projects code.
+  - [Heroku](http://www.heroku.com/) Heroku.com was used to deploy the site.
+  - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) used for layout and responsive testing.
+  - [Wave](https://wave.webaim.org/) used for accessibility testing.
+  - [W3 Validator](https://jigsaw.w3.org/css-validator/) used to test css code.
+  - [pep8online](http://pep8online.com/) pep8online used to validate python code
+  - [Windows snip & sketch](https://www.microsoft.com/en-us/p/snip-sketch/9mz95kl8mr0l?activetab=pivot:overviewtab) used to capture screenshots for readme file.
+  - [techsini.com](https://techsini.com/) used to create the mock-up used in the readme file.
+  - [Freeconvert.com](https://www.freeconvert.com) was used to convert the background image file to the  webp format.  
+  - [autoprefixer.github.io](https://autoprefixer.github.io/) used to improve browser compatibility.
+  
 
   
 # Deployment and Version Control
@@ -352,6 +387,8 @@ To deploy my project I followed the steps below.
   
   
  </details>
+ 
+ 
 
 
 
@@ -410,6 +447,8 @@ To deploy my project I followed the steps below.
    I used The W3C CSS Validation Service-Jigsaw to validate the css used in the app.  
   Any errors found were fixed to obtain no errors and 2 warnings as shown below.  
   The warning concerned the importing of fonts from google fonts.
+  Please note that a auto-prefixed version of this css file is used in the deployed version.  This version also has no errors but 38 warnings extra.  
+  All of these extra warnings relate to vendor extensions
     
   ![css validation results](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/css-html%20-validation-results/cssvalidation-pp4.png)  
   
