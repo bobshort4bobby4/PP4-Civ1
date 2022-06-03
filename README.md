@@ -78,7 +78,8 @@ The AGIILE methodology for project development will be used to produce this proj
   
   ### Wireframes
   A full set of wireframes was produced, they can be viewed via the link following.
-  This document shows three reviews per page on the reviews page, this number was changed to five in the deployed app, as it displayed better.
+  This document shows three reviews per page on the reviews page, this number was changed to five in the deployed app, as it displayed better.  
+  Please note that no wireframe was provided for the staff page as it was  a late addition to the project on advice from my Mentor that there should be some role based   accessability function within the site.  
   (CTRL + click to open on new page)
   [Link to wireframes pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/pp4-ci-wireframesv2.pdf)  
     
@@ -91,7 +92,7 @@ The AGIILE methodology for project development will be used to produce this proj
     
   ![example of the koulen font](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/typography/koulenfont-pp4.png)  
     
-  Both fonts were downloaded from Google fonts.  
+  Both fonts were downloaded from [Google fonts](https://fonts.google.com/).  
   
   ### Images
   
@@ -177,11 +178,10 @@ The AGIILE methodology for project development will be used to produce this proj
   ### Home Page  
   The major element of the landing page is a display inviting the user to check availability for the various room types the hotel offers.  
   Price and a brief description of the rooms are also displayed.  
-  The nav-bar is displayed at the top along with various links to social media.  
+  The nav-bar is displayed at the top along with various links.  
   The nav-bar is based on a standard bootstrap one and is fully responsive, collasping to  a  hamburger menu at smaller screen sizes.  
-  The nav-bar and social links are part of the base template and are displayed on all pages.  
-  When a user logs in the 'log out', 'myaccount' and 'logged in as ...' links are displayed.  
-  All social links open to a new tab.  
+  The nav-bar is part of the base template and is displayed on all pages.  
+  When a user logs in the 'log out', 'myaccount' and 'logged in as ...' links are displayed.    
   A carousel of featured reviews is placed on the lower part of the screen.  
     
   ![image of home screen](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/home-pp4.png)
@@ -243,7 +243,7 @@ The AGIILE methodology for project development will be used to produce this proj
   All user authentification functions are implemented using the django all-auth package.  The templates are customisied to match the style of website.  
      
   ### Footer  
-  All pages have a footer which conatain working links to the hotel for both telephone and email.  
+  All pages have a footer which contains working links to the hotel for both telephone and email.  
     
   
   ### Admin Panel Features
@@ -474,6 +474,11 @@ To deploy my project I followed the steps below.
   All python code was validated using the PEP8 online validator.  All errors were cleared, a link to screen-grabs of these results is below.  
 [Link to PeP8 results for python code](https://docs.google.com/document/d/1seRhPVNkAd9ZI-dmfUxzx1te3_IKNzYoB3pL-h_-G-8/edit?usp=sharing)
   
+ ### Javascript Validation 
+  There was a small amount of Javascript used to close messages, this script was passed through the jshint validator. the result is shown below.  
+    
+  ![jshint result]()  
+    
   
  ### Testing Application For Achievement of User Goals.  
     
