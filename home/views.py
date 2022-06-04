@@ -7,7 +7,8 @@ from django.shortcuts import redirect, reverse
 from django.views.generic import TemplateView, ListView
 from roombook.models import RoomType
 from reviews.models import Reviews
-
+# from decorators import role_required
+from django.core.exceptions import PermissionDenied
 
 # Create your views here.
 
@@ -40,14 +41,19 @@ class StaffView(ListView):
     """
     Generic View used to display staff
     page, queryset is all unapproved
-    eviews
+    reviews
     """
     template_name = 'home/staff.html'
     context_object_name = 'reviews'
 
     def get_queryset(self):
-        return Reviews.objects.filter(
-            approved=False)
+        user = self.request.user
+        # check proper user
+        if user.is_staff:
+            return Reviews.objects.filter(
+                approved=False)
+        else:
+            raise PermissionDenied
 
 
 def approvereview(request, pk):

@@ -1,0 +1,507 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+/* html{
+    height:100%;
+} */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+/* .input {
+    font-family: 'Koulen', cursive !important;
+    color: black !important;
+    filter:brightness(120%);
+} */
+
+* {
+    font-family: 'Playfair Display', serif;
+    padding:0;
+    border:none;
+    margin:0;
+}
+
+body {
+    background: url('https://res.cloudinary.com/dpudxnll7/image/upload/v1654208745/media/background-pp4_uj3mnf.webp') no-repeat center center fixed;
+    background-size: cover;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height:100vh;  
+}
+
+a {
+    color:black !important;
+}
+
+.under {
+    z-index:-999;
+    position:relative;
+}
+
+.hotel-title {
+    color:black;
+    margin:auto;
+    margin-top:10px;
+    padding:10px;
+    font-size:2rem; 
+}
+
+.barsty {
+    color:black;
+    background-color: #df9e3e;
+    border:5px solid burlywood;
+    border-style:outset;
+    -webkit-filter: brightness(115%) !important;
+            filter: brightness(115%) !important;
+}
+
+.koulenfont {
+    font-family: 'Koulen', cursive !important;
+}
+
+.koulenfont * {
+    font-family: 'Koulen', cursive !important;
+}
+
+.blacktext {
+    color: black !important;
+}
+
+.buttonsty {
+    /* background-color:#21c7f3; */
+    background-color:#df9e3e;
+    margin-top: 5px;
+    border:2px solid black;
+    padding:2px;
+    border-radius:10%;
+}
+
+.dark {
+    /* background-color: rgba(0,0,0,0.1);  */
+    color:burlywood !important; 
+    -webkit-filter: brightness(115%) !important; 
+            filter: brightness(115%) !important;
+}
+
+.darker {
+    background-color: rgba(0,0,0,0.1);  
+    color:burlywood; 
+    -webkit-filter:brightness(115%); 
+            filter:brightness(115%);
+}
+
+.paratext {
+    margin:auto;
+    margin-top:5px;
+    padding:10px;
+}
+
+.cusp {
+    padding:5px;
+}
+
+/* -------NAv-bar-----*/
+.dropdown-menu {
+    background-color:transparent;
+}
+
+.dropdown-divider {
+    border:1px solid rgba(0,0,0,0.15);
+}
+
+.navbar-toggler {
+    border:1px solid black!important;
+}
+
+.navbg {
+    background-color:#21c7f3;
+    color:black;
+}
+
+.cus-nav-p {
+    padding: 0.5rem 1rem;
+}
+
+/*==============*/
+/*-------footer-----*/
+
+.foot {
+    z-index:1100;
+    margin-top:auto;
+    background-color:#b97b20;
+    color:black;
+    border:4px solid burlywood;
+    border-style:outset;
+    -webkit-filter: brightness(115%) !important;
+            filter: brightness(115%) !important;
+
+  }
+
+  .footspans {
+      display:-webkit-box;
+      display:-ms-flexbox;
+      display:flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+  }
+  /*====================*/
+  /*----homepage--------*/
+.title_colour {
+    color:white;
+}
+
+.hotel_img {
+    position: relative;
+    overflow: hidden;
+}
+
+.hotel_img a {
+    background-color: #df9e3e;
+}
+
+.hotel_img img {
+    border-radius: 6%;
+    border:1px solid black;
+}
+
+.roompic {
+    margin:auto;
+}
+
+.roomtype {
+    color:white;
+    background-color: rgba(0,0,0,.3);
+    
+}
+
+.check {
+    position:relative;
+    top:-135px;
+
+}
+
+.check1 {
+    position:relative;
+    top:-250px;
+    width:50%;
+    margin:auto
+
+}
+
+.check2 {
+    position:relative;
+    top:-250px;
+    width:50%;
+    margin: auto;
+
+}
+
+#caro {
+    background-color: #df9e3e;
+    min-height:400px;
+    border:5px solid burlywood;
+    border-style: inset;
+}
+
+.carousel-item {
+    -webkit-transition-duration:1.2s, 1.2s !important;
+         -o-transition-duration:1.2s, 1.2s !important;
+            transition-duration:1.2s, 1.2s !important;
+}
+
+.home-review-panel{
+    color:black;
+    font-size:1.1rem;
+}
+
+/*=======================*/
+/*----information page---*/
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:35%;
+    position:relative;
+    height:0;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+/*====================*/
+/*---review page------*/
+
+.review-display {
+    border-style:inset;
+    /* background-color: beige; */
+    background-color:#3e261d;
+    border:5px solid burlywood;
+}
+
+.step-links {
+    font-size:0.8rem;
+}
+
+.darkanchor {
+    color:burlywood !important; 
+    -webkit-filter:brightness(115%); 
+            filter:brightness(115%);
+}
+/*================*/
+/*----staff page--*/
+
+.stafftextbox {
+    background-color: #a3c1d9;
+    color:black;
+}
+
+.staffbutton{
+  width:140px;
+  margin:auto;
+  background-color:#df9e3e;
+  margin-top: 5px;
+  border:2px solid black;
+  padding:2px;
+  border-radius:10%;
+
+}
+
+/*====================*/
+/*------myaccount page*/
+
+.bookingtable {
+    color:#a1661a;
+    border:5px solid burlywood;
+    border-style:inset;
+    background-color:#3e261d;
+    font-size: calc(0.3rem *2);
+}
+
+/*====================*/
+/*---book page--------*/
+
+.flash-color {
+    color:#eb420c
+}
+/*====================*/
+/*--check availability*/
+
+.customfontsize1 {
+    font-size:1.7rem !important;
+}
+
+.customfontsize2 {
+    font-size:1.4rem !important;
+}
+
+.availform {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;  
+}
+
+/*========================*/
+/*-custom all-auth pages-*/
+
+.smalltext {
+    font-size:smaller!important;
+}
+
+.regform-fontsize {
+    font-size: 0.7rem;
+}
+
+.liform p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+}
+
+/*===============*/
+/*---extend page-*/
+
+.extenddatebox {
+    color:black;
+    font-size: medium;
+    font-family: 'Koulen', cursive !important;
+}
+
+/*==================*/
+/*--create review---*/
+
+.book-btn {
+    background-color: #df9e3e;
+    border:1px solid black;
+    padding:2px;
+    border-radius:10%;
+}
+.form-wrapper textarea {
+    width:270px;
+    border-style:outset;
+    background-color: beige;
+    border:5px solid burlywood;
+    padding:5px;
+    margin:5px;
+}
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    }
+
+/*=====================*/
+
+/*----media queries-------------------*/   
+@media screen and (min-width:320px){
+    
+}
+@media screen and (min-width:375px) {
+    .step-links {
+        font-size:1rem;
+    }
+
+    #caro {
+        min-height:350px;
+    }
+
+    .form-wrapper textarea {
+        width:290px;
+    }
+
+}
+
+@media screen and (min-width:425px) {
+    .bookingtable {
+        font-size: calc(0.3rem *2.4);
+    }
+
+
+#caro {
+    min-height:300px;
+    }
+}
+
+.socicon {
+    margin-top:5px;
+}
+
+.regform-fontsize {
+    font-size: 0.9rem;
+}
+
+
+@media screen and (min-width:768px) {
+.step-links {
+    font-size:1.5rem;
+}
+
+
+.bookingtable {
+    font-size: calc(0.3rem *3);
+}
+
+.smalltext {
+    font-size:medium!important;
+}
+
+#caro {
+    min-height:190px;
+}
+
+.cusp {
+    padding:0;
+}
+
+}
+
+@media screen and (min-height:920px) {
+
+ #pagends {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    display:block;
+    bottom: 0;
+    left:0;
+    width: 100%; 
+    max-height: 50px;   
+}  
+
+}
+@media screen and (min-width:1024px) {
+    .bookingtable {
+        font-size: calc(0.3rem *3.8);
+    }
+
+    .home-review-panel {
+        font-size:1.4rem;
+    }
+
+    .topmarlg {
+        margin-top:7% !important;
+    }
+
+    .regform-fontsize {
+        font-size: 1rem;
+    }
+
+    .dropdown-menu{
+        background-color:burlywood;
+        top:50%;
+    }
+
+    .footspans {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        padding:5px;
+    }
+   
+}
+
+@media screen and (min-width:1440px) {
+    .map-responsive{
+        padding-bottom: 20%;
+    }
+    
+}

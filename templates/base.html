@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dpudxnll7/image/upload/v1652886940/media/flowerico_vvvnvr.png">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-<link rel="stylesheet" href="{% static 'css/style.css' %}">  
+<link rel="stylesheet" href="{% static 'css/prefixed.css' %}">  
 {% endblock %}
 
 {% block extra_css %}
@@ -114,6 +114,7 @@
 
     
     <!--===================script for closing messages=============-->
+    <!--===========this script is taken from CI course material====-->
     <script>
         setTimeout(function () {
             let messages = document.getElementById('msg');
@@ -121,15 +122,6 @@
             alert.close();
         }, 2500);
     </script>
-    <!--remore errors from error list-->
-    <!-- <script>
-        setTimeout(function() {
-          let errors = document.getElementsByClassName('errorlist');
-          while(errors.length > 0) {
-            errors[0].parentNode.removeChild(errors[0]);
-          }
-        }, 3000);
-      </script> -->
     </div>
     <!--===================Footer=================-->
     <footer class="foot">
