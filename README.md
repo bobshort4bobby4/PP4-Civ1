@@ -17,7 +17,7 @@ Github repository can be accessed [here](https://github.com/bobshort4bobby4/PP4-
 
 This is the fourth project I have completed as part of the[Code Institute Full Stack Diploma Course](https://codeinstitute.net).  
 
-The project sets out to create a website for a fictitious hotel.  Rooms can be booked and cancelled via the site, as well as extended if availability exsists for that room,  if the  current room is booked  another room of the same type will be suggested if available.  
+The project sets out to create a website for a fictitious hotel.  Rooms can be booked and cancelled via the site, as well as extended if availability exsists for that room.  
 The room should only be cancelled if the check in date is not more than 7 days away.
 
 The imaginery product owner has also requested that rooms are put on sale if occupancy drops below a set percentage.  
@@ -78,8 +78,10 @@ The AGIILE methodology for project development will be used to produce this proj
   
   ### Wireframes
   A full set of wireframes was produced, they can be viewed via the link following.
+  This document shows three reviews per page on the reviews page, this number was changed to five in the deployed app, as it displayed better.  
+  Please note that no wireframe was provided for the staff page as it was  a late addition to the project on advice from my Mentor that there should be some role based   accessability function within the site.  
   (CTRL + click to open on new page)
-  [Link to wireframes pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/pp4-ci-wireframesv2.pdf)  
+  [Link to wireframes pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/pp4-ci-wireframesv2.pdf)  
     
   ### Typography
   I choose The Playfair Display Font  as the  main font for the site.   
@@ -90,11 +92,12 @@ The AGIILE methodology for project development will be used to produce this proj
     
   ![example of the koulen font](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/typography/koulenfont-pp4.png)  
     
-  Both fonts were downloaded from Google fonts.  
-    
+  Both fonts were downloaded from [Google fonts](https://fonts.google.com/).  
   
-    
+  ### Images
   
+  All images used in this site were obtained from the [Pexels Website](https://www.pexels.com/) and are free to use.
+   
   ### Colours
   Colours used are shown below. Black was used for some of the form fields as it was clearer.  
     
@@ -161,7 +164,7 @@ The AGIILE methodology for project development will be used to produce this proj
   - ListView
   - CreateView  
     
-  The built-in mixins were used also  
+  Two built-in mixins were used also  
   - SuccessMessageMixin
   - LoginRequiredMixin
   
@@ -175,11 +178,10 @@ The AGIILE methodology for project development will be used to produce this proj
   ### Home Page  
   The major element of the landing page is a display inviting the user to check availability for the various room types the hotel offers.  
   Price and a brief description of the rooms are also displayed.  
-  The nav-bar is displayed at the top along with various links to social media.  
+  The nav-bar is displayed at the top along with various links.  
   The nav-bar is based on a standard bootstrap one and is fully responsive, collasping to  a  hamburger menu at smaller screen sizes.  
-  The nav-bar and social links are part of the base template and are displayed on all pages.  
-  When a user logs in the 'log out', 'myaccount' and 'logged in as ...' links are displayed.  
-  All social links open to a new tab.  
+  The nav-bar is part of the base template and is displayed on all pages.  
+  When a user logs in the 'log out', 'myaccount' and 'logged in as ...' links are displayed.    
   A carousel of featured reviews is placed on the lower part of the screen.  
     
   ![image of home screen](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/home-pp4.png)
@@ -200,10 +202,12 @@ The AGIILE methodology for project development will be used to produce this proj
   ### Create Review Page
   A simple page containing a text area for users to input their review, the form validates for content, on submitting the user is alerted with a thank you message and redirected to the home page.  The reviews will not be displayed untill approved via the admin panel, only reviews set to featured = true will be displayed on the home page slider.
     
-  ![image of the create review page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/createreview-pp4.png)  
+  ![image of the create review page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/createreviewpage-pp4.png)  
     
-  ### Contact Page
-  maybe not include  
+  ### Staff Page
+  This page is available only to users who are staff.  It is used to approve reviews submitted by customers.  
+    
+  ![staff page image](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/staffpage-pp4.png)
   
   ### Check Availability Page
   This page contains a short description of the type of room the user chose on the home page and a form to input the desired check-in and check-out dates.  
@@ -237,7 +241,11 @@ The AGIILE methodology for project development will be used to produce this proj
     
   ### User Authentification
   All user authentification functions are implemented using the django all-auth package.  The templates are customisied to match the style of website.  
+     
+  ### Footer  
+  All pages have a footer which contains working links to the hotel for both telephone and email.  
     
+  
   ### Admin Panel Features
   
   I made some small additions to the admin panel features, these were functions which I imagined would be useful to a hotel manager in a real-life scenario.  
@@ -267,6 +275,42 @@ The AGIILE methodology for project development will be used to produce this proj
   
   
  </details>
+ 
+ # Technologies Used
+<details>
+  <summary>Technologies Used</summary>
+  
+  #### Languages Used
+  
+  - Python
+  - CSS  
+  - HTML  
+  - CSS  
+  
+  #### Development Environment
+    
+  I used the gitpod-full-template for gitpod provided by Code Institute.  
+  The app was built using the Django framework.  
+  
+  
+  #### Applications Used
+  
+  - [Balsamiq](https://www.balsamiq.com) was used to create wireframes for this project.
+  - [LucidChart](https://www.lucidchart.com) used for the ERD in readme file.
+  - [Git](https://git-scm.com/) Git was used for version control.
+  - [GitHub](https://github.com/) GitHub is used to store the projects code.
+  - [Heroku](http://www.heroku.com/) Heroku.com was used to deploy the site.
+  - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) used for layout and responsive testing.
+  - [Wave](https://wave.webaim.org/) used for accessibility testing.
+  - [W3 Validator](https://jigsaw.w3.org/css-validator/) used to test css code.
+  - [pep8online](http://pep8online.com/) pep8online used to validate python code
+  - [Windows snip & sketch](https://www.microsoft.com/en-us/p/snip-sketch/9mz95kl8mr0l?activetab=pivot:overviewtab) used to capture screenshots for readme file.
+  - [techsini.com](https://techsini.com/) used to create the mock-up used in the readme file.
+  - [Freeconvert.com](https://www.freeconvert.com) was used to convert the background image file to the  webp format.  
+  - [autoprefixer.github.io](https://autoprefixer.github.io/) used to improve browser compatibility.  
+  
+  </details>
+  
 
   
 # Deployment and Version Control
@@ -345,6 +389,8 @@ To deploy my project I followed the steps below.
   
   
  </details>
+ 
+ 
 
 
 
@@ -403,6 +449,8 @@ To deploy my project I followed the steps below.
    I used The W3C CSS Validation Service-Jigsaw to validate the css used in the app.  
   Any errors found were fixed to obtain no errors and 2 warnings as shown below.  
   The warning concerned the importing of fonts from google fonts.
+  Please note that a auto-prefixed version of this css file is used in the deployed version.  This version also has no errors but 38 warnings extra.  
+  All of these extra warnings relate to vendor extensions
     
   ![css validation results](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/css-html%20-validation-results/cssvalidation-pp4.png)  
   
@@ -423,9 +471,14 @@ To deploy my project I followed the steps below.
   
   
  ### Python Validation
-  
+  All python code was validated using the PEP8 online validator.  All errors were cleared, a link to screen-grabs of these results is below.  
 [Link to PeP8 results for python code](https://docs.google.com/document/d/1seRhPVNkAd9ZI-dmfUxzx1te3_IKNzYoB3pL-h_-G-8/edit?usp=sharing)
   
+ ### Javascript Validation 
+  There was a small amount of Javascript used to close messages, this script was passed through the jshint validator. the result is shown below.  
+    
+  ![jshint result]()  
+    
   
  ### Testing Application For Achievement of User Goals.  
     
@@ -504,12 +557,7 @@ To deploy my project I followed the steps below.
   [The results of this testing can be found here](https://docs.google.com/spreadsheets/d/1OmOLO1755Cwm_MdL_q3j_q5kEfDmpSuUcT__er4jC2Y/edit?usp=sharing)
   
     
-  
-  
-  
-  
-  
-</details>
+  </details>
 
 
 
