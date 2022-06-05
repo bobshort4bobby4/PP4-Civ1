@@ -20,7 +20,7 @@ def occupancy_rate(data):
     bookings = Booking.objects.all()
     rooms = Room.objects.all()
     bookedrooms = []
-
+    # convert to datetime object
     y = int(data['check_in'][0:4])
     m = int(data['check_in'][5:7])
     d = int(data['check_in'][8:10])

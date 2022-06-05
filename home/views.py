@@ -4,11 +4,10 @@ home app views
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from django.shortcuts import redirect, reverse
+from django.core.exceptions import PermissionDenied
 from django.views.generic import TemplateView, ListView
 from roombook.models import RoomType
 from reviews.models import Reviews
-# from decorators import role_required
-from django.core.exceptions import PermissionDenied
 
 # Create your views here.
 

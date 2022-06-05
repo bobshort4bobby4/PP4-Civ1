@@ -4,7 +4,6 @@ forms used in the application
 """
 from django import forms
 from roombook.models import Booking
-from reviews.models import Reviews
 
 
 class AvailabilityForm(forms.Form):

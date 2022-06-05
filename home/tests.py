@@ -1,6 +1,8 @@
 """
 tests for home app
 """
+from django.contrib.auth import get_user_model
+from django.test.client import Client
 from django.test import TestCase
 from django.test import tag
 from django.urls import reverse
@@ -25,10 +27,10 @@ class TestHomeViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'home/info.html')
 
-    def test_staffview_renders_correct_template(self):
+    def test_staffview_renders_correct_template_nonstaff(self):
         response = self.client.get(reverse('home:staff'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'home/staff.html')
+        self.assertEqual(response.status_code, 403)
+        self.assertTemplateUsed(response, '403.html')
 
     def test_approve_review_is_working(self):
         user = User.objects.create_user(
