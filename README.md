@@ -291,6 +291,7 @@ The AGIILE methodology for project development will be used to produce this proj
     
   I used the gitpod-full-template for gitpod provided by Code Institute.  
   The app was built using the Django framework.  
+  I used the Django setup cheat sheet provided as course material to start and set basic settings for the application.
   
   
   #### Applications Used
@@ -308,6 +309,7 @@ The AGIILE methodology for project development will be used to produce this proj
   - [techsini.com](https://techsini.com/) used to create the mock-up used in the readme file.
   - [Freeconvert.com](https://www.freeconvert.com) was used to convert the background image file to the  webp format.  
   - [autoprefixer.github.io](https://autoprefixer.github.io/) used to improve browser compatibility.  
+  - [Cloudinary.com](https://cloudinary.com/) used to store media.
   
   </details>
   
@@ -551,13 +553,52 @@ To deploy my project I followed the steps below.
   - Roombook APP 84%  
   
   [These results are shared at this link](https://docs.google.com/spreadsheets/d/1RWi0MxZxObRYifLkKv-LtTtAoNW04lpUWkk4_LFDsOM/edit?usp=sharing)  
+  I felt that this testing did not cover many of the aspects/functionality that would be neccessary so also tested manually.  
     
   ### Manual Testing of User Input and Functions  
   I systematically tested all user inputs and functionality in the website to compare feedback/results against expected results.  
   Any unexpected output/outcomes were fixed.  
-  [The results of this testing can be found here](https://docs.google.com/spreadsheets/d/1OmOLO1755Cwm_MdL_q3j_q5kEfDmpSuUcT__er4jC2Y/edit?usp=sharing)
+  [The results of this testing can be found here](https://docs.google.com/spreadsheets/d/1OmOLO1755Cwm_MdL_q3j_q5kEfDmpSuUcT__er4jC2Y/edit?usp=sharing)  
+    
+  ### Known Issues and Unfixed Bugs
+  
+  ###### Method of calculating Flash sale
+  The method I used to determine whether the room should be put on sale (occupancy_rate.py in the booking_code folder) whilst not incorrect is perhaps not the best method. In hindsight I should have used a method such as the one used to calculate the occupancy rate in the admin panel for each room type (roombook/admin.py).  
+    
+  The latter method uses each specific room type to calculate the percentage of nights booked over a set period whereas the former uses all rooms and simply checks if the check-in date of the new booking falls with the range of all current bookings.  
+  It would not, I'd imagine be too difficult a task to change the occupancy_rate function in the future if required.
+  
+  ###### User Extending a Booking into Another Booking of Theirs in the same Room.  
+  If a customer attempts to extend a booking in a specific room overlapping the time period of another booking of theirs in the same room the program will not allow it.  
+  
+  For example if a customer A has a booking for room 3 from  1/1/2022 to 7/1/2022 and another for the same room from 10/01/2022 to 17/01/2022,  if they try to extend the first booking to 9/01/2022 (ie bridging the gap between the bookings) the app will allow it,  provided the room 3 is free.  
+  If however the customer overlaps the second booking an error will be shown and the extension to the booking refused. From an UE viewpoint it would be preferable to flag to the customer that they had already booked that room for some of the choosen extension period.  
+  
+  ###### Unit Testing
+  Although the coverage percentage is 85%, I feel that there were many aspects of the program I didn't manage to write tests for.  
+  These aspects were adequately tested in manual testing, I believe.
+  
+  ###### Git Push Sizes
+  My CI Mentor has pointed out that some of the earlier git commits are too large.  This is because I had written and tested some parts of the functionality/logic and tests in different coding environments, consequently I was able to commit larger batches of tested code to the repository.  
+  
+  ###### Time Incorrect
+  The time used in the app is one hour behind local time.  If i set the Timezone setting to 'Europe/Dublin' it displays the correct local time in the templates and on the admin panel.  The Django documentation suggests that UTC is a better option for this setting.maybe change in templaetes?
+  
   
     
+  </details>
+  
+  
+  # Credits
+  <details>
+  <summary>Credits</summary>
+  - Bootstrap I used standard bootstrap templates for several of the elements on the site, these were adapted to suit as needed. The Nav-bar, Review-Slider and the table on the My Account page are all taken from the [Bootstrap site](https://getbootstrap.com/).
+  - The Css used to format the embedded google map on the information page was taken from this blog[blog.duda](https://blog.duda.co/responsive-google-maps-for-your-website)
+  - Information on making custom model managers was found [here](https://www.youtube.com/watch?v=YGwSNkdwAEs)
+  - Stackoverflow for general information [](https://stackoverflow.com/)
+  - Course Materials
+  - My CI Mentor Mr Ben Kavanagh.
+  
   </details>
 
 
