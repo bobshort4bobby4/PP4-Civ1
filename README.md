@@ -200,7 +200,7 @@ The AGIILE methodology for project development will be used to produce this proj
   ![image of review page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/reviewpage-pp4.png)
     
   ### Create Review Page
-  A simple page containing a text area for users to input their review, the form validates for content, on submitting the user is alerted with a thank you message and redirected to the home page.  The reviews will not be displayed untill approved via the admin panel, only reviews set to featured = true will be displayed on the home page slider.
+  A simple page containing a text area for users to input their review, the form validates for content, on submitting the user is alerted with a thank you message and redirected to the home page.  The reviews will not be displayed untill approved via the admin panel or the staff area, only reviews set to featured = true will be displayed on the home page slider.
     
   ![image of the create review page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/createreviewpage-pp4.png)  
     
@@ -375,7 +375,7 @@ To deploy my project I followed the steps below.
   `git push heroku main`  
   
   
-  This process did not work seamlessly for me, below I list some the problems I encountered whilst trying to deployment the project.
+  This process did not work seamlessly for me, below I list some the problems I encountered whilst trying to deploy the project.
   
   Because I had not created a runtime.txt file in my root, which specifies which  version of python I was using the build failed.
   [link to information on this issue](https://devcenter.heroku.com/articles/python-runtimes)  
@@ -449,8 +449,9 @@ To deploy my project I followed the steps below.
    I used The W3C CSS Validation Service-Jigsaw to validate the css used in the app.  
   Any errors found were fixed to obtain no errors and 2 warnings as shown below.  
   The warning concerned the importing of fonts from google fonts.
-  Please note that a auto-prefixed version of this css file is used in the deployed version.  This version also has no errors but 38 warnings extra.  
-  All of these extra warnings relate to vendor extensions
+  Please note that a auto-prefixed version of this css file is used in the deployed version.  
+  This version also has no errors but 38 warnings extra.  
+  All of these extra warnings relate to vendor extensions  
     
   ![css validation results](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/css-html%20-validation-results/cssvalidation-pp4.png)  
   
@@ -542,9 +543,9 @@ To deploy my project I followed the steps below.
   
   ### Automated Tesing
   
-  I wrote tests using the unit test functionality built into django. The coverage rate of these tests for the entire app was 86%.  
+  I wrote tests using the unit test functionality built into django. The coverage rate of these tests for the entire app was 85%.  
   The coverage for the individual apps is listed below.  
-  - Home APP 100% 
+  - Home APP 99% 
   - MyAccount APP 73%  
   - Reviews APP 96%  
   - Roombook APP 84%  
