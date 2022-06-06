@@ -32,7 +32,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ["pp4-civ1.herokuapp.com", "localhost"]
@@ -135,6 +135,7 @@ WSGI_APPLICATION = 'hotelapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# leaving this commented out code as is needed for unit testing
 
 # DATABASES = {
 #     'default': {
