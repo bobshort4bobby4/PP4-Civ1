@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load tz %}
+{% get_current_timezone as TIME_ZONE %}
 {% block title%}Reviews{% endblock title %}
 {% block content %}
 <div class="hotel-title container text-center under dark">
@@ -11,15 +13,17 @@
 
 <section class="container p-2 text-center" aria-label="list of reviews">
     <!--===========list approved reviews======-->
+    {% localtime on %}
     {% for review in hotel_reviews %}
     <div  class="mt-2 mb-1 p-2 review-display">
-        <p style="font-size:1.2rem;">{{ review.text }}.......{{review.user.username}}, {{ review.created_on  }}</p>
+        <p style="font-size:1.2rem;">{{ review.text }}.......{{review.user.username}}, {{ review.created_on|timezone:TIME_ZONE }}</p>
     </div>
     {% empty %}
     <div>
         <h1 class="text-white">You have no reviews as of yet</h1>
     </div>
     {% endfor%}
+    {% endlocaltime %}
 
     <div class="pagination justify-content-between">
         <span class="step-links">

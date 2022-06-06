@@ -1,7 +1,7 @@
 """
 Views for review app
 """
-from django.shortcuts import redirect
+
 from django.views.generic import ListView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
