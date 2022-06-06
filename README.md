@@ -475,12 +475,13 @@ To deploy my project I followed the steps below.
   
  ### Python Validation
   All python code was validated using the PEP8 online validator.  All errors were cleared, a link to screen-grabs of these results is below.  
-[Link to PeP8 results for python code](https://docs.google.com/document/d/1seRhPVNkAd9ZI-dmfUxzx1te3_IKNzYoB3pL-h_-G-8/edit?usp=sharing)
+[Link to PeP8 results for python code](https://docs.google.com/document/d/1seRhPVNkAd9ZI-dmfUxzx1te3_IKNzYoB3pL-h_-G-8/edit?usp=sharing)  
+  NB There are a small number of lines that are one or two characters too long (ie. over 79), rather than break these onto several lines I preferred to leave as one line even if it does cause an error in the linter.
   
  ### Javascript Validation 
   There was a small amount of Javascript used to close messages, this script was passed through the jshint validator. the result is shown below.  
     
-  ![jshint result]()  
+  ![jshint result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/jshint-pp4.png)  
     
   
  ### Testing Application For Achievement of User Goals.  
@@ -562,31 +563,34 @@ To deploy my project I followed the steps below.
     
   ### Known Issues and Unfixed Bugs
   
-  ###### Method of calculating Flash sale
+  ##### Method of calculating Flash sale
   The method I used to determine whether the room should be put on sale (occupancy_rate.py in the booking_code folder) whilst not incorrect is perhaps not the best method. In hindsight I should have used a method such as the one used to calculate the occupancy rate in the admin panel for each room type (roombook/admin.py).  
     
   The latter method uses each specific room type to calculate the percentage of nights booked over a set period whereas the former uses all rooms and simply checks if the check-in date of the new booking falls with the range of all current bookings.  
   It would not, I'd imagine be too difficult a task to change the occupancy_rate function in the future if required.
   
-  ###### User Extending a Booking into Another Booking of Theirs in the same Room.  
+  ##### User Extending a Booking into Another Booking of Theirs in the same Room.  
   If a customer attempts to extend a booking in a specific room overlapping the time period of another booking of theirs in the same room the program will not allow it.  
   
-  For example if a customer A has a booking for room 3 from  1/1/2022 to 7/1/2022 and another for the same room from 10/01/2022 to 17/01/2022,  if they try to extend the first booking to 9/01/2022 (ie bridging the gap between the bookings) the app will allow it,  provided the room 3 is free.  
-  If however the customer overlaps the second booking an error will be shown and the extension to the booking refused. From an UE viewpoint it would be preferable to flag to the customer that they had already booked that room for some of the choosen extension period.  
+  For example if a customer has a booking for room 3 from  1/1/2022 to 7/1/2022 and another for the same room from 10/01/2022 to 17/01/2022,  if they try to extend the first booking to 9/01/2022 (ie bridging the gap between the bookings) the app will allow it,  provided the room 3 is free.  
+  If however the customer overlaps the second booking, an error will be shown and the extension to the booking refused. From an UE viewpoint it would be preferable to flag to the customer that they had already booked that room for some of the choosen extension period.  
   
-  ###### Unit Testing
+  ##### Unit Testing
   Although the coverage percentage is 85%, I feel that there were many aspects of the program I didn't manage to write tests for.  
   These aspects were adequately tested in manual testing, I believe.
   
-  ###### Git Push Sizes
+  ##### Git Push Sizes
   My CI Mentor has pointed out that some of the earlier git commits are too large.  This is because I had written and tested some parts of the functionality/logic and tests in different coding environments, consequently I was able to commit larger batches of tested code to the repository.  
   
-  ###### Time Incorrect
-  The time used in the app is one hour behind local time.  If i set the Timezone setting to 'Europe/Dublin' it displays the correct local time in the templates and on the admin panel.  The Django documentation suggests that UTC is a better option for this setting.  I also tried the template tag `localtime on` and also using the tIME_ZONE context processor, I haven't found a fix for this error at this time.
+  ##### Time Incorrect
+  The time used in the app is one hour behind local time.  If i set the Timezone setting to 'Europe/Dublin' it displays the correct local time in the templates and on the admin panel.  The Django documentation suggests that UTC is a better option for this setting.  I also tried the template tag `localtime on` and also using the TIME_ZONE context processor, I haven't found a fix for this error at this time.
   
-  ###### Incorrect Default setting used in Review Model.
-  I used the default value of `auto_now` for the `created_on ` field in the Review model, `auto_now_add` would have been a better choice. In this case I don't think it matters as the reviews are not editable, I was reluctant to change the model as I feared it may affect currently written records.
-    
+  ##### Incorrect Default setting used in Review Model.
+  I used the default value of `auto_now` for the `created_on ` field in the Review model, `auto_now_add` would have been a better choice. In this case I don't think it matters as the reviews are not editable, I was reluctant to change the model as I feared it may affect currently written records.  
+  
+  ##### Unauthorised Viewing of Booking Details.
+   Late in the developement process I noticed that a logged in user could view (but not change) another user's booking details by entering a random value into the extend booking and cancel booking URLs.  I put an id check into the get method of both views and this solved the issue, I left the previous checks in the code as an additional safeguard.  
+  
   </details>
   
   
@@ -595,10 +599,11 @@ To deploy my project I followed the steps below.
   <summary>Credits</summary>
   
   - Bootstrap I used standard bootstrap templates for several of the elements on the site, these were adapted to suit as needed. The Nav-bar, Review-Slider and the table on the My Account page are all taken from the [Bootstrap site](https://getbootstrap.com/).  
-  - The Css used to format the embedded google map on the information page was taken from this blog[blog.duda](https://blog.duda.co/responsive-google-maps-for-your-website)  
-  - Information on making custom model managers was found [here](https://www.youtube.com/watch?v=YGwSNkdwAEs)  
-  - Stackoverflow for general information [](https://stackoverflow.com/)  
-  - Course Materials  
+  - The Css used to format the embedded google map on the information page was taken from this blog[blog.duda](https://blog.duda.co/responsive-google-maps-for-your-website). 
+  - Information on making custom model managers was found [here](https://www.youtube.com/watch?v=YGwSNkdwAEs). 
+  - Stackoverflow for general information [](https://stackoverflow.com/).  
+  - Javascript script used to close the Django messages was taken from one of the course material examples.
+  - Course Materials.    
   - My CI Mentor Mr Ben Kavanagh.  
   
   </details>
