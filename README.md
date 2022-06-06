@@ -582,9 +582,10 @@ To deploy my project I followed the steps below.
   My CI Mentor has pointed out that some of the earlier git commits are too large.  This is because I had written and tested some parts of the functionality/logic and tests in different coding environments, consequently I was able to commit larger batches of tested code to the repository.  
   
   ###### Time Incorrect
-  The time used in the app is one hour behind local time.  If i set the Timezone setting to 'Europe/Dublin' it displays the correct local time in the templates and on the admin panel.  The Django documentation suggests that UTC is a better option for this setting.maybe change in templaetes?
+  The time used in the app is one hour behind local time.  If i set the Timezone setting to 'Europe/Dublin' it displays the correct local time in the templates and on the admin panel.  The Django documentation suggests that UTC is a better option for this setting.  I also tried the template tag `localtime on` and also using the tIME_ZONE context processor, I haven't found a fix for this error at this time.
   
-  
+  ###### Incorrect Default setting used in Review Model.
+  I used the default value of `auto_now` for the `created_on ` field in the Review model, `auto_now_add` would have been a better choice. In this case I don't think it matters as the reviews are not editable, I was reluctant to change the model as I feared it may affect currently written records.
     
   </details>
   
@@ -592,12 +593,13 @@ To deploy my project I followed the steps below.
   # Credits
   <details>
   <summary>Credits</summary>
-  - Bootstrap I used standard bootstrap templates for several of the elements on the site, these were adapted to suit as needed. The Nav-bar, Review-Slider and the table on the My Account page are all taken from the [Bootstrap site](https://getbootstrap.com/).
-  - The Css used to format the embedded google map on the information page was taken from this blog[blog.duda](https://blog.duda.co/responsive-google-maps-for-your-website)
-  - Information on making custom model managers was found [here](https://www.youtube.com/watch?v=YGwSNkdwAEs)
-  - Stackoverflow for general information [](https://stackoverflow.com/)
-  - Course Materials
-  - My CI Mentor Mr Ben Kavanagh.
+  
+  - Bootstrap I used standard bootstrap templates for several of the elements on the site, these were adapted to suit as needed. The Nav-bar, Review-Slider and the table on the My Account page are all taken from the [Bootstrap site](https://getbootstrap.com/).  
+  - The Css used to format the embedded google map on the information page was taken from this blog[blog.duda](https://blog.duda.co/responsive-google-maps-for-your-website)  
+  - Information on making custom model managers was found [here](https://www.youtube.com/watch?v=YGwSNkdwAEs)  
+  - Stackoverflow for general information [](https://stackoverflow.com/)  
+  - Course Materials  
+  - My CI Mentor Mr Ben Kavanagh.  
   
   </details>
 
