@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-{% block title%}MyAccount{% endblock title %}
+{% block title%}My Account{% endblock title %}
 
 {% block content %}
 <div class="container mt-5 bookingtable" >
   <div class="col-sm-12  offset-md-2 col-md-8  offset-lg-3 col-lg-6 p-1">
-    <div class="row flex-column">
+    <div class="row flex-column no-gutters">
         <div>
-            <h2 class="text-center" style="color:#a1661a">Welcome!</h2>
-            <H2 class="text-center" style="color:#a1661a"> Your Bookings.</H2>
+            <h2 class="text-center dark" >Welcome!</h2>
+            <H2 class="text-center dark" > Your Bookings.</H2>
         </div>
         <table class="table koulenfont dark">
           <thead>
@@ -24,7 +24,7 @@
 
           <tbody >
             <tr>
-              <th scope="row">{{ booking.user }}</th>
+              <th scope="row no-gutters">{{ booking.user }}</th>
               <td>{{ booking.room_number }}</td>
               <td>{{ booking.check_in }}</td>
               <td>{{ booking.check_out }}</td>
@@ -44,8 +44,8 @@
     
         
   </div>
-        <h4 style="color:#a1661a" class="text-center">User:    {{user.username}}</h4>
-        <h4 style="color:#a1661a" class="text-center mb-1">User Email:    {{ user.email }}</h4>
+        <h4  class="text-center dark">User:    {{user.username}}</h4>
+        <h4  class="text-center mb-1 dark">User Email:    {{ user.email }}</h4>
         <p class="mb-2"><a href="{% url 'account_change_password' %}" aria-label="change your password"><u class="koulenfont dark">change password</u></a></p>
     </div> 
 </div>
