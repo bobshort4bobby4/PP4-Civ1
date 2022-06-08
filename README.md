@@ -304,6 +304,7 @@ The AGIILE methodology for project development will be used to produce this proj
   - [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) used for layout and responsive testing.
   - [Wave](https://wave.webaim.org/) used for accessibility testing.
   - [W3 Validator](https://jigsaw.w3.org/css-validator/) used to test css code.
+  - [w3 HTML Validator](https://validator.w3.org/) was used for html validation.
   - [pep8online](http://pep8online.com/) pep8online used to validate python code
   - [Windows snip & sketch](https://www.microsoft.com/en-us/p/snip-sketch/9mz95kl8mr0l?activetab=pivot:overviewtab) used to capture screenshots for readme file.
   - [techsini.com](https://techsini.com/) used to create the mock-up used in the readme file.
@@ -604,6 +605,11 @@ To deploy my project I followed the steps below.
   - Stackoverflow for general information [](https://stackoverflow.com/).  
   - Javascript script used to close the Django messages was taken from one of the course material examples.
   - Course Materials.    
+  - I used several sources as I was researching a good way to implement the room booking function and site layout.  I studied several systems and wrote my own version using methods from these sources. Some of the main sources are listed  
+    1. https://www.geeksforgeeks.org/find-k-bookings-possible-given-arrival-departure-times/  
+    2. https://www.youtube.com/watch?v=yenjz1Wv9Yo&t=1s
+    3. https://www.youtube.com/watch?v=8Yv6eQSGK0w 
+    4. https://www.youtube.com/watch?v=5bSd2uI5gWg&t=40s
   - My CI Mentor Mr Ben Kavanagh.  
   
   </details>
