@@ -2,8 +2,11 @@
     Myaccount views
 """
 from datetime import date
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
+from django.core.exceptions import PermissionDenied
 from django.contrib import messages
 from django.shortcuts import redirect, reverse
 from django.shortcuts import get_object_or_404
@@ -14,6 +17,7 @@ from forms.forms import CancelConfirmForm, ExtendBookingForm
 from booking_code.check_extendability import check_extendability
 
 
+@method_decorator(login_required, name='dispatch')
 class ShowDetails(ListView):
     """
         A generic veiw to list all booking of that customer
@@ -28,13 +32,13 @@ class ShowDetails(ListView):
             user=self.request.user, is_active=True).order_by('check_in')
 
 
+@method_decorator(login_required, name='dispatch')
 class CancelBooking(SuccessMessageMixin, DeleteView):
     """
      Generic view to delete booking with id of pk.
 
     """
     # set queryset to one booking selected by user, passed in kwargs
-
     def get_queryset(self):
         pk = self.kwargs.get('pk', None)
         return Booking.objects.filter(
@@ -62,26 +66,32 @@ class CancelBooking(SuccessMessageMixin, DeleteView):
 
     # overriding get method to check the checkin date is not too close
     def get(self, request, *args, **kwargs):
+        user = self.request.user
         bookid = self.kwargs.get('pk', None)
-        today = date.today()
         booking = get_object_or_404(Booking, pk=bookid)
-        checkin = booking.check_in
-        # if checkin over 7 days away then cancel
-        if (checkin - today).days >= 7:
-            return render(request, self.template_name, {'booking': booking})
-        # if checkin less than 7 days away then deny cancel request
-        elif (checkin - today).days < 7:
-            messages.warning(request, 'Sorry! Cancelation only\
-                possible if checkin date is more than 7 days away')
-            return redirect(reverse('myaccount:myaccount'))
-        # if checkin is past tense, deny cancellation request
-        elif checkin < today:
-            messages.warning(request, 'Sorry! Checkin date has passed')
-            return redirect(reverse('myaccount:myaccount'))
+        # checkin to ensure user has the right to view this booking details
+        if booking.user.username == user.username:
+            today = date.today()
+            checkin = booking.check_in
+            # if checkin over 7 days away then cancel
+            if (checkin - today).days >= 7:
+                return render(request, self.template_name, {'booking': booking})
+            # if checkin less than 7 days away then deny cancel request
+            elif (checkin - today).days < 7:
+                messages.warning(request, 'Sorry! Cancelation only\
+                    possible if checkin date is more than 7 days away')
+                return redirect(reverse('myaccount:myaccount'))
+            # if checkin is past tense, deny cancellation request
+            elif checkin < today:
+                messages.warning(request, 'Sorry! Checkin date has passed')
+                return redirect(reverse('myaccount:myaccount'))
+            else:
+                return redirect(reverse('myaccount:myaccount'))
         else:
-            return redirect(reverse('myaccount:myaccount'))
+            raise PermissionDenied()
 
 
+@method_decorator(login_required, name='dispatch')
 class ExtendBooking(View):
     """
     Class based view to handle stay extension request
@@ -89,7 +99,7 @@ class ExtendBooking(View):
 
     template_name = 'myaccount/extend_booking.html'
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request, **kwargs):
 
         # pass booking data into template
         bookid = self.kwargs.get('pk', None)
@@ -101,9 +111,15 @@ class ExtendBooking(View):
             'bookid': bookid,
             'form': form
         }
-        return render(request, self.template_name, context)
 
-    def post(self, request, *args, **kwargs):
+        user = self.request.user
+        # checking to ensure user has right to view this booking details
+        if bookid.user.username == user.username:
+            return render(request, self.template_name, context)
+        else:
+            raise PermissionDenied()
+
+    def post(self, request, **kwargs):
         # pass booking data into template
         bookid = self.kwargs.get('pk', None)
         bookid = get_object_or_404(Booking, pk=bookid)
