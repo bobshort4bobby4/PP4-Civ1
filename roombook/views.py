@@ -95,21 +95,23 @@ def availability_view(request, type):
                 'is_active': True,
                 'type': type
             }
+            # data1 = data
 
-            # convert dict to json string
-            with open("context.json", "w") as outfile:
-                json.dump(data, outfile)
+            # # convert dict to json string
+            # with open("context.json", "w") as outfile:
+            #     json.dump(data, outfile)
 
-            data = {
-                'context': outfile,
-            }
+            # data = {
+            #     'context': outfile,
+            # }
             # join url path and data
             base_url = reverse('roombook:book')
-            query_string = urlencode({'data': data})
-            url = '{}?{}'.format(base_url, query_string)
+            # query_string = urlencode({'data': data})
+            # url = '{}?{}'.format(base_url, query_string)
 
+            request.session['data'] = data
             # send to book template
-            return redirect(url)
+            return redirect(base_url)
 
         # if no room available display message and return to home screen
         else:
@@ -119,11 +121,18 @@ def availability_view(request, type):
 
 
 def book_room_view(request):
+    '''
+    View to handle making booking
+    Parameters:
+         data: dictionary stored in session data
+
+    '''
     # retrieve data
-    data = request.GET.get('data')
+    # data = request.GET.get('data')
+    data = request.session['data']
     # convert json file
-    with open('context.json') as json_file:
-        data = json.load(json_file)
+    # with open('context.json') as json_file:
+    #     data = json.load(json_file)
 
     if request.method == 'GET':
         # check occupancy rate for checkin date
