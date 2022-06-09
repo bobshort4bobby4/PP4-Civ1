@@ -168,7 +168,9 @@ def book_room_view(request):
             'Thank you.\nConfirmation of your booking for the Flower Hotel.\n' +
             'Your booking is for Room ' + data['room_number'] + ' from \n' +
             data['check_in'] + ' to \n' + data['check_out'] + '\n' +
-            'Your booking id is ' + booking.id,
+            'Your booking id is ' + str(booking.id) + '\n' +
+            'Please let us know if we can help with anything ' + '\n' +
+            'to make your stay even better',
             'example.com',
             [email],
             fail_silently=False,

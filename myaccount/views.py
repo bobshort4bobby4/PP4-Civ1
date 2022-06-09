@@ -57,10 +57,10 @@ class CancelBooking(SuccessMessageMixin, DeleteView):
             send_mail(
                 'Booking Cancelation',
                 'Thank you.\nYour booking for the Flower Hotel.\n' +
-                'Booking id ' + bookid.id + '\n' +
-                'Room Number ' + bookid.room_number + '\n' +
-                'Check in ' + bookid.check_in + '\n' +
-                'Check Out ' + bookid.check_out + '\n' +
+                'Booking id ' + str(bookid.id) + '\n' +
+                'Room Number ' + str(bookid.room_number) + '\n' +
+                'Check in ' + str(bookid.check_in) + '\n' +
+                'Check Out ' + str(bookid.check_out) + '\n' +
                 'Has been canceled',
                 'example.com',
                 [email],
@@ -164,6 +164,18 @@ class ExtendBooking(View):
                 messages.success(
                                 request, f"Thank you for extending room { bookid.room_number } \
                                 to { data['new_check_out'] }")
+                email = request.user.email
+                send_mail(
+                    'Booking Extended',
+                    'Thank you.\nYour booking for the Flower Hotel.\n' +
+                    'Booking id ' + str(bookid.id) + '\n' +
+                    'Room Number ' + str(bookid.room_number) + '\n' +
+                    'Check in ' + str(bookid.check_in) + '\n' +
+                    'Has been extended to ' + str(bookid.check_out),
+                    'example.com',
+                    [email],
+                    fail_silently=False,
+                )
                 return redirect(reverse('home:home'))
             # display alert about room not available and redirect
             else:
