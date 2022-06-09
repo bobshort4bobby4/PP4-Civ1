@@ -165,7 +165,9 @@ def book_room_view(request):
         email = request.user.email
         send_mail(
             'Hotel Booking',
-            f'Thank you. Confirmation of your booking for the Flower Hotel.  Your booking is for Room {room_number} from {data['check_in'] to {data['check_out']}',
+            'Thank you. Confirmation of your booking for the Flower Hotel.' +
+            'Your booking is for Room' + data['room_number'] + 'from' +
+            data['check_in'] + 'to' + data['check_out'],
             'example.com',
             [email],
             fail_silently=False,
