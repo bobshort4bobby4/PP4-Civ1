@@ -2,8 +2,9 @@
 Views for roombook app
 """
 from datetime import date
-import json
-from urllib.parse import urlencode
+# import json
+# from urllib.parse import urlencode
+from django.core.mail import send_mail
 from django.contrib import messages
 from django.shortcuts import render, redirect, reverse
 from booking_code.check_availability import check_availability
@@ -161,6 +162,14 @@ def book_room_view(request):
                         is_active=True
                     )
         booking.save()
+        email = request.user.email
+        send_mail(
+            'Hotel Booking',
+            'Here is the message about your booking.',
+            'example.com',
+            [email],
+            fail_silently=False,
+        )
 
         messages.success(request, f"Thank you for booking room\
                                  { data['room_number'] } from \
