@@ -2,6 +2,7 @@
     Myaccount views
 """
 from datetime import date
+from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.urls import reverse_lazy
@@ -52,6 +53,19 @@ class CancelBooking(SuccessMessageMixin, DeleteView):
         user = self.request.user
         if bookid.user.username == user.username:
             messages.success(self.request, self.success_message)
+            email = request.user.email
+            send_mail(
+                'Booking Cancelation',
+                'Thank you.\nYour booking for the Flower Hotel.\n' +
+                'Booking id ' + bookid.id + '\n' +
+                'Room Number ' + bookid.room_number + '\n' +
+                'Check in ' + bookid.check_in + '\n' +
+                'Check Out ' + bookid.check_out + '\n' +
+                'Has been canceled',
+                'example.com',
+                [email],
+                fail_silently=False,
+            )
             return super(CancelBooking, self).delete(request, *args, **kwargs)
         else:
             messages.warning(request, 'Sorry! This does not appear\
