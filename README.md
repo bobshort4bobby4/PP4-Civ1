@@ -131,8 +131,7 @@ The AGIILE methodology for project development will be used to produce this proj
   
   **Room**  
   room_number: integerfield  
-  type:foreginKey(roomtype)
-  booked:boolean  
+  type:foreginKey(roomtype)  
   occupied:boolean  
   
   **Booking**  
@@ -166,7 +165,10 @@ The AGIILE methodology for project development will be used to produce this proj
     
   Two built-in mixins were used also  
   - SuccessMessageMixin
-  - LoginRequiredMixin
+  - LoginRequiredMixin  
+  
+  The login_required decorator was also used.  
+  
   
 
 </details>
@@ -241,6 +243,9 @@ The AGIILE methodology for project development will be used to produce this proj
     
   ### User Authentification
   All user authentification functions are implemented using the django all-auth package.  The templates are customisied to match the style of website.  
+  
+  ### Confirmation Emails
+  The booking, cancel booking and extend booking function are all confirmed via email to the user's email address.  
      
   ### Footer  
   All pages have a footer which contains working links to the hotel for both telephone and email.  
@@ -429,7 +434,7 @@ To deploy my project I followed the steps below.
   
   
   ### WAVE Web Accessibility Evaluation Tool
-  The WAVE tool was used to test all, bar one of the apps pages. The 'myaccount' page caused a server error when it's url was submitted to the WAVE website, I do not know the reason for this error but could not replicate it on any other platform.  
+  The WAVE tool was used to test all, bar one of the apps pages. The 'myaccount' page caused a server error when it's url was submitted to the WAVE website, I do not know the reason for this error but could not replicate it on any other platform.  I subquently installed the WAVE Chrome extentsion and was able to use the WAVE checker via the extentsion, result included below.
   As before a summary of results is shown as well as links to the individual results.  
     
   ![summary of wave accessability tool results](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-all-pp4.png)  
@@ -443,6 +448,7 @@ To deploy my project I followed the steps below.
   [link to extend bookig page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-extend-pp4.png)  
   [link to info page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-info-pp4.png)  
   [link to reviews page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-reviews-pp4.png)
+  [link to myaccount page WAVE result(https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wavemyaccount-pp4.png)
     
   The one error shown is as above, concerning a form field having no visible label, this was fixed as shown below.  
     
