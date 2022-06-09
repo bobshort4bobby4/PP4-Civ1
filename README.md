@@ -434,7 +434,7 @@ To deploy my project I followed the steps below.
   
   
   ### WAVE Web Accessibility Evaluation Tool
-  The WAVE tool was used to test all, bar one of the apps pages. The 'myaccount' page caused a server error when it's url was submitted to the WAVE website, I do not know the reason for this error but could not replicate it on any other platform.  I subquently installed the WAVE Chrome extentsion and was able to use the WAVE checker via the extentsion, result included below.
+  The WAVE tool was used to test all, bar one of the apps pages. The 'myaccount' page caused a server error when it's url was submitted to the WAVE website, I do not know the reason for this error but could not replicate it on any other platform.  I subquently installed the WAVE Chrome extension and was able to use the WAVE checker via the extension, result included below.
   As before a summary of results is shown as well as links to the individual results.  
     
   ![summary of wave accessability tool results](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-all-pp4.png)  
@@ -447,8 +447,8 @@ To deploy my project I followed the steps below.
   [link to create review page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-createreview-pp4.png)  
   [link to extend bookig page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-extend-pp4.png)  
   [link to info page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-info-pp4.png)  
-  [link to reviews page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-reviews-pp4.png)
-  [link to myaccount page WAVE result(https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wavemyaccount-pp4.png)
+  [link to reviews page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-reviews-pp4.png)  
+  [link to myaccount page WAVE result](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wavemyaccount-pp4.png)  
     
   The one error shown is as above, concerning a form field having no visible label, this was fixed as shown below.  
     
@@ -580,7 +580,7 @@ To deploy my project I followed the steps below.
   If a customer attempts to extend a booking in a specific room overlapping the time period of another booking of theirs in the same room the program will not allow it.  
   
   For example if a customer has a booking for room 3 from  1/1/2022 to 7/1/2022 and another for the same room from 10/01/2022 to 17/01/2022,  if they try to extend the first booking to 9/01/2022 (ie bridging the gap between the bookings) the app will allow it,  provided the room 3 is free.  
-  If however the customer overlaps the second booking, an error will be shown and the extension to the booking refused. From an UE viewpoint it would be preferable to flag to the customer that they had already booked that room for some of the choosen extension period.  
+  If however the customer overlaps the second booking, an error will be shown and the extension to the booking refused. From an UE viewpoint it would be preferable to flag to the customer that they had already booked that room for some of the chosen extension period.  
   
   ##### Unit Testing
   Although the coverage percentage is 85%, I feel that there were many aspects of the program I didn't manage to write tests for.  
@@ -597,6 +597,9 @@ To deploy my project I followed the steps below.
   
   ##### Unauthorised Viewing of Booking Details.
    Late in the developement process I noticed that a logged in user could view (but not change) another user's booking details by entering a random value into the extend booking and cancel booking URLs.  I put an id check into the get method of both views and this solved the issue, I left the previous checks in the code as an additional safeguard.  
+  
+  ##### Email Address
+  Rather than create a email address for the project I elected to use a personal email, similarly I used the default site address created by django.  
   
   </details>
   
