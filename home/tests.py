@@ -69,5 +69,4 @@ class TestHomeViews(TestCase):
         )
 
         self.client.login(username='robert', password='1234')
-        response = self.client.get(reverse('home:approve', kwargs={'pk': 1}))
         self.assertTemplateUsed('/staff/')

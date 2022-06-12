@@ -91,12 +91,16 @@ class TestRoombookViews(TestCase):
                                                    password='dogs12')
 
         context = {
-                        'user': self.user,
-                        'room_number': roomnum,
+                        'room_number': str(roomnum.room_number),
                         'check_in': '2022-05-01',
                         'check_out': '2022-05-03',
                         'is_active': True,
+                        'type': 'Single',
             }
+        # set session database 'data' value to context
+        session = self.client.session
+        session['data'] = context
+        session.save()
         response = self.client.get('/roombook/book/', context)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'roombook/book.html')
