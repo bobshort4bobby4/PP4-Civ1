@@ -2,8 +2,6 @@
 Views for roombook app
 """
 from datetime import date
-# import json
-# from urllib.parse import urlencode
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.shortcuts import render, redirect, reverse
@@ -86,7 +84,7 @@ def availability_view(request, type):
                     #  add to list
                     available_rooms.append(room)
 
-        # f there is at least one room available
+        # if there is at least one room available
         if len(available_rooms) > 0:
             room = available_rooms[0]
             data = {
@@ -96,19 +94,8 @@ def availability_view(request, type):
                 'is_active': True,
                 'type': type
             }
-            # data1 = data
 
-            # # convert dict to json string
-            # with open("context.json", "w") as outfile:
-            #     json.dump(data, outfile)
-
-            # data = {
-            #     'context': outfile,
-            # }
-            # join url path and data
             base_url = reverse('roombook:book')
-            # query_string = urlencode({'data': data})
-            # url = '{}?{}'.format(base_url, query_string)
 
             request.session['data'] = data
             # send to book template
@@ -128,12 +115,7 @@ def book_room_view(request):
          data: dictionary stored in session data
 
     '''
-    # retrieve data
-    # data = request.GET.get('data')
     data = request.session['data']
-    # convert json file
-    # with open('context.json') as json_file:
-    #     data = json.load(json_file)
 
     if request.method == 'GET':
         # check occupancy rate for checkin date
