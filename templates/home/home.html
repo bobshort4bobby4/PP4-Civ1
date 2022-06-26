@@ -34,11 +34,11 @@
                   {% for review in reviews %}
                     {% if forloop.first %}
                       <div class="carousel-item active">
-                        <p class="d-block caro-box w-100 home-review-panel">{{ review.text }}..............{{ review.user.username}}, {{ review.created_on }}</p>
+                        <p class="d-block caro-box w-100 home-review-panel">{{ review.text }}..............{{ review.user.username}}, {{ review.created_on|date}}</p>
                       </div>
                     {% else %}
                       <div class="carousel-item " aria-label="review {{forloop.counter}}">
-                        <p class="d-block caro-box w-100 home-review-panel"  >{{ review.text }}..............{{ review.user.username}}, {{ review.created_on }}</p>
+                        <p class="d-block caro-box w-100 home-review-panel"  >{{ review.text }}..............{{ review.user.username}}, {{ review.created_on|date}}</p>
                       </div>
                     {% endif %}
                   {% empty %}

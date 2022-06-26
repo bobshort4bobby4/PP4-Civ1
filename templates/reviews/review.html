@@ -16,7 +16,7 @@
     {% localtime on %}
     {% for review in hotel_reviews %}
     <div  class="mt-2 mb-1 p-2 review-display">
-        <p style="font-size:1.2rem;">{{ review.text }}.......{{review.user.username}}, {{ review.created_on|timezone:TIME_ZONE }}</p>
+        <p style="font-size:1.2rem;">{{ review.text }}.......{{review.user.username}}, {{ review.created_on|date }}</p>
     </div>
     {% empty %}
     <div>
