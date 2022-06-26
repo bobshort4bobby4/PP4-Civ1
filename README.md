@@ -49,7 +49,7 @@ The AGIILE methodology for project development will be used to produce this proj
   As a Customer I want:
   - to be able to easily book a room.
   - to be able to easily cancel a booking if there is more than 7 days to check in to manage my booking.
-  - to be able to easly extend my stay if possible to manage my booking .
+  - to be able to easily extend my stay if possible to manage my booking .
   - to be easily able to view my booking and account details to make using the site as easy as possible.
   - to be easily able to change account details to make use as easy as possible.
   - to have all actions confirmed to me so as to avoid any confusion or mis-understandings.
@@ -250,6 +250,8 @@ The AGIILE methodology for project development will be used to produce this proj
   ### Footer  
   All pages have a footer which contains working links to the hotel for both telephone and email.  
     
+  ### Custom Model Manager
+  I added a custom model manager into the bookings model which marks all out of date bookings as in-active.  ie. if a booking's check-out date is in the past, then the booking's 'is_active' field is set to false.  
   
   ### Admin Panel Features
   
@@ -258,10 +260,7 @@ The AGIILE methodology for project development will be used to produce this proj
   I added two columns in the roomtype relation display which show the ocupancy rate for each room type over 14 and 30 days.  
     
   ![image of occupancy rate display in admin panel](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/occupancyrate-pp4.png)  
-    
-    
-  ##### Custom Model Manager
-  I added a custom model manager into the bookings model which marks all out of date bookings as in-active.  ie. if a booking's check-out date is in the past, then the booking's 'is_active' field is set to false.   
+       
     
  ##### Actions on Review Relation Display  
   I added three actions to the dropdown list on the review relation display. These allow the manager to process reviews in a more efficient manner.  
@@ -316,6 +315,23 @@ The AGIILE methodology for project development will be used to produce this proj
   - [Freeconvert.com](https://www.freeconvert.com) was used to convert the background image file to the  webp format.  
   - [autoprefixer.github.io](https://autoprefixer.github.io/) used to improve browser compatibility.  
   - [Cloudinary.com](https://cloudinary.com/) used to store media.
+  
+  #### Django/Python Libaries Used
+  I installed the following libraries.  
+  
+  - Django: The framework used to build the app.
+  - Pillow:used to handle image files.
+  - Cloudinary: used to serve/store media and css files.
+  - Coverage: used in testing to determine how comphrensive testing is.
+  - Gunicorn:WSGI application server (Web Server Gateway Interface)used to handle interaction between the web server and the app.
+  - Django-allauth: Handles user verification and authorisation.
+  - pytz:Library used to make handling timezones easier.
+  - psycopg2:Library used to connect to database.
+  - dj-database-url: Django utility which allows database URLs to be used to configure the app.
+  - backports.zoneinfo; Timezone support.
+  - Django-crispy-forms: used to format forms within Django, I did not actually need to use this package.
+ 
+  
   
   </details>
   
