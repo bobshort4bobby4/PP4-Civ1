@@ -73,7 +73,7 @@ The AGIILE methodology for project development will be used to produce this proj
   - optimise the django admin panel to aid hotel management functions.
   
   The user stories were prioritised using the MoSCoW technique and the Kanban Board feature built-in to Github will be used as an information radiator.
-  The user stories were broken down into tasks and these were listed under their respective Epic in the initial Kanban Board/
+  The user stories were broken down into tasks and these were listed under their respective Epic in the initial Kanban Board.  
   Care was taken to ensure should-have proioritised user stories are not greater than 60% of the total.
   
   ### Wireframes
@@ -220,7 +220,7 @@ The AGIILE methodology for project development will be used to produce this proj
     
   ### Book Page
   The book page displays the details of the booking and a button to confirm the booking.  If the occupancy rate for that period is below 50% a banner is displayed showing a 10% discount on the booking price. Please see note on how this was calculated in testing section.  
-  On booking the user is thanked, the details shown again and re-directed to the home page.
+  On booking the user is thanked, a confirmation email sent, the details shown again and re-directed to the home page.
     
   ![image of the booking screen](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/bookpage-pp4.png)  
     
@@ -232,12 +232,12 @@ The AGIILE methodology for project development will be used to produce this proj
     
   ### Extend Booking Page
   
-  Page used to extend the check-out date for the room if free. It displays the details of the booking and a form field to enter the new desired checkout date.  The form data is validated  and the booking is altered if possible, the user is shown a message and redirected to the myaccount page if data is invalid.  
+  Page used to extend the check-out date for the room if free. It displays the details of the booking and a form field to enter the new desired checkout date.  The form data is validated  and the booking is altered if possible, the user is shown a message, sent an confirmation email and redirected to the myaccount page if data is invalid.  
     
   ![image of extend booking page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/extendbookingpage-pp4.png)  
     
   ### Cancel Booking Page 
-  This page will be used to cancel the booking (details are displayed ) if there is enough notice. If there is not a message is displayed, if there is the booking is deleted from the database and action confirmed to user via an alert. 
+  This page will be used to cancel the booking (details are displayed ) if there is enough notice. If there is not a message is displayed, if there is the booking is deleted from the database and action confirmed to user via an alert and an email. 
     
   ![image of the cancel booking page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/cancelbookingpage-pp4.png)
     
@@ -429,12 +429,14 @@ To deploy my project I followed the steps below.
     
   ![create review lighthouse result fixed](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/lighthouse-results/lighthouse-createreview-fixed-pp4.png)  
     
-  ![extend page lighthouse result fixed](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/lighthouse-results/lighthouse-extend-fixed-pp4.png)
+  ![extend page lighthouse result fixed](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/lighthouse-results/lighthouse-extend-fixed-pp4.png)  
+    
 
   
   
   ### WAVE Web Accessibility Evaluation Tool
-  The WAVE tool was used to test all, bar one of the apps pages. The 'myaccount' page caused a server error when it's url was submitted to the WAVE website, I do not know the reason for this error but could not replicate it on any other platform.  I subquently installed the WAVE Chrome extension and was able to use the WAVE checker via the extension, result included below.
+  The WAVE tool was used to test all, bar one of the apps pages. The 'myaccount' page caused a server error when it's url was submitted to the WAVE website, I do not know the reason for this error but could not replicate it on any other platform.  
+  I subquently installed the WAVE Chrome extension and was able to use the WAVE checker via the extension, result included below.
   As before a summary of results is shown as well as links to the individual results.  
     
   ![summary of wave accessability tool results](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/wave-results/wave-all-pp4.png)  
@@ -568,7 +570,7 @@ To deploy my project I followed the steps below.
   Any unexpected output/outcomes were fixed.  
   [The results of this testing can be found here](https://docs.google.com/spreadsheets/d/1OmOLO1755Cwm_MdL_q3j_q5kEfDmpSuUcT__er4jC2Y/edit?usp=sharing)  
     
-  ### Known Issues and Unfixed Bugs
+  ### Known Issues, Solved Bugs and Unfixed Bugs
   
   ##### Method of calculating Flash sale
   The method I used to determine whether the room should be put on sale (occupancy_rate.py in the booking_code folder) whilst not incorrect is perhaps not the best method. In hindsight I should have used a method such as the one used to calculate the occupancy rate in the admin panel for each room type (roombook/admin.py).  
@@ -600,6 +602,16 @@ To deploy my project I followed the steps below.
   
   ##### Email Address
   Rather than create a email address for the project I elected to use a personal email, similarly I used the default site address created by django.  
+  
+  ##### Confirmation Email Url not Clickable on Mobile Devices
+  On some mobile devices using certain email services the confirmation email URL used to confirm email address during the registration process was not clickable, but had to be copied and pasted into the address bar to work.  
+  After an internet search I added the below settings to settings.py which has resolved the issue.  
+    
+   `ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = False`    
+   `ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL`    
+   `ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL`    
+  
+  
   
   </details>
   
