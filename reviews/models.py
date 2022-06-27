@@ -22,5 +22,7 @@ class Reviews(models.Model):
         ordering = ['created_on']
         verbose_name_plural = 'Reviews'
 
+    objects = models.Manager()
+
     def __str__(self):
         return self.user.username

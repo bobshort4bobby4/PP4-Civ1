@@ -30,7 +30,7 @@ class MarkOutDatedAsInactive(models.Manager):
 
     def all(self):
         """
-         Override ll function to include custom function
+         Override all function to include custom function
         """
         bookings = super().all()
         bookings = self.set_inactive(bookings)
@@ -55,6 +55,8 @@ class RoomType(models.Model):
 
     def __str__(self):
         return f'{self.type}'
+
+    objects = models.Manager()
 
 
 class Room(models.Model):
@@ -87,6 +89,5 @@ class Booking(models.Model):
     objects = MarkOutDatedAsInactive()
 
     def __str__(self):
-        return f"{self.user} has booked Room\
-             {self.room_number} from\
-             {self.check_in} to {self.check_out}"
+        return (f"{self.user} has booked Room {self.room_number} from " +
+                f"{self.check_in} to {self.check_out}")

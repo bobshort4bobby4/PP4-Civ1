@@ -2,11 +2,10 @@
 roombook unit tests
 """
 
-
+from datetime import timedelta, date
 from django.contrib.auth import get_user_model
 from django.contrib.admin.sites import AdminSite
 from django.urls import reverse
-from datetime import timedelta, date
 from django.test import tag
 from django.test import TestCase
 from forms.forms import AvailabilityForm
