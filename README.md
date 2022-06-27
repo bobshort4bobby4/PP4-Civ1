@@ -501,8 +501,20 @@ To deploy my project I followed the steps below.
  ### Python Validation
   All python code was validated using the PEP8 online validator.  All errors were cleared, a link to screen-grabs of these results is below.  
 [Link to PeP8 results for python code](https://docs.google.com/document/d/1seRhPVNkAd9ZI-dmfUxzx1te3_IKNzYoB3pL-h_-G-8/edit?usp=sharing)  
-  NB There are a small number of lines that are one or two characters too long (ie. over 79), rather than break these onto several lines I preferred to leave as one line even if it does cause an error in the linter.
-  
+
+  NB There are a small number of lines that are one or two characters too long (ie. over 79), rather than break these onto several lines I preferred to leave as one line even if it does cause an error in the linter.  
+  I had to add the line   
+  `objects=models.Manager()`  
+  into all models which did not have objects defined to stop the linter showing the "'Model' does not have an 'objects' attribute" wherever the objects model manager was used.
+   
+  The linter also produced the "unable to import 'django.db'" error in quite a few of the files.  I generated a pyintrc file using  
+  `pylint --generate-rcfile > .pylintrc`  
+  and added django to the plugin settings therein  
+  `load-plugins=django`  
+   [credit to https://forum.djangoproject.com/t/unable-to-import-django-dbpylint-import-error/6893/4](https://forum.djangoproject.com/t/unable-to-import-django-dbpylint-import-error/6893/4)   
+     
+  There are a few variables which do not conform to the snake_case format, in some instances these are one or two character words.
+    
  ### Javascript Validation 
   There was a small amount of Javascript used to close messages, this script was passed through the jshint validator. the result is shown below.  
     
@@ -612,6 +624,10 @@ To deploy my project I followed the steps below.
   
   ##### Incorrect Default setting used in Review Model.
   I used the default value of `auto_now` for the `created_on ` field in the Review model, `auto_now_add` would have been a better choice. In this case I don't think it matters as the reviews are not editable, I was reluctant to change the model as I feared it may affect currently written records.  
+  
+  ##### 'Approved by' field in Reviews Model
+  There should be an "Approved By" field in the reviews model to record which member of staff approved that particular review.  It would be automatically set at review time to the currently loggged in user.  
+  
   
   ##### Unauthorised Viewing of Booking Details.
    Late in the developement process I noticed that a logged in user could view (but not change) another user's booking details by entering a random value into the extend booking and cancel booking URLs.  I put an id check into the get method of both views and this solved the issue, I left the previous checks in the code as an additional safeguard.  
