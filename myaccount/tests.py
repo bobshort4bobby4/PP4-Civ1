@@ -1,9 +1,9 @@
 """
 tests for myaccount app
 """
+from datetime import timedelta, date
 from django.contrib.auth.models import User
 from django.shortcuts import reverse
-from datetime import timedelta, date
 from django.test import TestCase, Client
 from django.test import tag
 from roombook.models import Room, RoomType, Booking

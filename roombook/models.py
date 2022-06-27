@@ -69,6 +69,8 @@ class Room(models.Model):
     def __str__(self):
         return f'{self.room_number}'
 
+    objects = models.Manager()
+
 
 class Booking(models.Model):
     """
@@ -85,4 +87,6 @@ class Booking(models.Model):
     objects = MarkOutDatedAsInactive()
 
     def __str__(self):
-        return f"{self.user} has booked Room {self.room_number} from {self.check_in} to {self.check_out}"
+        return f"{self.user} has booked Room\
+             {self.room_number} from\
+             {self.check_in} to {self.check_out}"

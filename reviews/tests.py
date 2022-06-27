@@ -1,14 +1,14 @@
 """
 tests for review app
 """
+from datetime import date
 from django.test import TestCase
 from django.test import tag
 from django.urls import reverse
-from .models import Reviews
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
-from datetime import date
 from django.contrib.admin.sites import AdminSite
+from .models import Reviews
 from .admin import ReviewsAdmin
 
 

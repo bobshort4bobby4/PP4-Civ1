@@ -196,7 +196,7 @@ class TestAdminSite(TestCase):
                                  )
 
         # run test
-        response = self.roomtypemodeladmin.occupancy_14_Days(self.itemtype)
+        response = self.roomtypemodeladmin.occupancy_14_days(self.itemtype)
 
         self.assertEqual(response, '10.0')
 
@@ -223,6 +223,6 @@ class TestAdminSite(TestCase):
                                 )
 
         # run test
-        response = self.roomtypemodeladmin.occupancy_30_Days(self.itemtype)
+        response = self.roomtypemodeladmin.occupancy_30_days(self.itemtype)
 
         self.assertEqual(response, '10.0')

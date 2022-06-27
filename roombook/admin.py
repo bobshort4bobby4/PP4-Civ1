@@ -11,9 +11,9 @@ class RoomTypeAdmin(admin.ModelAdmin):
     """
     config for Room admin panel
     """
-    list_display = ('type', 'price', 'occupancy_14_Days',  'occupancy_30_Days')
+    list_display = ('type', 'price', 'occupancy_14_days',  'occupancy_30_days')
 
-    def occupancy_14_Days(self, obj):
+    def occupancy_14_days(self, obj):
         """
         Function to calculate occupancy rate for
         a particular type of room over next 14 days
@@ -51,7 +51,7 @@ class RoomTypeAdmin(admin.ModelAdmin):
         occupancy_rate = str((booked_days/tot_days)*100)
         return occupancy_rate[0:4]
 
-    def occupancy_30_Days(self, obj):
+    def occupancy_30_days(self, obj):
         """
         Function to calculate occupancy rate for
         a particular type of room over next 30 days
