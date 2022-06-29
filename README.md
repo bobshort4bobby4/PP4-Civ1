@@ -33,7 +33,7 @@ She also requested a review section where customers could leave feedback on thei
   
    
   
-The AGIILE methodology for project development will be used to produce this project, this method involves continual collaboration between all parties and improvments   at every stage. It helps to ensure good quality products are produced within time and financial constraints.
+The AGIILE methodology for project development will be used to produce this project, this method involves continual collaboration between all parties and improvements   at every stage. It helps to ensure good quality products are produced within time and financial constraints.
   
    ### User Stories  
   
@@ -65,16 +65,51 @@ The AGIILE methodology for project development will be used to produce this proj
   #### Epics
   Using the user stories as a frame of reference the following Epics were formulated;
   
-  - implement basic html and django structure
-  - implement user registration and login
-  - implement home pages
-  - implement room booking management system
-  - implement user feedback system
-  - optimise the django admin panel to aid hotel management functions.
+  - Epic 01 implement basic html and django structure
+  - Epic 02 implement user registration and login
+  - Epic 03 implement room booking management system
+  - Epic 04 implement customer account management system
+  - Epic 05 implement user feedback system
+  - Epic 06 optimise the django admin panel to aid hotel management functions.
   
   The user stories were prioritised using the MoSCoW technique and the Kanban Board feature built-in to Github will be used as an information radiator.
   The user stories were broken down into tasks and these were listed under their respective Epic in the initial Kanban Board.  
   Care was taken to ensure should-have proioritised user stories are not greater than 60% of the total.
+  
+  ##### Table Showing User Story Allocation to Epics    
+    
+    
+    
+        
+        
+      
+  
+  |                                    User Story                                                                                                |     EPIC     |
+  |----------------------------------------------------------------------------------------------------------------------------------------------|--------------|
+  | to be easily able to ascertain information on the hotel and it's locality to aid my purchasing decision.                                     |      01      |
+  | to be able to check availability for my room choice on any particular set of dates to aid my purchasing decision.                            |      03      |
+  | to navigate easily around the site to avoid frustration whilst using the site and to engender positive emotions towards the business.        |      01      |
+  | to have any incorrect input rejected and the error explained clearly and quickly so I do not have any frustrating emotions using the site.   |      01      |
+  | to be able to read reviews about the hotel to determine the quality of the product and aid my purchasing decision.                           |      05      |
+  |                                                                                                                                              |              |
+  | to be able to easily book a room.                                                                                                            |      03      |
+  | to be able to easily cancel a booking if there is more than 7 days to check in to manage my booking.                                         |      04      |
+  | to be able to easily extend my stay if possible to manage my booking .                                                                       |      04      |
+  | to be easily able to view my booking and account details to make using the site as easy as possible.                                         |      04      |
+  | to be easily able to change account details to make use as easy as possible.                                                                 |      04      |
+  | to have all actions confirmed to me so as to avoid any confusion or mis-understandings.                                                      |      01      |
+  | to be able to leave a review of the hotel to improve my experience using the site/business.                                                  |      05      |
+  |                                                                                                                                              |              |
+  | to be able to view and analyse bookings to enable proper planning.                                                                           |      06      |
+  | to be able to view/change rooms to keep room inventory current.                                                                              |      06      |
+  | to be able to view customer information to enable efficient communication.                                                                   |      06      |
+  | to provide a quality website in order to drive sales and increase profits.                                                                   |      01      |
+  
+  
+  
+  
+  
+  
   
   ### Wireframes
   A full set of wireframes was produced, they can be viewed via the link following.
