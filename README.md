@@ -74,7 +74,7 @@ The AGIILE methodology for project development will be used to produce this proj
   
   The user stories were prioritised using the MoSCoW technique and the Kanban Board feature built-in to Github will be used as an information radiator.
   The user stories were broken down into tasks and these were listed under their respective Epic in the initial Kanban Board.  
-  Care was taken to ensure should-have proioritised user stories are not greater than 60% of the total.
+  Care was taken to ensure should-have prioritised user stories are not greater than 60% of the total.
   
   ##### Table Showing User Story Allocation to Epics    
     
@@ -324,7 +324,7 @@ The AGIILE methodology for project development will be used to produce this proj
   - Python
   - CSS  
   - HTML  
-  - CSS  
+  - Javascript
   
   #### Development Environment
     
@@ -427,7 +427,7 @@ To deploy my project I followed the steps below.
   - link the gitpod workspace with the app  
   `heroku git:remote -a pp4-civ1`  
   - use git commands to update repository  
-  `git add .`  `git commit -m "commit message"`  
+  `git add .`  `git commit -m "Deploy to Heroku"`  
   - push to github  
   `git push origin main`  
   - push to heroku  
@@ -658,10 +658,10 @@ To deploy my project I followed the steps below.
   The time used in the app is one hour behind local time.  If i set the Timezone setting to 'Europe/Dublin' it displays the correct local time in the templates and on the admin panel.  The Django documentation suggests that UTC is a better option for this setting.  I also tried the template tag `localtime on` and also using the TIME_ZONE context processor, I haven't found a fix for this error at this time.
   
   ##### Incorrect Default setting used in Review Model.
-  I used the default value of `auto_now` for the `created_on ` field in the Review model, `auto_now_add` would have been a better choice. In this case I don't think it matters as the reviews are not editable, I was reluctant to change the model as I feared it may affect currently written records.  
+  I used the default value of `auto_now` for the `created_on ` field in the Review model, `auto_now_add` would have been a better choice. In this case I don't think it matters as the reviews are not editable by the creator, I was reluctant to change the model as I feared it may affect currently written records.  
   
   ##### 'Approved by' field in Reviews Model
-  There should be an "Approved By" field in the reviews model to record which member of staff approved that particular review.  It would be automatically set at review time to the currently loggged in user.  
+  There should be an "Approved By" field in the reviews model to record which member of staff approved that particular review.  It would be automatically set at review approval to the currently logged in user.  
   
   
   ##### Unauthorised Viewing of Booking Details.
