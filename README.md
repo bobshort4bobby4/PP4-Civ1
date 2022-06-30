@@ -39,27 +39,27 @@ The AGIILE methodology for project development will be used to produce this proj
   
    #### Casual Visitor Goals
    As a Casual Visitor I want:
-  - to be easily able to ascertain information on the hotel and it's locality to aid my purchasing decision.
-  - to be able to check availability for my room choice on any particular set of dates to aid my purchasing decision.
-  - to navigate easily around the site to avoid frustration whilst using the site and to engender positive emotions towards the business.
-  - to have any incorrect input rejected and the error explained clearly and quickly so I do not have any frustrating emotions using the site. 
-  - to be able to read reviews about the hotel to determine the quality of the product and aid my purchasing decision.
+  - [#8](https://github.com/bobshort4bobby4/PP4-Civ1/issues/8) to be easily able to ascertain information on the hotel and it's locality to aid my purchasing decision.
+  - [#15](https://github.com/bobshort4bobby4/PP4-Civ1/issues/15) to be able to check availability for my room choice on any particular set of dates to aid my purchasing decision.
+  - [#7](https://github.com/bobshort4bobby4/PP4-Civ1/issues/7) to navigate easily around the site to avoid frustration whilst using the site and to engender positive emotions towards the business.
+  - [#1](https://github.com/bobshort4bobby4/PP4-Civ1/issues/1) to have any incorrect input rejected and the error explained clearly and quickly so I do not have any frustrating emotions using the site. 
+  - [#24](https://github.com/bobshort4bobby4/PP4-Civ1/issues/24) to be able to read reviews about the hotel to determine the quality of the product and aid my purchasing decision.
     
   #### Customer Goals
   As a Customer I want:
-  - to be able to easily book a room.
-  - to be able to easily cancel a booking if there is more than 7 days to check in to manage my booking.
-  - to be able to easily extend my stay if possible to manage my booking .
-  - to be easily able to view my booking and account details to make using the site as easy as possible.
-  - to be easily able to change account details to make use as easy as possible.
-  - to have all actions confirmed to me so as to avoid any confusion or mis-understandings.
-  - to be able to leave a review of the hotel to improve my experience using the site/business.  
+  - [#16](https://github.com/bobshort4bobby4/PP4-Civ1/issues/16) to be able to easily book a room.
+  - [#20](https://github.com/bobshort4bobby4/PP4-Civ1/issues/20) to be able to easily cancel a booking if there is more than 7 days to check in to manage my booking.
+  - [#19](https://github.com/bobshort4bobby4/PP4-Civ1/issues/19) to be able to easily extend my stay if possible to manage my booking .
+  - [#18](https://github.com/bobshort4bobby4/PP4-Civ1/issues/18) to be easily able to view my booking and account details to make using the site as easy as possible.
+  - [#11](https://github.com/bobshort4bobby4/PP4-Civ1/issues/11) to be easily able to change account details to make use as easy as possible.
+  - [#25](https://github.com/bobshort4bobby4/PP4-Civ1/issues/25) to be able to leave a review of the hotel to improve my experience using the site/business.  
     
   #### Site Owner/Administrator
   As a Site Owner/Administrator I want:
-  - to be able to view and analyse bookings to enable proper planning.
-  - to be able to view/change rooms to keep room inventory current.
-  - to be able to view customer information to enable efficient communication.
+  - [#29](https://github.com/bobshort4bobby4/PP4-Civ1/issues/29) to be able to view and analyse bookings to enable proper planning.
+  - [#26](https://github.com/bobshort4bobby4/PP4-Civ1/issues/26) to be able to view/change rooms to keep room inventory current.
+  - [#26](https://github.com/bobshort4bobby4/PP4-Civ1/issues/26) to be able to view customer information to enable efficient communication.
+  - [#28](https://github.com/bobshort4bobby4/PP4-Civ1/issues/28) to be able to manage submitted reviews efficently.
   - to provide a quality website in order to drive sales and increase profits.
   
   #### Epics
