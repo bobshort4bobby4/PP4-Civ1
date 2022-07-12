@@ -39,26 +39,26 @@ The AGIILE methodology for project development will be used to produce this proj
   
    #### Casual Visitor Goals
    As a Casual Visitor I want:
-  - [#8](https://github.com/bobshort4bobby4/PP4-Civ1/issues/8) to be easily able to ascertain information on the hotel and it's locality to aid my purchasing decision.
-  - [#15](https://github.com/bobshort4bobby4/PP4-Civ1/issues/15) to be able to check availability for my room choice on any particular set of dates to aid my purchasing decision.
-  - [#7](https://github.com/bobshort4bobby4/PP4-Civ1/issues/7) to navigate easily around the site to avoid frustration whilst using the site and to engender positive emotions towards the business.
-  - [#1](https://github.com/bobshort4bobby4/PP4-Civ1/issues/1) to have any incorrect input rejected and the error explained clearly and quickly so I do not have any frustrating emotions using the site. 
-  - [#24](https://github.com/bobshort4bobby4/PP4-Civ1/issues/24) to be able to read reviews about the hotel to determine the quality of the product and aid my purchasing decision.
+  - [#8](https://github.com/bobshort4bobby4/PP4-Civ1/issues/8) to be easily able to ascertain information on the hotel and it's locality, to aid my purchasing decision.
+  - [#15](https://github.com/bobshort4bobby4/PP4-Civ1/issues/15) to be able to check availability for my room choice on any particular set of dates, to aid my purchasing decision.
+  - [#7](https://github.com/bobshort4bobby4/PP4-Civ1/issues/7) to navigate easily around the site, to avoid frustration whilst using the site and to engender positive emotions towards the business.
+  - [#1](https://github.com/bobshort4bobby4/PP4-Civ1/issues/1) to have any incorrect input rejected and the error explained clearly and quickly, so I do not have any frustrating emotions using the site. 
+  - [#24](https://github.com/bobshort4bobby4/PP4-Civ1/issues/24) to be able to read reviews about the hotel, to determine the quality of the product and aid my purchasing decision.
     
   #### Customer Goals
   As a Customer I want:
   - [#16](https://github.com/bobshort4bobby4/PP4-Civ1/issues/16) to be able to easily book a room.
-  - [#20](https://github.com/bobshort4bobby4/PP4-Civ1/issues/20) to be able to easily cancel a booking if there is more than 7 days to check in to manage my booking.
-  - [#19](https://github.com/bobshort4bobby4/PP4-Civ1/issues/19) to be able to easily extend my stay if possible to manage my booking .
-  - [#18](https://github.com/bobshort4bobby4/PP4-Civ1/issues/18) to be easily able to view my booking and account details to make using the site as easy as possible.
-  - [#11](https://github.com/bobshort4bobby4/PP4-Civ1/issues/11) to be easily able to change account details to make use as easy as possible.
-  - [#25](https://github.com/bobshort4bobby4/PP4-Civ1/issues/25) to be able to leave a review of the hotel to improve my experience using the site/business.  
+  - [#20](https://github.com/bobshort4bobby4/PP4-Civ1/issues/20) to be able to easily cancel a booking if there is more than 7 days to check in, to manage my booking.
+  - [#19](https://github.com/bobshort4bobby4/PP4-Civ1/issues/19) to be able to easily extend my stay if possible, to manage my booking .
+  - [#18](https://github.com/bobshort4bobby4/PP4-Civ1/issues/18) to be easily able to view my booking and account details, to make using the site as easy as possible.
+  - [#11](https://github.com/bobshort4bobby4/PP4-Civ1/issues/11) to be easily able to change account details, to make use as easy as possible.
+  - [#25](https://github.com/bobshort4bobby4/PP4-Civ1/issues/25) to be able to leave a review of the hotel, to improve my experience using the site/business.  
     
   #### Site Owner/Administrator
   As a Site Owner/Administrator I want:
-  - [#29](https://github.com/bobshort4bobby4/PP4-Civ1/issues/29) to be able to view and analyse bookings to enable proper planning.
-  - [#26](https://github.com/bobshort4bobby4/PP4-Civ1/issues/26) to be able to view/change rooms to keep room inventory current.
-  - [#26](https://github.com/bobshort4bobby4/PP4-Civ1/issues/26) to be able to view customer information to enable efficient communication.
+  - [#29](https://github.com/bobshort4bobby4/PP4-Civ1/issues/29) to be able to view and analyse bookings, to enable proper planning.
+  - [#26](https://github.com/bobshort4bobby4/PP4-Civ1/issues/26) to be able to view/change rooms, to keep room inventory current.
+  - [#26](https://github.com/bobshort4bobby4/PP4-Civ1/issues/26) to be able to view customer information, to enable efficient communication.
   - [#28](https://github.com/bobshort4bobby4/PP4-Civ1/issues/28) to be able to manage submitted reviews efficently.
   - to provide a quality website in order to drive sales and increase profits.
   
@@ -571,7 +571,7 @@ To deploy my project I followed the steps below.
    |to be able to read reviews about the hotel.                                         |Review facility provided                               |
    |to be able to easily book a room.                                                   |Easy booking process provided with neccessary feedback |
    |to be able to easily cancel a booking                                               |Simple process to cancel booking provided              |
-   |to be able to easly extend my stay                                                  |Simple process to extend stay if available             |
+   |to be able to easily extend my stay                                                  |Simple process to extend stay if available             |
    |to be easily able to view my booking and account details                            |Dedicated page for customer's account                  |
    |to be easily able to change account details                                         |Ability to change password                             |
    |to have all actions confirmed to me so as to avoid any confusion                    |All information relayed to customer                    |
@@ -652,7 +652,7 @@ To deploy my project I followed the steps below.
   These aspects were adequately tested in manual testing, I believe.
   
   ##### Git Push Sizes
-  My CI Mentor has pointed out that some of the earlier git commits are too large.  This is because I had written and tested some parts of the functionality/logic and tests in different coding environments, consequently I was able to commit larger batches of tested code to the repository.  
+  My CI Mentor has pointed out that some of the earlier git commits are too large.  This is because I had written and tested some parts of the functionality/logic and tests in a  different coding environment, consequently I was able to commit larger batches of tested code to the repository.  The reason I started a new repo was because I had major issues with the models on the original repo due to me making many changes to their structure.  The original repo is to be found [here](https://github.com/bobshort4bobby4/PP4-ci)
   
   ##### Time Incorrect
   The time used in the app is one hour behind local time.  If i set the Timezone setting to 'Europe/Dublin' it displays the correct local time in the templates and on the admin panel.  The Django documentation suggests that UTC is a better option for this setting.  I also tried the template tag `localtime on` and also using the TIME_ZONE context processor, I haven't found a fix for this error at this time.
@@ -675,8 +675,8 @@ To deploy my project I followed the steps below.
   After an internet search I added the below settings to settings.py which has resolved the issue.  
     
    `ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = False`    
-   `ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL`    
-   `ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL`    
+   `ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = '/accounts/login'`    
+   `ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = '/accounts/login'`    
   
   
   
@@ -688,7 +688,7 @@ To deploy my project I followed the steps below.
   <summary>Credits</summary>
   
   - Bootstrap I used standard bootstrap templates for several of the elements on the site, these were adapted to suit as needed. The Nav-bar, Review-Slider and the table on the My Account page are all taken from the [Bootstrap site](https://getbootstrap.com/).  
-  - The Css used to format the embedded google map on the information page was taken from this blog[blog.duda](https://blog.duda.co/responsive-google-maps-for-your-website). 
+  - The Css used to format the embedded google map on the information page was taken from this blog [blog.duda](https://blog.duda.co/responsive-google-maps-for-your-website). 
   - Information on making custom model managers was found [here](https://www.youtube.com/watch?v=YGwSNkdwAEs). 
   - Stackoverflow for general information [](https://stackoverflow.com/).  
   - Javascript script used to close the Django messages was taken from one of the course material examples.
