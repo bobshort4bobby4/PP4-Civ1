@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en" class="">
+<html lang="en">
 <head>
-    {% block meta %}
+{% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="The Flower Hotel Beautiful holidays in the Mediterranean">
     <meta name="keywords" content="The Flower Hotel, holiday, quality, vacation, excellent, mediterranean">
@@ -14,27 +14,28 @@
 {% endblock %}
 
 {% block corecss %} 
-<link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dpudxnll7/image/upload/v1652886940/media/flowerico_vvvnvr.png">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-<link rel="stylesheet" href="{% static 'css/prefixed.css' %}">  
+    <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dpudxnll7/image/upload/v1652886940/media/flowerico_vvvnvr.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <link rel="stylesheet" href="{% static 'css/prefixed.css' %}">  
 {% endblock %}
 
 {% block extra_css %}
 {% endblock %}
 
 {% block corejs %}
-<script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 {% endblock %}
 
 {% block extra_js %}
 {% endblock %}
     
-    <title>{% block title%}{% endblock title %}</title>
+<title>{% block title%}{% endblock title %}</title>
 </head>
+
 <body class="d-flex flex-column dark main-bg h-100">
     <div class="">
       
@@ -136,3 +137,4 @@
     </footer>
     
 </body>
+</html>

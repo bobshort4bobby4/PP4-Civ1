@@ -26,6 +26,14 @@ class ShowDetails(ListView):
     template_name = "myaccount/myaccount.html"
     model = Booking
     context_object_name = 'mybookings'
+
+    # override init method to make sure custom model manager is called
+    # thus preventing out of date booking being shown on my account page
+
+    def __init__(self, **kwargs):
+        Booking.objects.all()
+        super().__init__(**kwargs)
+
     # queryset is all bookings belonging to that customer order by date
 
     def get_queryset(self):
