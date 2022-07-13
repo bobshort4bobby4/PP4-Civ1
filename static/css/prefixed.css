@@ -9,11 +9,11 @@
     height:100%;
 } */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); */
+
 @import url('https://fonts.googleapis.com/css2?family=Heebo&family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 
-
+/*================Base.html and site wide styles===*/
 * {
     font-family: 'Playfair Display', serif;
     padding:0;
@@ -73,7 +73,6 @@ a {
 }
 
 .buttonsty {
-    /* background-color:#21c7f3; */
     background-color:#df9e3e;
     margin-top: 5px;
     border:2px solid black;
@@ -82,7 +81,6 @@ a {
 }
 
 .dark {
-    /* background-color: rgba(0,0,0,0.1);  */
     color:burlywood !important; 
     -webkit-filter: brightness(115%) !important; 
             filter: brightness(115%) !important;
@@ -105,7 +103,7 @@ a {
     padding:5px;
 }
 
-/* -------NAv-bar-----*/
+/* ----===============---NAv-bar--====================---*/
 .dropdown-menu {
     background-color:transparent;
 }
@@ -128,7 +126,7 @@ a {
 }
 
 /*==============*/
-/*-------footer-----*/
+/*-----===========--footer--==================---*/
 
 .foot {
     z-index:1100;
@@ -157,8 +155,8 @@ a {
           -ms-flex-pack: space-evenly;
               justify-content: space-evenly;
   }
-  /*====================*/
-  /*----homepage--------*/
+  /*===========================================*/
+  /*---======================-homepage--------*/
 .title_colour {
     color:white;
 }
@@ -227,8 +225,8 @@ a {
     font-size:1.1rem;
 }
 
-/*=======================*/
-/*----information page---*/
+/*============================================*/
+/*---=================-information page--====-*/
 
 .map-responsive{
     overflow:hidden;
@@ -245,8 +243,8 @@ a {
     position:absolute;
 }
 
-/*====================*/
-/*---review page------*/
+/*=====================================*/
+/*--===========-review page----======--*/
 
 .review-display {
     border-style:inset;
@@ -264,8 +262,8 @@ a {
     -webkit-filter:brightness(115%); 
             filter:brightness(115%);
 }
-/*================*/
-/*----staff page--*/
+/*==========================================*/
+/*---====================-staff page--======*/
 
 .stafftextbox {
     background-color: #a3c1d9;
@@ -283,8 +281,8 @@ a {
 
 }
 
-/*====================*/
-/*------myaccount page*/
+/*=========================================*/
+/*-----====================-myaccount page*/
 
 .bookingtable {
     color:#a1661a;
@@ -294,14 +292,14 @@ a {
     font-size: calc(0.3rem *2);
 }
 
-/*====================*/
-/*---book page--------*/
+/*========================================*/
+/*---===================book page--------*/
 
 .flash-color {
     color:#eb420c
 }
-/*====================*/
-/*--check availability*/
+/*========================================*/
+/*--===================check availability*/
 
 .customfontsize1 {
     font-size:1.7rem !important;
@@ -324,8 +322,8 @@ a {
             align-items: flex-end;  
 }
 
-/*========================*/
-/*-custom all-auth pages-*/
+/*===========================================*/
+/*-===================custom all-auth pages-*/
 
 .smalltext {
     font-size:smaller!important;
@@ -348,8 +346,8 @@ a {
             justify-content: space-between !important;
 }
 
-/*===============*/
-/*---extend page-*/
+/*===========================================*/
+/*---===========================extend page-*/
 
 .extenddatebox {
     color:black;
@@ -357,8 +355,8 @@ a {
     font-family: 'Koulen', cursive !important;
 }
 
-/*==================*/
-/*--create review---*/
+/*==========================================*/
+/*--=======================create review---*/
 
 .book-btn {
     background-color: #df9e3e;
@@ -384,12 +382,11 @@ a {
     overflow:hidden;
     }
 
-/*=====================*/
+/*=======================================*/
 
-/*----media queries-------------------*/   
-@media screen and (min-width:320px){
-    
-}
+/*----==media queries-------------------*/
+
+
 @media screen and (min-width:375px) {
     .step-links {
         font-size:1rem;
