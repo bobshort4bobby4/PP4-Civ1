@@ -292,7 +292,8 @@ The AGIILE methodology for project development will be used to produce this proj
   
   I made some small additions to the admin panel features, these were functions which I imagined would be useful to a hotel manager in a real-life scenario.  
   ##### Occupancy Rate in roomtype 
-  I added two columns in the roomtype relation display which show the ocupancy rate for each room type over 14 and 30 days.  
+  I added two columns in the roomtype relation display which show the ocupancy rate for each room type over 14 and 30 days. The functions for this feature are contained in the admin.py of the roombook app.  
+  
     
   ![image of occupancy rate display in admin panel](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/occupancyrate-pp4.png)  
        
@@ -305,7 +306,12 @@ The AGIILE methodology for project development will be used to produce this proj
   ##### Custom Filters
   I added several custom filters to some of the relation displays via the admin.py file  
     
-  ![image of custom admin panel filters](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/customfilters-pp4.png)
+  ![image of custom admin panel filters](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/customfilters-pp4.png)  
+  
+  
+  ##### Custom Error Pages
+  I created custom 400/500 error pages.  I stored these in the templates directory and Django uses them automatically.  
+  
   
   
   
