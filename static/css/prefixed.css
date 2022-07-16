@@ -163,7 +163,7 @@ a {
 
 .hotel_img {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .hotel_img a {
@@ -398,6 +398,11 @@ a {
 
     .form-wrapper textarea {
         width:290px;
+    }
+
+    #roomcard {
+        margin-left:0;
+        margin-right:0;
     }
 
 }

@@ -6,13 +6,13 @@
       <div class="container " >
           <div class=" text-center title_colour under mb-5 rounded-lg dark">
               <h2 >The Flower Hotel</h2>
-              <h3>Choose from our different room sizes, They're all great!  </h3>
+              <h3>Choose from our different room sizes. They're all great!  </h3>
           </div>
 
 <!--=====================Room cards========================-->
-          <div class="row no-gutters">
+          <div id = "roomcard" class="row ">
               {% for i in room_types %}
-              <div class="col-sm-12  offset-md-3 col-md-6  offset-lg-0 col-lg-4">
+              <div class="col-sm-12  offset-md-3 col-md-6  offset-lg-0 col-lg-4 p-0">
                   <div class=" text-center">
                       <div class="hotel_img">
                           <img class="roompic" src="{{ i.image_url }}" alt="roompicture of an {{i.type}} room">
