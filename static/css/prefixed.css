@@ -330,7 +330,7 @@ a {
 }
 
 .regform-fontsize {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 
 .liform p {
@@ -396,9 +396,9 @@ a {
         min-height:350px;
     }
 
-    .form-wrapper textarea {
-        width:290px;
-    }
+    /* .form-wrapper textarea {
+        width:70%;
+    } */
 
     #roomcard {
         margin-left:0;
@@ -416,7 +416,7 @@ a {
 #caro {
     min-height:300px;
     }
-}
+
 
 .socicon {
     margin-top:5px;
@@ -426,10 +426,20 @@ a {
     font-size: 0.9rem;
 }
 
+.form-wrapper textarea {
+    width:70%;
+}
+
+}
+
 
 @media screen and (min-width:768px) {
 .step-links {
     font-size:1.5rem;
+}
+
+.form-wrapper textarea {
+    width:85%;
 }
 
 
