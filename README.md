@@ -277,7 +277,8 @@ The AGIILE methodology for project development will be used to produce this proj
   ![image of the cancel booking page](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/features-readme/cancelbookingpage-pp4.png)
     
   ### User Authentification
-  All user authentification functions are implemented using the django all-auth package.  The templates are customisied to match the style of website.  
+  All user authentification functions are implemented using the django all-auth package.  The templates are customisied to match the style of website.   
+  Some of the all-auth forms have focus set on the most appropriate field others have not.  I used jquery to set focus where needed and remove some placeholders where they where too long for the fields.
   
   ### Confirmation Emails
   The booking, cancel booking and extend booking function are all confirmed via email to the user's email address.  
