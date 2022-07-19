@@ -680,11 +680,14 @@ To deploy my project I followed the steps below.
   ##### Confirmation Email Url not Clickable on Mobile Devices
   On some mobile devices using certain email services the confirmation email URL used to confirm email address during the registration process was not clickable, but had to be copied and pasted into the address bar to work.  
   After an internet search I added the below settings to settings.py which has resolved the issue.  
+  
     
    `ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = False`    
    `ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = '/accounts/login'`    
    `ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = '/accounts/login'`    
-   
+  
+  I came across this issue again on a different machine and I think it is more to do with the set up of the operating system/browser rather than a problem with the Django app.
+    
   ##### Out-of-Date Bookings Shown On MY Account Page in Certain Circumstances.  
   If a user logs in and proceeds to access their account page straight away, any bookings which have expired since their last log-in will be displayed.  
     
