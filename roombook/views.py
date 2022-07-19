@@ -97,6 +97,7 @@ def availability_view(request, type):
 
             base_url = reverse('roombook:book')
 
+        # using session to pass data rather than json file
             request.session['data'] = data
             # send to book template
             return redirect(base_url)
@@ -144,6 +145,7 @@ def book_room_view(request):
                         is_active=True
                     )
         booking.save()
+        # confirmation email
         email = request.user.email
         send_mail(
             'Hotel Booking',
