@@ -104,7 +104,7 @@ def availability_view(request, type):
 
         # if no room available display message and return to home screen
         else:
-            messages.warning(request, 'All of this size of unit are booked!!\
+            messages.warning(request, 'All of this roomsize are booked!!\
                                     Try another one')
             return redirect(reverse('home:home'))
 
@@ -120,6 +120,7 @@ def book_room_view(request):
 
     if request.method == 'GET':
         # check occupancy rate for checkin date
+        # define if sale declared using sale_flag
         sale_flag = occupancy_rate(data)
         # define context and render page
         context = {

@@ -40,11 +40,12 @@ class ExtendBookingForm(forms.Form):
     class Meta:
         fields = ['check_out']
 
+    # oldcheck_out passed in from view with form
     def __init__(self, oldcheck_out, *args, **kwargs):
 
         # call standard __init__
         super().__init__(*args, **kwargs)
-
+        # make global to make available in clean_new_check_out
         global old_check_out
         old_check_out = oldcheck_out
 

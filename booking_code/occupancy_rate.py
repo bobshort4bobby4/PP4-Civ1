@@ -29,6 +29,8 @@ def occupancy_rate(data):
     for room in rooms:
         for booking in bookings:
             if booking.room_number_id == room.room_number:
+                # if check-in falls within existing bookings date range
+                # add that room to list
                 if cin >= booking.check_in:
                     if cin <= booking.check_out:
                         bookedrooms.append(room)

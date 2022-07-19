@@ -173,6 +173,7 @@ class ExtendBooking(View):
                                 request, f"Thank you for extending room { bookid.room_number } \
                                 to { data['new_check_out'] }")
                 email = request.user.email
+                # confirmation email
                 send_mail(
                     'Booking Extended',
                     'Thank you.\nYour booking for the Flower Hotel.\n' +
