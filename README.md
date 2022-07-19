@@ -683,6 +683,11 @@ To deploy my project I followed the steps below.
    `ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = False`    
    `ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = '/accounts/login'`    
    `ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = '/accounts/login'`    
+   
+  ##### Out-of-Date Bookings Shown On MY Account Page in Certain Circumstances.  
+  If a user logs in and proceeds to access their account page straight away, any bookings which have expired since their last log-in will be displayed.  
+    
+  This is because the model manager which sets expired bookings `is_valid` field to false will not have been run.  To solve this I changed the `__init__` method of the generic view used to handle this function.  I called the object manager of the model which ran the custom manager, thereby setting any out of date bookings to false before the page is rendered.
   
   
   
@@ -693,7 +698,7 @@ To deploy my project I followed the steps below.
   <details>
   <summary>Credits</summary>
   
-  - Bootstrap I used standard bootstrap templates for several of the elements on the site, these were adapted to suit as needed. The Nav-bar, Review-Slider and the table on the My Account page are all taken from the [Bootstrap site](https://getbootstrap.com/).  
+  - Bootstrap; I used standard bootstrap templates for several of the elements on the site, these were adapted to suit as needed. The Nav-bar, Review-Slider and the table on the My Account page are all taken from the [Bootstrap site](https://getbootstrap.com/).  
   - The Css used to format the embedded google map on the information page was taken from this blog [blog.duda](https://blog.duda.co/responsive-google-maps-for-your-website). 
   - Information on making custom model managers was found [here](https://www.youtube.com/watch?v=YGwSNkdwAEs). 
   - Stackoverflow for general information [](https://stackoverflow.com/).  
