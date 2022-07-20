@@ -115,6 +115,8 @@ The AGIILE methodology for project development will be used to produce this proj
   A full set of wireframes was produced, they can be viewed via the link following.
   This document shows three reviews per page on the reviews page, this number was changed to five in the deployed app, as it displayed better.  
   Please note that no wireframe was provided for the staff page as it was  a late addition to the project on advice from my Mentor that there should be some role based   accessability function within the site.  
+  The staff page replaced the contact page which was not implemented in the final project.  
+  
   (CTRL + click to open on new page)
   [Link to wireframes pdf](https://github.com/bobshort4bobby4/PP4-Civ1/blob/main/media/pp4-ci-wireframesv2.pdf)  
     
@@ -691,7 +693,7 @@ To deploy my project I followed the steps below.
   ##### Out-of-Date Bookings Shown On MY Account Page in Certain Circumstances.  
   If a user logs in and proceeds to access their account page straight away, any bookings which have expired since their last log-in will be displayed.  
     
-  This is because the model manager which sets expired bookings `is_valid` field to false will not have been run.  To solve this I changed the `__init__` method of the generic view used to handle this function.  I called the object manager of the model which ran the custom manager, thereby setting any out of date bookings to false before the page is rendered.
+  This is because the model manager which sets expired bookings `is_valid` field to false will not have been run.  To solve this I changed the `__init__` method of the generic view used to handle this view.  I called the object manager of the model which ran the custom manager, thereby setting any out of date bookings to false before the page is rendered.
   
   
   
